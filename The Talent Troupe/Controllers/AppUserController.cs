@@ -18,7 +18,7 @@ namespace The_Talent_Troupe.Controllers
         {
             _dbContext = dbContext;
         }
-        [HttpGet("Users")]
+        [HttpGet("Userss")]
         public IActionResult GetAllUsers()
         {
             DbSet<AppUser> dbs = _dbContext.AppUser;
