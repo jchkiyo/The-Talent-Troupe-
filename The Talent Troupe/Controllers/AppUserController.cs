@@ -26,7 +26,12 @@ namespace The_Talent_Troupe.Controllers
              return Ok(appuser);
        
         }
+        [HttpGet("Use")]
+        public IActionResult GetAllUsers2()
+        {
+            return Ok("test");
 
+        }
 
 
 
