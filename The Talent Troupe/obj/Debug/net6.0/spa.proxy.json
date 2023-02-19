@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44452",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\JingWen\\source\\repos\\The Talent Troupe\\The Talent Troupe\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}
