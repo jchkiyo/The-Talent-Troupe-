@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
+
+
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1> If you are reading this... </h1>
+        <img src="https://www.pngmart.com/files/3/Sun-PNG-Transparent-Image.png" className="App-logo" alt="logo" />
+    
+        <h5> Life may get dark like this background </h5>
+        <h5> but you are as bright as this Sun and you will survive it ! </h5>
+
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://google.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Google for help!
+
         </a>
       </header>
     </div>
+
+
+
   );
 }
 
