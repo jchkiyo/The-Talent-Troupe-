@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import vector4 from "./assets/vector4.svg";
 import clipPathGroup from "./assets/clipPathGroup.svg";
