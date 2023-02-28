@@ -17,12 +17,12 @@ export default function Navigation(props) {
         <h1>HomePage</h1>
       </Link> */}
 
-      <Link className="hover-effect" to="/home">
+      <Link className="hover-effect" to="/">
         <h1>Home</h1>
       </Link>
 
       <Link className="hover-effect" to="/about">
-        <h1>About</h1>
+        <h1>About Us</h1>
       </Link>
 
       {/* <a

@@ -129,8 +129,26 @@ Link:link {
   font-size: 2.5rem;
 }
 
+.home-banner-dps-container {
+  margin-top: 5%;
+  border: 2px solid grey;
+  width: 100%;
+  height: 400px;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.home-banner-dps {
+  float: left;
+  width: 13%;
+  height: auto;
+}
+
+
+
 .home-banner-image {
-  max-height: 17rem;
+  max-height: 35rem;
+  padding-top: 2rem;
   padding-left: 2rem;
 }
 

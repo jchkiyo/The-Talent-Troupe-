@@ -1,4 +1,3 @@
-import Carousel from './SpecialsCarousel';
 import Service1 from '../../../assets/service1.png';
 import Service2 from '../../../assets/service2.png';
 import Service3 from '../../../assets/service3.png';
@@ -36,9 +35,7 @@ export default function Specials() {
                  and lemon zest."/>
             </section>
 
-            <section className="specials-carousel">
-                <Carousel />
-            </section>
+
         </section>
     );
 }
