@@ -1,21 +1,16 @@
 import { Link } from "react-router-dom";
 
-export default function Navigation(props) {
+export default function Navigation() {
   return (
-    <menu className={`navbar-menu ${props.device}`}>
+    <menu className="navigation-menu">
 
-
-        <Link to="/">
-          <img
-            src={require("../assets/teamlogo.png")}
-            alt="The Talent Troupe logo"
-            className="nav-image"
-          ></img>
-        </Link>
-
-      {/* <Link className="hover-effect" to="/">
-        <h1>HomePage</h1>
-      </Link> */}
+      <Link to="/">
+        <img
+          src={require("../assets/teamlogo.png")}
+          alt="The Talent Troupe logo"
+          className="nav-image"
+        ></img>
+      </Link>
 
       <Link className="hover-effect" to="/">
         <h1>Home</h1>

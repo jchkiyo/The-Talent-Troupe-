@@ -42,7 +42,7 @@ button {
   border: none;
 }
 
-.burger-icon {
+.logo-icon {
   margin-top: 1.5rem;
 }
 
@@ -76,14 +76,14 @@ Link:link {
 }
 
 /* NAVBAR STYLING */
-.navbar-menu {
+.navigation-menu {
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
 }
 
-.navbar-menu > li,
-.navbar-menu > a,
-.navbar-menu > Link {
+.navigation-menu > li,
+.navigation-menu > a,
+.navigation-menu > Link {
   text-align: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -93,7 +93,7 @@ Link:link {
   display: none;
 }
 
-.burger {
+.logo {
   display: none;
   grid-template-columns: 5fr 1fr;
 }
@@ -126,7 +126,8 @@ Link:link {
 }
 
 .home-banner-text > h2 {
-  font-size: 2.5rem;
+  margin-top: -1.4rem;
+  font-size: 5rem;
 }
 
 .home-banner-dps-container {
@@ -144,17 +145,15 @@ Link:link {
   height: auto;
 }
 
-
-
 .home-banner-image {
-  max-height: 35rem;
+  max-height: 32rem;
   padding-top: 2rem;
   padding-left: 2rem;
 }
 
 .home-banner-image > img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
 
@@ -608,7 +607,7 @@ footer > menu {
     display: grid;
   }
 
-  .burger > img {
+  .logo > img {
     margin-top: 1.5rem;
     margin-left: 0.5rem;
   }

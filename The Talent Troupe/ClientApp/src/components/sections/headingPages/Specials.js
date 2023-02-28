@@ -17,22 +17,23 @@ export default function Specials() {
                     image={Service1}
                     name="Retirement Planner"
                     price="FREE"
-                    description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
-                 Dressed with salt, hot pepper, and olive oil."/>
+                    description="Secure your financial future with in-depth analysis of your retirement goals, income sources and expenses"
+                    direct="home"/>
+                    
 
                 <SpecialCard 
                     image={Service2}
                     name="Big Purchase Planner"
                     price="FREE"
-                    description="Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with
-                 salt and olive oil."/>
+                    description="An invaluable advisor for anyone looking to make an big purchase such as cars/housing"
+                    direct="home"/>
+                    
 
                 <SpecialCard
                     image={Service3}
                     name="Car Prices"
-                    price="FREE"
-                    description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
-                 and lemon zest."/>
+                    price="COMING SOON"
+                    description="Ultimate tool to get the best deal of your car purchase with our extensive database of car models and prices"/>
             </section>
 
 

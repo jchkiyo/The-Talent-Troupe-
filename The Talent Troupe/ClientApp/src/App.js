@@ -1,11 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navigation from "./components/Navigation";
 import Routing from "./components/Routing";
 import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navigation />
       <Routing />
       <Footer />
     </>

@@ -1,5 +1,7 @@
 import {Link} from 'react-router-dom';
 export default function SpecialCard(props) {
+    const directory = "/"+String(props.direct);
+    console.log(directory);
     return (
         <article className="menu-card">
             <img src={props.image} alt="Special Menu"></img>
@@ -7,7 +9,7 @@ export default function SpecialCard(props) {
                 <h1>{props.name}</h1>
                 <h3>{props.price}</h3>
                 <p>{props.description}</p>
-                <Link className="special-button"to="/order">Order for Delivery</Link>
+                <Link className="special-button"to={directory}>Start Now!</Link>
             </section>
         </article>
     );
