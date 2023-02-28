@@ -1,0 +1,159 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@LimJiaEarn 
+jchkiyo
+/
+The-Talent-Troupe-
+Private
+Fork your own copy of jchkiyo/The-Talent-Troupe-
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Beta Try the new code view
+The-Talent-Troupe-/The Talent Troupe/ClientApp/src/Homepage.css
+@weiherng2000
+weiherng2000 added homepage
+Latest commit 57ad5c8 yesterday
+ History
+ 1 contributor
+128 lines (107 sloc)  1.72 KB
+
+
+.header {
+  background-color: #C63B3B;
+  width:100%;
+  height:68px;
+
+}
+
+#talenttroupe{
+  position: absolute;
+  left: 2.37%;
+  right: 85.48%;
+  top : 3%;
+  bottom: 93.88%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+#home{
+  position: absolute;
+  left: 56.91%;
+  right: 39.58%;
+  top : 3%;
+  bottom: 93.38%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+}
+
+#retirement{
+  position: absolute;
+  left: 63.79%;
+  right: 28.82%;
+  top : 3%;
+  bottom: 93.38%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+}
+
+#big{
+  position: absolute;
+  left: 75.58%;
+  right: 15.49%;
+  top: 3%;
+  bottom: 93.38%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+}
+
+#contact{
+  position: absolute;
+  left: 88.2%;
+  right: 4.19%;
+  top: 3%;
+  bottom: 93.38%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+
+  color: #FFFFFF;
+}
+
+.body{
+  background: lightgray;
+  width:100%;
+  height:800px;
+}
+
+.orange{
+  position:relative;
+  left: 6.52%;
+  right: 65.23%;
+  top: 17.05%;
+  bottom: 35.56%;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75.009px;
+  line-height: 91px;
+
+  color: #FF5757;
+}
+
+#button1{
+  position: relative;
+  top: 69.4%;
+  bottom: 22.14%;
+  font-size: 24px;
+  width:430px;
+  height:70px;
+  border-radius: 16px;
+  text-align: center;
+  background: #FF5757;
+}
+
+.home-pic
+{
+  width: 505px;
+  height: 631px;
+  position: absolute;
+  top: 170px;
+  right: 147px;
+  bottom: 51.19px;
+}
