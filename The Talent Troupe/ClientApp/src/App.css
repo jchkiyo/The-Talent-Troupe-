@@ -110,8 +110,8 @@ Link:link {
 }
 
 /* CALL TO ACTION */
-.call-to-action {
-  background-color: #495e57;
+.home-banner {
+  background-color: black ;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,22 +119,22 @@ Link:link {
   margin-top: -1.4rem;
 }
 
-.hero-text > h1 {
-  font-size: 3rem;
+.home-banner-text > h1 {
+  font-size: 7rem;
   margin-top: 0rem;
   margin-bottom: -3rem;
 }
 
-.hero-text > h2 {
+.home-banner-text > h2 {
   font-size: 2.5rem;
 }
 
-.hero-image {
+.home-banner-image {
   max-height: 17rem;
   padding-left: 2rem;
 }
 
-.hero-image > img {
+.home-banner-image > img {
   width: 100%;
   height: 100%;
   object-fit: cover;

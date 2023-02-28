@@ -5,8 +5,8 @@ export default function Footer() {
       <menu>
         <li className="img-footer">
           <img
-            src={require("../assets/footer-logo.png")}
-            alt="Little Lemon logo"
+            src={require("../assets/teamlogo.png")}
+            alt="The Talent Troupe logo"
           ></img>
         </li>
         <li className="contact">
@@ -14,38 +14,42 @@ export default function Footer() {
           <ul className="footer-links">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <a
+            {/* <a
               href={require("../assets/menu.webp")}
               target="_blank"
               rel="noreferrer"
             >
               Menu
-            </a>
-            <Link to="/reservations">Reservations</Link>
-            <Link to="/order">Order</Link>
-            <Link to="/login">Login</Link>
+            </a> */}
+            <Link to="/reservations">Retirement Planner</Link>
+            <Link to="/order">Big Purchase Planner</Link>
+            <Link to="/login">Contact Us</Link>
           </ul>
         </li>
 
         <li>
           <h1 className="footer-header">Contact</h1>
           <ul className="footer-links">
-            <li>2395 Maldove Way,</li>
-            <li>Chicago Illinois</li>
+            <li>50 Nanyang Avenue,</li>
+            <li>639798</li>
             <br></br>
-            <li>(629)-243-6827</li>
+            <li>(+65)-67612345</li>
             <br></br>
             <a
               href="mailto: info@littlelemon.com"
               target="_blank"
               rel="noreferrer"
             >
-              info@littlelemon.com
+              contactus@TheTalentTroupe.com
             </a>
           </ul>
         </li>
+
+        
+            
         <li>
           <h1 className="footer-header">Connect</h1>
+
           <ul className="footer-links">
             <a
               href="https://www.facebook.com/thelittlelemonshop/"
@@ -70,6 +74,8 @@ export default function Footer() {
             </a>
           </ul>
         </li>
+
+
       </menu>
     </footer>
   );

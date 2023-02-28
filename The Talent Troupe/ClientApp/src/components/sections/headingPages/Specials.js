@@ -1,23 +1,38 @@
 import Carousel from './SpecialsCarousel';
-import GreekSalad from '../../../assets/food/greek-salad.webp';
-import Bruschetta from '../../../assets/food/bruschetta.jpeg';
-import LemonDessert from '../../../assets/food/lemon-dessert.webp';
+import Service1 from '../../../assets/service1.png';
+import Service2 from '../../../assets/service2.png';
+import Service3 from '../../../assets/service3.png';
 import SpecialCard from './CardInfo/SpecialCard';
 
 export default function Specials() {
     return (
         <section className="specials">
+
             <article className="specials-topbar">
-                <h1>This weeks specials</h1>
-                <a className="action-button" href={require('../../../assets/menu.webp')} target="_blank" rel="noreferrer">Online Menu</a>
+                <h1>Our services</h1>
             </article>
 
             <section className="specials-cards">
-                <SpecialCard image={GreekSalad} name="Greek Salad" price="$12.99" description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
+
+                <SpecialCard
+                    image={Service1}
+                    name="Retirement Planner"
+                    price="FREE"
+                    description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
                  Dressed with salt, hot pepper, and olive oil."/>
-                <SpecialCard image={Bruschetta}name="Bruschetta" price="$16.99" description="Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with
+
+                <SpecialCard 
+                    image={Service2}
+                    name="Big Purchase Planner"
+                    price="FREE"
+                    description="Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with
                  salt and olive oil."/>
-                <SpecialCard image={LemonDessert} name="Lemon Dessert" price="$8.50" description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
+
+                <SpecialCard
+                    image={Service3}
+                    name="Car Prices"
+                    price="FREE"
+                    description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
                  and lemon zest."/>
             </section>
 
