@@ -1,0 +1,40 @@
+.testimonials {
+    padding: 0 5rem 2rem 5rem;
+    animation-duration: 0.33s;
+    animation-timing-function: ease-in-out;
+    animation-name: slideDownFade;
+  }
+  
+  .testimonials-topbar > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem 0 1rem 0;
+  }
+  
+  .testimonials-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vw;
+    align-items: center;
+  }
+  
+  .testimonial-card {
+    background-color: #edefee;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .testimonial-card > img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+  }
+  
+  .testimonials-carousel {
+    display: none;
+  }
+  
+  .specials-carousel {
+    margin: 0 2rem 0 2rem;
+  }
+  

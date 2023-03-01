@@ -6,14 +6,13 @@ export default function Heading() {
                     
                     <h1>Talent Troupe</h1>
                     <h2>Singapore</h2>
-                    <p className="subsection">We are a troupe of 5 passionate and competent programmers.</p>
-
+                    <p className="subsection">We are a troupe of 5 aspiring software engineers with a range of skills and experience committed to creating a successful and innovative website</p>
                     <div className="home-banner-dps-container">
-                        <img className="home-banner-dps" src={require('../../../assets/talentjoseph.png')} alt="talent1"></img>
-                        <img className="home-banner-dps" src={require('../../../assets/talentjingwen.png')} alt="talent1"></img>
-                        <img className="home-banner-dps" src={require('../../../assets/talentjiaearn.png')} alt="talent1"></img>
-                        <img className="home-banner-dps" src={require('../../../assets/talentweiherng.png')} alt="talent1"></img>
-                        <img className="home-banner-dps" src={require('../../../assets/talentram.png')} alt="talent1"></img>
+                        <img className="home-banner-dps" src={require('../../../assets/talentjoseph.png')} alt="joseph"></img>
+                        <img className="home-banner-dps" src={require('../../../assets/talentjingwen.png')} alt="jingwen"></img>
+                        <img className="home-banner-dps" src={require('../../../assets/talentjiaearn.png')} alt="jiaearn"></img>
+                        <img className="home-banner-dps" src={require('../../../assets/talentweiherng.png')} alt="tanweiherng"></img>
+                        <img className="home-banner-dps" src={require('../../../assets/talentram.png')} alt="ram"></img>
                     </div>
                     <br></br>
                 </section>

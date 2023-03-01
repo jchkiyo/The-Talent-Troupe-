@@ -2,18 +2,19 @@ import Service1 from '../../../assets/service1.png';
 import Service2 from '../../../assets/service2.png';
 import Service3 from '../../../assets/service3.png';
 import {Link} from 'react-router-dom';
+import "./Ourservices.css";
 
-export default function Specials() {
+export default function Ourservices() {
     return (
-        <section className="specials">
+        <section className="our-services">
 
-            <article className="specials-topbar">
+            <article className="our-services-topbar">
                 <h1>Our services</h1>
             </article>
 
-            <section className="specials-cards">
+            <section className="our-services-cards">
 
-                <SpecialCard
+                <ServiceCard
                     image={Service1}
                     name="Retirement Planner"
                     price="FREE"
@@ -21,15 +22,15 @@ export default function Specials() {
                     direct="/Retirementplanner"/>
                     
 
-                <SpecialCard 
+                <ServiceCard 
                     image={Service2}
                     name="Big Purchase Planner"
                     price="FREE"
-                    description="An invaluable advisor for anyone looking to make an big purchase such as cars/housing"
-                    direct="/Retirementplanner"/>
+                    description="An invaluable advisor for anyone looking to make a big purchase such as cars/housing"
+                    direct="/Bigpurchaseplanner"/>
                     
 
-                <SpecialCard
+                <ServiceCard
                     image={Service3}
                     name="Car Prices"
                     price="COMING SOON"
@@ -41,16 +42,16 @@ export default function Specials() {
     );
 }
 
-function SpecialCard(props) {
+function ServiceCard(props) {
 
     return (
-        <article className="menu-card">
-            <img src={props.image} alt="Special Menu"></img>
-            <section className="menu-card-content">
+        <article className="service-card">
+            <img src={props.image} alt="service"></img>
+            <section className="service-card-content">
                 <h1>{props.name}</h1>
                 <h3>{props.price}</h3>
                 <p>{props.description}</p>
-                <Link className="special-button" to={props.direct}> Start Now!</Link>
+                <Link className="start-now-button" to={props.direct}> Start Now!</Link>
             </section>
         </article>
     );

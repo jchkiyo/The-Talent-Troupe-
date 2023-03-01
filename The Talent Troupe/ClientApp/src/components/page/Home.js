@@ -1,6 +1,6 @@
 import Heading from "../pagesections/home/Heading";
-import Specials from "../pagesections/home/Specials";
-import Testimonials from "../pagesections/home/Testimonials";
+import Ourservices from "../pagesections/home/Ourservices";
+import Ourreviews from "../pagesections/home/Ourreviews";
 import About from "../pagesections/home/About";
 import "./Home.css";
 
@@ -10,8 +10,8 @@ export default function Homepage() {
       <Heading />
 
       <main>
-        <Specials />
-        <Testimonials />
+        <Ourservices />
+        <Ourreviews />
         <About />
       </main>
       
