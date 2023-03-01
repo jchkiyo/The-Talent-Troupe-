@@ -6,7 +6,7 @@ export default function Heading() {
                     
                     <h1>Talent Troupe</h1>
                     <h2>Singapore</h2>
-                    <p className="subsection">We are a troupe of 5 passionate programmers.</p>
+                    <p className="subsection">We are a troupe of 5 passionate and competent programmers.</p>
 
                     <div className="home-banner-dps-container">
                         <img className="home-banner-dps" src={require('../../../assets/talentjoseph.png')} alt="talent1"></img>
