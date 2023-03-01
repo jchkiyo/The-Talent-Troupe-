@@ -29,11 +29,11 @@ export default function Navigation() {
         <h1>Menu</h1>
       </a> */}
 
-      <Link className="hover-effect" to="/home">
+      <Link className="hover-effect" to="/Retirementplanner">
         <h1>Retirement Planner</h1>
       </Link>
 
-      <Link className="hover-effect" to="/home">
+      <Link className="hover-effect" to="/Retirementplanner">
         <h1>Big Purchase Planner</h1>
       </Link>
 

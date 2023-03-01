@@ -84,7 +84,7 @@ export default function ReservationForm(props) {
       </div>
 
       <div>
-        <label htmlFor="people">Number of People</label> <br></br>
+        <label htmlFor="people">Monthly Income</label> <br></br>
         <input
           type="number"
           id="people"
@@ -108,14 +108,14 @@ export default function ReservationForm(props) {
         ></input>
       </div>
 
-      <div>
+      {/* <div>
         <label htmlFor="time">Select Time</label> <br></br>
         <select id="time" required>
           {finalTime}
         </select>
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         <label htmlFor="occasion">Occasion</label> <br></br>
         <select
           id="occasion"
@@ -128,10 +128,10 @@ export default function ReservationForm(props) {
           <option>Engagement</option>
           <option>Other</option>
         </select>
-      </div>
+      </div> */}
 
       <div>
-        <label htmlFor="preferences">Seating preferences</label> <br></br>
+        <label htmlFor="preferences">Children</label> <br></br>
         <select
           id="preferences"
           value={preferences}

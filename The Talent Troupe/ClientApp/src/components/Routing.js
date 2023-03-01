@@ -1,21 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/HomePage";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Order from "./pages/Order";
-import Login from "./pages/Login";
-import Confirmation from "./pages/Confirmation";
+import Home from "./page/Home";
+import Retirementplanner from "./page/RetirementPlanner";
+import About from "./page/About";
+import Login from "./page/Login";
+import Confirmation from "./page/Confirmation";
 
 export default function Routing() {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
+      <Route path="/" element={<Home />} />
 
-      <Route path="/home" element={<Home />} />
+      <Route path="/retirementplanner" element={<Retirementplanner />} />
 
       <Route path="/about" element={<About />} />
-
-      <Route path="/order" element={<Order />} />
       
       <Route path="/login" element={<Login />} />
 

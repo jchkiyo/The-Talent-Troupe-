@@ -21,8 +21,8 @@ export default function Footer() {
             >
               Menu
             </a> */}
-            <Link to="/reservations">Retirement Planner</Link>
-            <Link to="/order">Big Purchase Planner</Link>
+            <Link to="/Retirementplanner">Retirement Planner</Link>
+            <Link to="/Retirementplanner">Big Purchase Planner</Link>
             <Link to="/login">Contact Us</Link>
           </ul>
         </li>
@@ -52,21 +52,21 @@ export default function Footer() {
 
           <ul className="footer-links">
             <a
-              href="https://www.facebook.com/thelittlelemonshop/"
+              href="https://www.google.com"
               target="_blank"
               rel="noreferrer"
             >
-              Facebook
+              Google Us !
             </a>
             <a
-              href="https://www.instagram.com/littlelemonmoon/"
+              href="https://www.instagram.com"
               target="_blank"
               rel="noreferrer"
             >
-              Instagram
+              Instagram Us !
             </a>
             <a
-              href="https://www.youtube.com/watch?v=3Li-FfypZYE"
+              href="https://www.linkedin.com"
               target="_blank"
               rel="noreferrer"
             >

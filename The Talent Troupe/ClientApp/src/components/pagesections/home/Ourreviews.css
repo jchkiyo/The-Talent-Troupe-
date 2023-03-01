@@ -1,0 +1,33 @@
+.ourreviews-container {
+    padding: 0 5rem 2rem 5rem;
+    animation-duration: 0.33s;
+    animation-timing-function: ease-in-out;
+    animation-name: slideDownFade;
+  }
+  
+  .ourreview-topbar > h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 4rem 0 1rem 0;
+  }
+  
+  .ourreview-reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vw;
+    align-items: center;
+  }
+  
+  .ourreview-review {
+    background-color: #edefee;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .ourreview-review > img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+  }
+  
+  
