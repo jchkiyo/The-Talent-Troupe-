@@ -1,4 +1,4 @@
-import Login from "../sections/loginPages/Login";
+import Login from "../pagesections/login/Login";
 
 export default function Order() {
   return (
