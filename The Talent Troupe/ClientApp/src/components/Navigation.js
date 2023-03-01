@@ -33,7 +33,7 @@ export default function Navigation() {
         <h1>Retirement Planner</h1>
       </Link>
 
-      <Link className="hover-effect" to="/Retirementplanner">
+      <Link className="hover-effect" to="/Bigpurchaseplanner">
         <h1>Big Purchase Planner</h1>
       </Link>
 
@@ -44,6 +44,7 @@ export default function Navigation() {
       <Link className="hover-effect" to="/login">
         <h1>Contact Us</h1>
       </Link>
+
 
     </menu>
   );
