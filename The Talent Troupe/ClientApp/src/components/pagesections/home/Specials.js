@@ -18,7 +18,7 @@ export default function Specials() {
                     name="Retirement Planner"
                     price="FREE"
                     description="Secure your financial future with in-depth analysis of your retirement goals, income sources and expenses"
-                    direct="Retirementplanner"/>
+                    direct="/Retirementplanner"/>
                     
 
                 <SpecialCard 
@@ -26,7 +26,7 @@ export default function Specials() {
                     name="Big Purchase Planner"
                     price="FREE"
                     description="An invaluable advisor for anyone looking to make an big purchase such as cars/housing"
-                    direct="Retirementplanner"/>
+                    direct="/Retirementplanner"/>
                     
 
                 <SpecialCard

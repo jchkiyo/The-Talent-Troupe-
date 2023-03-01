@@ -1,0 +1,31 @@
+.about-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: -1.4rem;
+  }
+  
+  .about-header-image {
+    width: 100vw; /* width of container */
+    height: 20rem; /* height of container */
+    object-fit: cover;
+  }
+
+  .about-header-text {
+    background-color: #495e57;
+    padding: 0 3rem 0 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    border-radius: 0.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .about-header {
+      margin-top: 0rem;
+    }
+  
+  }

@@ -1,6 +1,6 @@
-import './Home.css';
 import React from 'react';
 import picture1 from "../../assets/homepic.png";
+import "./RetirementPlanner.css";
 
 function HomePage() {
   return (

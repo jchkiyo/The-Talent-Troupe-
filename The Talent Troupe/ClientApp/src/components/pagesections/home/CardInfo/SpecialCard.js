@@ -8,7 +8,7 @@ export default function SpecialCard(props) {
                 <h1>{props.name}</h1>
                 <h3>{props.price}</h3>
                 <p>{props.description}</p>
-                <Link className="special-button" to="/Retirementplanner"> Start Now!</Link>
+                <Link className="special-button" to={props.direct}> Start Now!</Link>
             </section>
         </article>
     );

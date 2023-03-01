@@ -1,5 +1,7 @@
-import HeroImage from "../../assets/food5.jpeg";
+import HeroImage from "../../assets/pic4.png";
 import { Link } from "react-router-dom";
+
+
 export default function Confirmation() {
   return (
     <header className="confirmation-header">
