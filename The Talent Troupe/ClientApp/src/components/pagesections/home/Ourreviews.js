@@ -5,13 +5,13 @@ import "./Ourreviews.css";
 
 export default function Ourreviews() {
     return (
-        <section className="testimonials">
-            
-            <article className="testimonials-topbar">
+        <section className="ourreview-container">
+
+            <article className="ourreview-topbar">
                 <h1>Our Reviews</h1>
             </article>
 
-            <section className="testimonials-cards">
+            <section className="ourreview-reviews">
                 <TestimonialCard name="Ethan Kim" description="This planner is a game changer! I trust the advice and feel confident in my financial decisions now!"/>
                 <TestimonialCard name="Chloe Thompson" description="Thanks to this, I now have a solid financial plan to my retirement!"/>
                 <TestimonialCard name="Amelia Lee" description="This website helped create a roadmap for my financial future and I couldn't be happier with the results!"/>
@@ -28,7 +28,7 @@ export default function Ourreviews() {
 
 function TestimonialCard(props) {
     return (
-        <article className="testimonial-card">
+        <article className="ourreview-review">
             <img src={Star} alt="Star-Icon"></img>
             <h3>{props.name}</h3>
             <p>{props.description}</p>
