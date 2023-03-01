@@ -1,21 +1,44 @@
 
+.parent
+{
+    display:flex;
+    justify-content: space-evenly;
+    position: relative;
+}
 
 .hdb 
 {
-    background-image: url("../../assets/hdb.jpg");
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    display: block;
+    
+}
+.car
+{
+    display: block;
+    
 }
 
-.text-block {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: black;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+
+#texthdb
+{
+    display:inline-block;
+    left: 18%;
+    right: 50%;
+    top: 2.34%;
+    bottom: 95.18%;
+    position: relative;
+}
+
+#textcar    
+{
+    display:inline-block;
+    left: 53%;
+    right: 50%;
+    top: 2.34%;
+    bottom: 95.18%;
+    position: relative;
+}
+
+
+ 
+
+
