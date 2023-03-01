@@ -3,7 +3,6 @@ import Home from "./page/Home";
 import Retirementplanner from "./page/RetirementPlanner";
 import About from "./page/About";
 import Login from "./page/Login";
-import Confirmation from "./page/Confirmation";
 
 export default function Routing() {
   return (
@@ -16,7 +15,6 @@ export default function Routing() {
       
       <Route path="/login" element={<Login />} />
 
-      <Route path="/confirmation" element={<Confirmation />} />
     </Routes>
   );
 }

@@ -8,7 +8,7 @@ export default function Navigation() {
         <img
           src={require("../assets/teamlogo.png")}
           alt="The Talent Troupe logo"
-          className="nav-image"
+          className="navigation-menu-image"
         ></img>
       </Link>
 
