@@ -3,7 +3,6 @@ import Home from "./page/Home";
 import Retirementplanner from "./page/RetirementPlanner";
 import About from "./page/About";
 import Login from "./page/Login";
-import Confirmation from "./page/Confirmation";
 import Bigpurchaseplanner from "./page/Bigpurchaseplanner";
 
 export default function Routing() {
@@ -18,8 +17,7 @@ export default function Routing() {
       <Route path="/login" element={<Login />} />
 
       <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
-
-      <Route path="/confirmation" element={<Confirmation />} />
+      
     </Routes>
   );
 }
