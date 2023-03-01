@@ -1,7 +1,7 @@
 import Service1 from '../../../assets/service1.png';
 import Service2 from '../../../assets/service2.png';
 import Service3 from '../../../assets/service3.png';
-import SpecialCard from './CardInfo/SpecialCard';
+import {Link} from 'react-router-dom';
 
 export default function Specials() {
     return (
@@ -38,5 +38,20 @@ export default function Specials() {
 
 
         </section>
+    );
+}
+
+function SpecialCard(props) {
+
+    return (
+        <article className="menu-card">
+            <img src={props.image} alt="Special Menu"></img>
+            <section className="menu-card-content">
+                <h1>{props.name}</h1>
+                <h3>{props.price}</h3>
+                <p>{props.description}</p>
+                <Link className="special-button" to={props.direct}> Start Now!</Link>
+            </section>
+        </article>
     );
 }

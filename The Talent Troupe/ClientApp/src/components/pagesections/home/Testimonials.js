@@ -1,5 +1,9 @@
-import Carousel from './TestimonialCarousel'
-import TestimonialCard from './CardInfo/TestimonialCard';
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import Star from '../../../assets/star.png';
+
+
+
 export default function Testimonials() {
     return (
         <section className="testimonials">
@@ -25,3 +29,15 @@ export default function Testimonials() {
         </section>
     );
 }
+
+function TestimonialCard(props) {
+    return (
+        <article className="testimonial-card">
+            <img src={Star} alt="delivery Icon"></img>
+            <h3>{props.name}</h3>
+            <p>{props.description}</p>
+        </article>
+    );
+}
+
+
