@@ -1,9 +1,17 @@
-import Login from "../sections/loginPages/Login";
+import './Bigpurchase.css';
+import React from 'react';
+
 
 export default function Bigpurchaseplanner() {
   return (
     <>
-      <h1>test</h1>
+      <div className = "hdb">
+      <div class="text-block">
+        <h4>Nature</h4>
+        <p>What a beautiful sunrise</p>
+      </div>
+        <button>Click here to caluclate HDB</button>
+      </div>
     </>
   );
 }
