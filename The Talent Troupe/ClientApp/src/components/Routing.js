@@ -4,6 +4,7 @@ import Retirementplanner from "./pages/RetirementPlanner";
 import About from "./pages/About";
 import Order from "./pages/Order";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Confirmation from "./pages/Confirmation";
 
 export default function Routing() {
@@ -18,6 +19,8 @@ export default function Routing() {
       <Route path="/order" element={<Order />} />
       
       <Route path="/login" element={<Login />} />
+
+      <Route path="/signup" element={<Signup />} />
 
       <Route path="/confirmation" element={<Confirmation />} />
     </Routes>

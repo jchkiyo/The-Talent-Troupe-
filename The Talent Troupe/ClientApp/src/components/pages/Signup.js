@@ -2,7 +2,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {Login} from '../sections/loginPages/Login.jsx';
+import {Signup} from '../sections/loginPages/Signup.jsx';
 
 class Order extends React.Component {
   
@@ -11,10 +11,8 @@ class Order extends React.Component {
     return (
     <>
     
-    <Login />
-    
+    <Signup />
     </>
-    
 )
 };
 }
