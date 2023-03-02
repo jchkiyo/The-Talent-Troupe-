@@ -1,0 +1,85 @@
+.home-banner {
+  background-color: black ;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem 5rem 1.2rem 5rem;
+  margin-top: -1.4rem;
+}
+.home-banner-subsection {
+  margin-top: -2rem;
+}
+
+.home-banner-text > h1 {
+  font-size: 7rem;
+  margin-top: 0rem;
+  margin-bottom: -3rem;
+}
+
+.home-banner-text > h2 {
+  margin-top: -1.4rem;
+  font-size: 5rem;
+}
+
+.home-banner-dps-container {
+  margin-top: 5%;
+  border: 2px solid grey;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.home-banner-dps {
+  float: left;
+  width: 13%;
+  height: auto;
+}
+
+.home-banner-image {
+  max-height: 50rem;
+  padding-left: 12rem;
+}
+
+.about-container {
+  background-color: #686761;
+  color: rgb(252, 231, 231);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.25rem 5rem 2.5rem 5rem;
+  min-height: 22rem;
+  margin-bottom: -1rem;
+  grid-gap: 25vw;
+}
+
+.about-subtext {
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.double-image-container {
+  max-height: 18rem;
+  position: relative;
+  top: 4rem;
+  left: 2rem;
+}
+
+.double-image-container > img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.double-image-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.double-image-2 {
+  position: absolute;
+  top: -3.5rem;
+  left: 5rem;
+}
+
+
