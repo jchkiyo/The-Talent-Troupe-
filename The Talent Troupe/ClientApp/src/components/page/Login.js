@@ -1,5 +1,3 @@
-import Login from "../pagesections/login/Login";
-
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
