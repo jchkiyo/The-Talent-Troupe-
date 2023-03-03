@@ -13,11 +13,11 @@ export default function Navigation() {
       </Link>
 
       <Link className="hover-effect" to="/">
-        <h1>Home</h1>
+        <h2>Home</h2>
       </Link>
 
       <Link className="hover-effect" to="/about">
-        <h1>About Us</h1>
+        <h2>About Us</h2>
       </Link>
 
       {/* <a
@@ -30,19 +30,15 @@ export default function Navigation() {
       </a> */}
 
       <Link className="hover-effect" to="/Retirementplanner">
-        <h1>Retirement Planner</h1>
+        <h2>Retirement Planner</h2>
       </Link>
 
       <Link className="hover-effect" to="/Bigpurchaseplanner">
-        <h1>Big Purchase Planner</h1>
+        <h2>Big Purchase Planner</h2>
       </Link>
 
       <Link className="hover-effect" to="/login">
-        <h1>Login</h1>
-      </Link>
-
-      <Link className="hover-effect" to="/login">
-        <h1>Contact Us</h1>
+        <h2>Login</h2>
       </Link>
 
 
