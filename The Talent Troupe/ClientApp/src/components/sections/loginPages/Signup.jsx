@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {  createUserWithEmailAndPassword   } from 'firebase/auth';
+import {  createUserWithEmailAndPassword, sendEmailVerification   } from 'firebase/auth';
 import { auth ,db} from '../firebase.js';
 import {  NavLink, useNavigate } from 'react-router-dom'
 import '../loginPages/LoginStyle.css'; 
@@ -26,18 +26,25 @@ export const Signup = () => {
             .then((userCredential) => {
                 // Signed up
                 const user = userCredential.user;
-                
+                 //send verification mail
+                 sendEmailVerification(auth.currentUser)
+                 auth.signOut();
                 addDoc(collection(db, "users"), {
                   username:username,
                   email:email
                   
                 })
+                
+                
                 .then(() => {
                   alert('Account Created Successfully 👍' );
                 })
                 .catch((error) => {
                   alert(error.message);
                 });
+               
+                
+              
                  
                 console.log(user);
                 navigate("/login")
