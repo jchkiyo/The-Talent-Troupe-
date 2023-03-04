@@ -22,6 +22,9 @@ export default function Navigation() {
                 <NavLink to="/about" activestyle>
                     About Us
                 </NavLink>
+                <NavLink to="/Viewhdbprices" activestyle>
+                    View HDB Prices
+                </NavLink>
                 <NavLink to="/Retirementplanner" activestyle>
                     Retirement Planner
                 </NavLink>
