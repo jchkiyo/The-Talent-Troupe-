@@ -28,7 +28,7 @@ export const Signup = () => {
                 const user = userCredential.user;
                  //send verification mail
                  sendEmailVerification(auth.currentUser)
-                 auth.signOut();
+                 //auth.signOut();
                 addDoc(collection(db, "users"), {
                   username:username,
                   email:email
