@@ -1,9 +1,10 @@
 import React, {useState, useRef} from 'react';
-import {  createUserWithEmailAndPassword   } from 'firebase/auth';
-import { auth } from '../firebase.js';
+import {  createUserWithEmailAndPassword, sendEmailVerification   } from 'firebase/auth';
+import { auth ,db} from '../firebase.js';
 import {  NavLink, useNavigate } from 'react-router-dom'
 import '../loginPages/LoginStyle.css'; 
 import { Alert } from "react-bootstrap"
+import { collection, addDoc } from "firebase/firestore"; 
 
        
 export const Signup = () => {
@@ -11,10 +12,10 @@ export const Signup = () => {
         const passwordConfirmRef = useRef();
         const [error, setError] = useState("");
         const navigate = useNavigate();
-     
+        const [username, setUsername] = useState('')
         const [email, setEmail] = useState('')
         const [password, setPassword] = useState('');
-     
+        
         const onSubmit = async (e) => {
           e.preventDefault()
           if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -23,10 +24,31 @@ export const Signup = () => {
          
           await createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in
+                // Signed up
                 const user = userCredential.user;
+                 //send verification mail
+                 sendEmailVerification(auth.currentUser)
+                 //auth.signOut();
+                addDoc(collection(db, "users"), {
+                  username:username,
+                  email:email
+                  
+                })
+                
+                
+                .then(() => {
+                  alert('Account Created Successfully 👍' );
+                })
+                .catch((error) => {
+                  alert(error.message);
+                });
+               
+                
+              
+                 
                 console.log(user);
                 navigate("/login")
+                
                 // ...
             })
             .catch((error) => {
@@ -34,6 +56,8 @@ export const Signup = () => {
                 return setError(error.message);
                 
             });
+         
+
      
        
         }
@@ -55,12 +79,12 @@ export const Signup = () => {
                    <form id="loginForm" action="index.html">
                    <div className="form-floating mb-3">
               <label for="username">Full Name</label>
-                <input className="form-control" id="username"  placeholder="Full Name" required />
+              <input className="form-control" id="floatingInput" type="text" value ={username} placeholder="Full Name" required onChange={(e)=> setUsername(e.target.value)}  />
                 
               </div>
                      <div className="form-floating mb-3">
                      <label for="floatingInput">Email address</label>
-                     <input className="form-control" id="floatingInput" type="email" placeholder="name@example.com" required onChange={(e)=> setEmail(e.target.value)} />
+                     <input className="form-control" id="floatingInput" type="email" value ={email} placeholder="name@example.com" required onChange={(e)=> setEmail(e.target.value)} />
                       
                      </div>
                      <div className="form-floating mb-3">

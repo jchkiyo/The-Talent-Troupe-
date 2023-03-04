@@ -12,9 +12,12 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
+    "reactfire": "^4.2.2",
+    "styled-components": "^5.3.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
