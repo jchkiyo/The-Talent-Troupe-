@@ -5,13 +5,14 @@ import About from "./page/About";
 import Login from "./page/Login";
 import Confirmation from "./page/Confirmation";
 import Bigpurchaseplanner from "./page/Bigpurchaseplanner";
+import Retirementplanner2 from "./page/retirementplanner2";
 
 export default function Routing() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
 
-      <Route path="/retirementplanner" element={<Retirementplanner />} />
+      <Route exact path="/retirementplanner" element={<Retirementplanner />} />
 
       <Route path="/about" element={<About />} />
       
@@ -20,6 +21,8 @@ export default function Routing() {
       <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
 
       <Route path="/confirmation" element={<Confirmation />} />
+
+      <Route exact path="/retirementplanner2" element={<Retirementplanner2 />} />
     </Routes>
   );
 }

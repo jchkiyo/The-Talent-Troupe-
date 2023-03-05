@@ -1,6 +1,7 @@
 import React from 'react';
 import picture1 from "../../assets/homepic.png";
 import "./RetirementPlanner.css";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -15,14 +16,16 @@ function HomePage() {
              <br></br>
              easier
              <br></br>
-             <button id = "button1">START NOW</button>
-          </div>
-          <img
-            alt=""
-            src={picture1}
-            className= "home-pic"
-           />
-       </div>
+             <Link to = "/retirementplanner2">
+               <button id = "button1">START NOW</button>
+             </Link>
+            </div>
+            <img
+               alt=""
+               src={picture1}
+               className= "home-pic"
+            />
+         </div>
     </React.Fragment>
   
 );
