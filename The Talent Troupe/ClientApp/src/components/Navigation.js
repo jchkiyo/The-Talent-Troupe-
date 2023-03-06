@@ -13,6 +13,45 @@ export default function Navigation() {
           className="navigation-menu-image"
         ></img>
 
+<<<<<<< HEAD
+      <Link className="hover-effect" to="/">
+        <h1>Home</h1>
+      </Link>
+
+      <Link className="hover-effect" to="/about">
+        <h1>About Us</h1>
+      </Link>
+
+      {/* <a
+        className="hover-effect"
+        href={require("../assets/menu.webp")}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <h1>Menu</h1>
+      </a> */}
+
+      <Link className="hover-effect" to="/Retirementplanner">
+        <h1>Retirement Planner</h1>
+      </Link>
+
+      <Link className="hover-effect" to="/Bigpurchaseplanner">
+        <h1>Big Purchase Planner</h1>
+      </Link>
+
+      <Link className="hover-effect" to="/login">
+        <h1>Login</h1>
+      </Link>
+
+      <Link className="hover-effect" to="/login">
+        <h1>Contact Us</h1>
+      </Link>
+
+
+
+
+    </menu>
+=======
             </NavLink>
             <Bars/>
             <NavMenu>
@@ -42,5 +81,6 @@ export default function Navigation() {
            
         </Nav>
    </>
+>>>>>>> main
   );
 }
