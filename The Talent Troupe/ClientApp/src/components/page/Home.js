@@ -4,7 +4,11 @@ import Ourreviews from "../pagesections/home/Ourreviews";
 import About from "../pagesections/home/About";
 import "./Home.css";
 
+
+ 
+
 export default function Homepage() {
+  
   return (
     <>
       <Heading />
@@ -13,6 +17,8 @@ export default function Homepage() {
         <Ourservices />
         <Ourreviews />
         <About />
+       
+        
       </main>
       
     </>

@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom";
+
+import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
+
 
 export default function Navigation() {
   return (
-    <menu className="navigation-menu">
-
-      <Link to="/">
-        <img
+    <>
+    <Nav>
+            <NavLink to="/">
+            <img
           src={require("../assets/teamlogo.png")}
           alt="The Talent Troupe logo"
-          className="nav-image"
+          className="navigation-menu-image"
         ></img>
-      </Link>
 
+<<<<<<< HEAD
       <Link className="hover-effect" to="/">
         <h1>Home</h1>
       </Link>
@@ -49,5 +51,36 @@ export default function Navigation() {
 
 
     </menu>
+=======
+            </NavLink>
+            <Bars/>
+            <NavMenu>
+                <NavLink to="/" activestyle>
+                    Home
+                </NavLink>
+                <NavLink to="/about" activestyle>
+                    About Us
+                </NavLink>
+                <NavLink to="/Viewhdbprices" activestyle>
+                    View HDB Prices
+                </NavLink>
+                <NavLink to="/Retirementplanner" activestyle>
+                    Retirement Planner
+                </NavLink>
+                <NavLink to="/Bigpurchaseplanner" activestyle>
+                    Big Purchase Planner
+                </NavLink>
+                <NavLink to="/Signup" activestyle>
+                    Sign Up
+                </NavLink>
+                <NavBtn>
+                <NavBtnLink to='/login'>Sign In</NavBtnLink>
+            </NavBtn>
+           
+            </NavMenu>
+           
+        </Nav>
+   </>
+>>>>>>> main
   );
 }
