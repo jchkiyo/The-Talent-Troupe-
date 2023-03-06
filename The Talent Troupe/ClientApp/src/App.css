@@ -37,7 +37,8 @@ menu {
   display: grid;
 }
 
-a:visited, a:link {
+a:visited,
+a:link {
   text-decoration: none;
   color: white;
 }
@@ -65,7 +66,6 @@ a:visited, a:link {
   margin-top: 0rem;
   margin-left: -2rem;
 }
-
 
 footer {
   min-height: 13rem;
@@ -123,7 +123,6 @@ footer > menu {
   padding: 0.5rem;
 }
 
-
 .redirect-button:hover {
   background-color: #f4ce14;
   color: #464646 !important;
@@ -140,5 +139,3 @@ footer > menu {
     opacity: 1;
   }
 }
-
-
