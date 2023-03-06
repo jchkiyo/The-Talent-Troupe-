@@ -10,8 +10,11 @@
     "bootstrap": "^4.6.2",
     "firebase": "^9.17.2",
     "react": "^18.2.0",
+<<<<<<< HEAD
     "react-bootstrap-range-slider": "^3.0.8",
+=======
     "react-bootstrap": "^2.7.2",
+>>>>>>> main
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-responsive-carousel": "^3.2.23",
