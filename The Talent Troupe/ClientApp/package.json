@@ -10,19 +10,8 @@
     "bootstrap": "^4.6.2",
     "firebase": "^9.17.2",
     "react": "^18.2.0",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of cb7f5061 (reverting)
     "react-bootstrap-range-slider": "^3.0.8",
-<<<<<<< HEAD
     "react-bootstrap": "^2.7.2",
-<<<<<<< HEAD
-=======
->>>>>>> parent of 27554f0e (Merge branch 'fix' into mybranch)
-=======
->>>>>>> main
->>>>>>> parent of cb7f5061 (reverting)
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-responsive-carousel": "^3.2.23",
