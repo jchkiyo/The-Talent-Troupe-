@@ -24,6 +24,9 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
       </Route>
+      <Route exact element={<PrivateRoutes />}>
+        <Route path="/viewhdbprices" element={<Viewhdbprices />} />
+      </Route>
     </Routes>
   );
 }
