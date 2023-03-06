@@ -4,7 +4,7 @@ import { auth } from '../firebase';
 import {  NavLink, useNavigate } from 'react-router-dom'
 import '../loginPages/LoginStyle.css'; 
 import { Alert } from "react-bootstrap"
-
+import { startSession } from '../../session';
 export const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
@@ -16,8 +16,11 @@ export const Login = () => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+            startSession(user);
+            console.log("access token", sessionStorage.getItem("accessToken"))
             navigate("/")
-            console.log(user);
+          
+           
         })
         .catch((error) => {
           return setError(error.message);
@@ -42,12 +45,12 @@ export const Login = () => {
                  {error && <Alert variant="danger">{error}</Alert>}
                  <form id="loginForm" action="index.html">
                    <div className="form-floating mb-3">
-                   <label for="floatingInput">Email address</label>
+                   <label htmlFor="floatingInput">Email address</label>
                    <input className="form-control" id="floatingInput" type="email" placeholder="name@example.com" required onChange={(e)=> setEmail(e.target.value)} />
                     
                    </div>
                    <div className="form-floating mb-3">
-                   <label for="floatingPassword">Password</label>
+                   <label htmlFor="floatingPassword">Password</label>
                      <input className="form-control" id="floatingPassword" type="password" placeholder="Password" required onChange={(e)=> setPassword(e.target.value)} />
                     
                    </div>

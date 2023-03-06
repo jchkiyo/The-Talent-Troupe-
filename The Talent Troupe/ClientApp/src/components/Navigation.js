@@ -1,10 +1,19 @@
 
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
+import {Nav, NavLink, Bars, NavMenu } from './NavbarElements'
+
+import SignedOutLinks from './SignedOutLinks';
+import React from 'react'
+import { AuthProvider } from './AuthProvider';
 
 
-export default function Navigation() {
+
+
+ const Navigation= ()=> {
+  
+  
   return (
-    <>
+    
+    <AuthProvider>
     <Nav>
             <NavLink to="/">
             <img
@@ -16,28 +25,13 @@ export default function Navigation() {
             </NavLink>
             <Bars/>
             <NavMenu>
-                <NavLink to="/" activestyle>
-                    Home
-                </NavLink>
-                <NavLink to="/about" activestyle>
-                    About Us
-                </NavLink>
-                <NavLink to="/Retirementplanner" activestyle>
-                    Retirement Planner
-                </NavLink>
-                <NavLink to="/Bigpurchaseplanner" activestyle>
-                    Big Purchase Planner
-                </NavLink>
-                <NavLink to="/Signup" activestyle>
-                    Sign Up
-                </NavLink>
-                <NavBtn>
-                <NavBtnLink to='/login'>Sign In</NavBtnLink>
-            </NavBtn>
-           
+            <SignedOutLinks/>
             </NavMenu>
            
         </Nav>
-   </>
+   </AuthProvider>
   );
 }
+
+export default Navigation
+

@@ -78,22 +78,22 @@ export const Signup = () => {
                    {error && <Alert variant="danger">{error}</Alert>}
                    <form id="loginForm" action="index.html">
                    <div className="form-floating mb-3">
-              <label for="username">Full Name</label>
+              <label htmlFor="username">Full Name</label>
               <input className="form-control" id="floatingInput" type="text" value ={username} placeholder="Full Name" required onChange={(e)=> setUsername(e.target.value)}  />
                 
               </div>
                      <div className="form-floating mb-3">
-                     <label for="floatingInput">Email address</label>
+                     <label htmlFor="floatingInput">Email address</label>
                      <input className="form-control" id="floatingInput" type="email" value ={email} placeholder="name@example.com" required onChange={(e)=> setEmail(e.target.value)} />
                       
                      </div>
                      <div className="form-floating mb-3">
-                     <label for="floatingPassword">Password</label>
+                     <label htmlFor="floatingPassword">Password</label>
                        <input className="form-control" id="floatingPassword" type="password" placeholder="Password" required ref={passwordRef} onChange={(e)=> setPassword(e.target.value)} />
                       
                      </div>
                      <div className="form-floating mb-3">
-                     <label for="floatingPassword2">Confirm Password</label>
+                     <label htmlFor="floatingPassword2">Confirm Password</label>
                        <input className="form-control" id="floatingPassword2" type="password" placeholder="Confrim Password" ref={passwordConfirmRef} required onChange={(e)=> setPassword(e.target.value)} />
                       
                      </div>
