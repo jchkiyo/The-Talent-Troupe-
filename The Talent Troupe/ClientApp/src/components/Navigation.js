@@ -1,19 +1,21 @@
-
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
-
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
-    <>
-    <Nav>
-            <NavLink to="/">
-            <img
+    <menu className="navigation-menu">
+
+      <Link to="/">
+        <img
           src={require("../assets/teamlogo.png")}
           alt="The Talent Troupe logo"
-          className="navigation-menu-image"
+          className="nav-image"
         ></img>
+      </Link>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 27554f0e (Merge branch 'fix' into mybranch)
       <Link className="hover-effect" to="/">
         <h1>Home</h1>
       </Link>
@@ -51,6 +53,7 @@ export default function Navigation() {
 
 
     </menu>
+<<<<<<< HEAD
 =======
             </NavLink>
             <Bars/>
@@ -82,5 +85,7 @@ export default function Navigation() {
         </Nav>
    </>
 >>>>>>> main
+=======
+>>>>>>> parent of 27554f0e (Merge branch 'fix' into mybranch)
   );
 }

@@ -1,26 +1,23 @@
-import React from 'react'
-import './Bigpurchaseplanner.css'
-import Pic1 from '../../assets/hdb.jpg'
-import Pic2 from '../../assets/carpic.jpeg'
-import {Link} from 'react-router-dom'
+import './Bigpurchase.css';
+import React from 'react';
+import hdbpic from "../../assets/hdb.jpg";
+import carpic from "../../assets/car.jpg";
+import { Link } from "react-router-dom";
 
 
-export default function BigPurchasePlanner () {
-	return (
-		<div className='BigPurchasePlanner_BigPurchasePlanner'>
-
-			<Link to='/viewhdbprices'>
-				<div className='OtherBigPurchases'>
-					<img className='Rectangle1' src = {Pic1} alt="Pic1" />
-					<span className='BuyingHDB'>Buying HDB</span>
-				</div>
-
-			</Link>
-			<div className='BuyingHDB_1'>
-				<img className='Rectangle2' src = {Pic2} alt="Pic2" />
-				<span className='OtherBigPurchases_1'>Other Big Purchases</span>
-			</div>
-
-		</div>
-	)
+export default function Bigpurchaseplanner() {
+  return (
+    <>
+      <div className = "parent">
+          <Link to = "/hdbplanner">
+            <img  className = "hdb"src={hdbpic} alt = "" height = "700" width = "750"/>
+          </Link >
+          <Link to = "/carplanner">
+            <img  className = "car"src={carpic} alt = "" height = "700" width = "750"/>
+          </Link>
+      </div>
+      <h1 id = "texthdb">HDB purchase planner</h1>
+      <h1 id = "textcar">Car depreciation calculator</h1>
+    </>
+  );
 }
