@@ -5,7 +5,7 @@ export default function Heading() {
       <img
         className="header-reserve"
         src={HeroImage}
-        alt="Pic4"
+        alt="Little Lemon Ingredients"
       ></img>
       <div className="reserve-header-text">
         <h1>Reserve a table</h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Star from '../../../assets/reviewsicon.png';
+import Star from '../../../assets/star.png';
 import "./Ourreviews.css";
 
 

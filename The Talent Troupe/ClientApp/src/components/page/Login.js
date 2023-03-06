@@ -1,20 +1,9 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from "../pagesections/login/Login";
 
-import {Login} from '../sections/loginPages/Login.jsx';
-
-class Order extends React.Component {
-  
-  render() {
-   
-    return (
+export default function Order() {
+  return (
     <>
-    
-    <Login />
-    
+      <Login />
     </>
-    
-)
-};
+  );
 }
-export default Order;
