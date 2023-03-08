@@ -122,8 +122,7 @@
 {
   width: 505px;
   height: 631px;
-  position: absolute;
-  top: 170px;
-  right: 147px;
-  bottom: 51.19px;
+  margin-left: 1000px;
+  margin-top: -350px;
+  
 }
