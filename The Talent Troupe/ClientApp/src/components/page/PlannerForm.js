@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "BookingForm.css";
+import "./PlannerForm.css";
 
 
-export default function ReservationForm(props) {
+export default function PlannerForm(props) {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,9 +14,6 @@ export default function ReservationForm(props) {
   const [preferences, setPreferences] = useState("");
   const [comments, setComments] = useState("");
 
-  const [finalTime, setFinalTime] = useState(
-    props.availableTimes.map((times) => <option>{times}</option>)
-  );
 
   function handleDateChange(e) {
     setDate(e.target.value);
@@ -26,7 +23,6 @@ export default function ReservationForm(props) {
 
     props.updateTimes(date);
 
-    setFinalTime(props.availableTimes.map((times) => <option>{times}</option>));
   }
 
   return (
@@ -111,14 +107,7 @@ export default function ReservationForm(props) {
         ></input>
       </div>
 
-      {/* <div>
-        <label htmlFor="time">Select Time</label> <br></br>
-        <select id="time" required>
-          {finalTime}
-        </select>
-      </div> */}
-
-      {/* <div>
+      <div>
         <label htmlFor="occasion">Occasion</label> <br></br>
         <select
           id="occasion"
@@ -131,7 +120,7 @@ export default function ReservationForm(props) {
           <option>Engagement</option>
           <option>Other</option>
         </select>
-      </div> */}
+      </div>
 
       <div>
         <label htmlFor="preferences">Children</label> <br></br>

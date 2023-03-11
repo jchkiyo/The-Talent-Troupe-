@@ -8,12 +8,12 @@
 	height: 100vh;
 	overflow: auto;
 	background: rgba(255,197,197,1.00);
-	border: 1px solid rgba(0,0,0,1);
 	box-sizing: border-box;
 }
-.BigPurchasePlanner_BigPurchasePlanner .OtherBigPurchases {
+.BigPurchasePlanner_BigPurchasePlanner
+.OtherBigPurchases {
 	position: absolute;
-	left: 276px;
+	left: 25%;
 	top: 193px;
 	width: 856px;
 	height: 275px;
@@ -22,7 +22,9 @@
 	box-sizing: border-box;
 	align-items: center;
 }
-.BigPurchasePlanner_BigPurchasePlanner .OtherBigPurchases .Rectangle1 {
+.BigPurchasePlanner_BigPurchasePlanner
+.OtherBigPurchases
+.Rectangle1 {
 	position: relative;
 	flex: none;
 	margin-bottom: NaNpx;
@@ -32,7 +34,9 @@
 	overflow: hidden;
 	border-radius: 45px;
 }
-.BigPurchasePlanner_BigPurchasePlanner .OtherBigPurchases .BuyingHDB {
+.BigPurchasePlanner_BigPurchasePlanner
+.OtherBigPurchases
+.BuyingHDB {
 	position: relative;
 	flex: none;
 	margin-bottom: NaNpx;
@@ -51,7 +55,7 @@
 }
 .BigPurchasePlanner_BigPurchasePlanner .BuyingHDB_1 {
 	position: absolute;
-	left: 276px;
+	left: 25%;
 	top: 505px;
 	width: 856px;
 	height: 277px;

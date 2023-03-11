@@ -8,6 +8,8 @@ import Home from "./page/Home";
 import Viewhdbprices from "./page/Viewhdbprices";
 import Bigpurchaseplanner from "./page/Bigpurchaseplanner";
 import PrivateRoutes from "../PrivateRoutes";
+import PlannerForm from "./page/PlannerForm";
+import MyProfile from "./page/MyProfile";
 export default function Routing() {
   return (
     <Routes>
@@ -27,6 +29,13 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/viewhdbprices" element={<Viewhdbprices />} />
       </Route>
+      <Route exact element={<PrivateRoutes />}>
+        <Route path="/Myprofile" element={<MyProfile />} />
+      </Route>
+      <Route exact element={<PrivateRoutes />}>
+        <Route path="/plannerform" element={<PlannerForm />} />
+      </Route>
+
     </Routes>
   );
 }
