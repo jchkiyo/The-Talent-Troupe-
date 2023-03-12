@@ -4,16 +4,13 @@ import "./PlannerForm.css";
 
 
 export default function PlannerForm(props) {
+
   const [PlanName, setPlanName] = useState("");
-  const [PlanPurpose, setPlanPurpose] = useState("");
+  const [PurchaseType, setPurchaseType] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
   const [MonthlyContribution, setMonthlyContribution] = useState(1);
   const [date, setDate] = useState("");
   const [comments, setComments] = useState("");
-
-
-
-
 
 
   return (
@@ -33,18 +30,18 @@ export default function PlannerForm(props) {
       </div>
 
       <div>
-        <label>Plan Purpose</label> <br></br>
+        <label>Big Purchase Type</label> <br></br>
         <select
-          id="planpurpose"
-          value={PlanPurpose}
-          onChange={(e) => setPlanPurpose(e.target.value)}
+          id="bigpurchasetype"
+          value={setPurchaseType}
+          onChange={(e) => setPurchaseType(e.target.value)}
         >
-          <option>HDB Purchase</option>
           <option>Car Purchase</option>
+          <option>HDB Purchase</option>
           <option>Others</option>
         </select>
       </div>
-      { PlanPurpose==="HDB Purchase" &&
+      { PurchaseType==="HDB Purchase" &&
       <div>
       <Link className="action-button" to="/Viewhdbprices">
         View recent HDB prices here!
@@ -114,9 +111,9 @@ export default function PlannerForm(props) {
         <br></br>
         {
             PlanName.length>0 &&
-            PlanPurpose.length>0 &&
+            PurchaseType.length>0 &&
             AmountToSave > 0 &&
-            MonthlyContribution > 0 &&
+            MonthlyContribution !== 1 &&
         <Link className="action-button2" to="/confirmation">
           SAVE PLAN
         </Link>
