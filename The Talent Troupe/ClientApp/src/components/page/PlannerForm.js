@@ -9,7 +9,7 @@ export default function PlannerForm(props) {
   const [PurchaseType, setPurchaseType] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
   const [MonthlyContribution, setMonthlyContribution] = useState(1);
-  const [date, setDate] = useState("");
+  const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
 
 
@@ -83,12 +83,12 @@ export default function PlannerForm(props) {
         <label>Date Of Creation</label> <br></br>
         <input
           type="date"
-          id="date"
+          id="creationDate"
           required
-          value={date}
+          value={creationDate}
 
           onChange={ (e) => {
-            setDate(e.target.value);
+            setcreationDate(e.target.value);
             props.updateTimes(new Date(e.target.value));
           }}
 

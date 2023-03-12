@@ -1,4 +1,7 @@
-import { React, useState, Link } from 'react';
+import { React, useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import "./myplanner.css";
 import Pic1 from "../../../assets/retirementplanpic.png";
 import Pic2 from "../../../assets/bigpurchasepic.png";
@@ -9,15 +12,15 @@ export default function MyPlanners() {
 
     const [retirementPlans, setretirementPlans] = useState(
         [
-            {title: "My Retirement Plan", creationDate: "11/2/23"},
-            {title: "Wife's Retirement Plan", creationDate: "12/2/23"},
+            {planName: "My Retirement Plan", creationDate: "11/2/23", amountToSave: 1000000, monthlyContribution: 2000, comments: "NIL"},
+            {planName: "Wife's Retirement Plan", creationDate: "12/2/23", amountToSave: 800000, monthlyContribution: 1400, comments: "Did by husband"}
         ]
     );
 
     const [bigPurchasePlans, setbigPurchasePlans] = useState(
         [
-            {title: "Punggol HDB Plan", creationDate: "21/2/23"},
-            {title: "Sengkang HDB Plan", creationDate: "12/3/23"}
+            {planName: "Punggol HDB Plan", creationDate: "21/2/23", amountToSave: 500000, monthlyContribution: 2000, comments: "Low Floor"},
+            {planName: "Sengkang HDB Plan", creationDate: "12/3/23", amountToSave: 560000, monthlyContribution: 2000, comments: "High Floor"}
         ]
     );
 
@@ -29,11 +32,14 @@ export default function MyPlanners() {
                 <h1>Your Retirement Plans</h1>
             </article>
 
-
+   
 
             <div className = "flex flex-wrap">
                 {retirementPlans.map( (retirementPlans) => {return(
-                    <RetirementPlanCard key={retirementPlans.name+retirementPlans.creationDate+"key"} title={retirementPlans.title} creationDate={retirementPlans.creationDate} />
+
+                    <RetirementPlanCard key={retirementPlans.PlanName+retirementPlans.creationDate+"key"} planName={retirementPlans.planName} creationDate={retirementPlans.creationDate} 
+                                        amountToSave={retirementPlans.amountToSave} monthlyContribution={retirementPlans.monthlyContribution} comments={retirementPlans.comments}
+                    />
                 );})}
             </div>
 
@@ -45,9 +51,12 @@ export default function MyPlanners() {
 
             <div className = "flex flex-wrap">
                 {bigPurchasePlans.map( (bigPurchasePlans) => {return(
-                    <BigPurchasePlanCard key={bigPurchasePlans.name+bigPurchasePlans.creationDate+"key"} title={bigPurchasePlans.title} creationDate={bigPurchasePlans.creationDate} />
+                    <BigPurchasePlanCard key={retirementPlans.PlanName+retirementPlans.creationDate+"key"} planName={retirementPlans.planName} creationDate={retirementPlans.creationDate} 
+                                        amountToSave={retirementPlans.amountToSave} monthlyContribution={retirementPlans.monthlyContribution} comments={retirementPlans.comments}
+                    />
                 );})}
             </div>
+            
             
 
 
@@ -70,13 +79,17 @@ function RetirementPlanCard(props) {
             <div class="text-center space-y-2 sm:text-left">
                 <div class="space-y-0.5">
                 <p class="text-lg text-black font-semibold">
-                    {props.title}
+                    {props.planName}
                 </p>
                 <p class="text-slate-500 font-medium">
                     created: {props.creationDate}
                 </p>
                 </div>
-                <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
+                <ViewPlans 
+                    planName={props.planName} creationDate={props.creationDate} 
+                    amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
+                />
+
             </div>
         </div>
 
@@ -96,13 +109,16 @@ function BigPurchasePlanCard(props) {
             <div class="text-center space-y-2 sm:text-left">
                 <div class="space-y-0.5">
                 <p class="text-lg text-black font-semibold">
-                    {props.title}
+                    {props.planName}
                 </p>
                 <p class="text-slate-500 font-medium">
                     created: {props.creationDate}
                 </p>
                 </div>
-                <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
+                <ViewPlans 
+                    planName={props.planName} creationDate={props.creationDate} 
+                    amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
+                />
             </div>
         </div>
 
@@ -111,6 +127,46 @@ function BigPurchasePlanCard(props) {
 
     );
 }
+
+function ViewPlans(props) {
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <>
+        <button onClick={handleShow} class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{props.planName} Details</Modal.Title>
+            <Modal.Title>Created on {props.creationDate}</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>Amount to save: {props.amountToSave}</p>
+            <p>Monthly Contribution: {props.monthlyContribution}</p>            
+            <p>Comments: {props.comments}</p>
+
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
+
+        </Modal>
+      </>
+    );
+  }
 
 
 
