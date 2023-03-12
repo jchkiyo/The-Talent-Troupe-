@@ -31,16 +31,16 @@ export default function ViewHDBPrices () {
 					<span className='Town'>Town</span>
 				</div>
 				<div className='FLATTYPE_6'>
-					<span className='FLATType_6'>FLAT TYpe</span>
+					<span className='FLATType_6'>Flat Type</span>
 				</div>
 				<div className='FLOORAREA_6'>
-					<span className='FloorArea_6'>FlOOR AREA</span>
+					<span className='FloorArea_6'>Floor Area</span>
 				</div>
 				<div className='REMAININGLEASE_6'>
-					<span className='Remaininglease'>Remaining lease</span>
+					<span className='Remaininglease'>Remaining Lease</span>
 				</div>
 				<div className='PRICE_6'>
-					<span className='PRICE_7'>PRICE</span>
+					<span className='PRICE_7'>Price </span>
 				</div>
 			</div>
 			<div className='Header'>
@@ -48,16 +48,16 @@ export default function ViewHDBPrices () {
 				<div className='Filter'>
 					<span className='Filter_1'>Filter: </span>
 					<div className='FilterTown'>
-						<span className='TOWN_7'>TOWN</span>
+						<span className='TOWN_7'>Town</span>
 					</div>
 					<div className='FilterType'>
-						<span className='FLATTYPE_7'>FLAT TYPE</span>
+						<span className='FLATTYPE_7'>Flat Type</span>
 					</div>
 					<div className='FilterArea'>
-						<span className='FLOORAREA_7'>floor area</span>
+						<span className='FLOORAREA_7'>Floor Area</span>
 					</div>
 					<div className='FilterLease'>
-						<span className='REMAININGLEASE_7'>REMAINING LEASE</span>
+						<span className='REMAININGLEASE_7'>Remaining Lease</span>
 					</div>
 				</div>
 			</div>

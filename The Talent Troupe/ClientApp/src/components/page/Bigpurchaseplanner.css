@@ -12,7 +12,7 @@
 }
 .BigPurchasePlanner_BigPurchasePlanner
 .OtherBigPurchases {
-	position: absolute;
+	position: relative;
 	left: 25%;
 	top: 193px;
 	width: 856px;
