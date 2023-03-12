@@ -46,6 +46,9 @@ export const SignedInLinks = () => {
         <NavLink to="/Bigpurchaseplanner" >
              Big Purchase Planner
         </NavLink>
+        <NavLink to="/Myprofile" >
+             My Profile
+        </NavLink>
         <NavBtn>
            <a onClick={logout} href="/">Log Out</a>
         </NavBtn>

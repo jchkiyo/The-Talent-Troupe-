@@ -58,6 +58,7 @@ function SignedOutLinks() {
         </NavLink>
         {currentUser && <NavLink to='/Retirementplanner'>Retirement Planner</NavLink>}
         {currentUser && <NavLink to='/Bigpurchaseplanner'>Big Purchase Planner</NavLink>}
+        {currentUser && <NavLink to='/Myprofile'>My Profile</NavLink>}
         <div className="buttons">
        <a onClick={clickLogin} href="/" >
         <NavBtn>

@@ -47,8 +47,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1.25rem 5rem 2.5rem 5rem;
-  min-height: 22rem;
-  margin-bottom: -1rem;
+  min-height: 25rem;
   grid-gap: 25vw;
 }
 

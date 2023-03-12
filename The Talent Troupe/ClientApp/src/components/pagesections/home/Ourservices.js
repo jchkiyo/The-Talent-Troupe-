@@ -32,9 +32,10 @@ export default function Ourservices() {
 
                 <ServiceCard
                     image={Service3}
-                    name="Car Prices"
-                    price="COMING SOON"
-                    description="Ultimate tool to get the best deal of your car purchase with our extensive database of car models and prices"/>
+                    name="View HDB Prices"
+                    price="FREE"
+                    description="Ultimate tool to search recently sold HDB prices with filters for town, area and more!"
+                    direct="/Viewhdbprices"/>
             </section>
 
 
@@ -50,7 +51,7 @@ function ServiceCard(props) {
             <section className="service-card-content">
                 <h1>{props.name}</h1>
                 <h3>{props.price}</h3>
-                <p>{props.description}</p>
+                <p className="service-card-para">{props.description}</p>
                 <Link className="start-now-button" to={props.direct}> Start Now!</Link>
             </section>
         </article>

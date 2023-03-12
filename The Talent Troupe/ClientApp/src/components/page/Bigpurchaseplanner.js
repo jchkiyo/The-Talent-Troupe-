@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 
 export default function BigPurchasePlanner () {
 	return (
+
 		<div className='BigPurchasePlanner_BigPurchasePlanner'>
 
 			<Link to='/viewhdbprices'>
@@ -16,11 +17,13 @@ export default function BigPurchasePlanner () {
 				</div>
 
 			</Link>
-			<div className='BuyingHDB_1'>
-				<img className='Rectangle2' src = {Pic2} alt="Pic2" />
-				<span className='OtherBigPurchases_1'>Other Big Purchases</span>
-			</div>
 
+			<Link to='/plannerform'>
+				<div className='BuyingHDB_1'>
+					<img className='Rectangle2' src = {Pic2} alt="Pic2" />
+					<span className='OtherBigPurchases_1'>Other Big Purchases</span>
+				</div>
+			</Link>
 		</div>
 	)
 }
