@@ -1,4 +1,25 @@
-.action-button {
+  
+  .action-button {
+    text-decoration: none;
+    background-color: #f4ce14;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.2rem;
+    font-family: "Karla";
+    font-size: 1rem;
+  }
+  .action-button:hover {
+    text-decoration: none;
+    background-color: #495e57;
+    color: #eeeeee;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #edefee;
+    transition: 0.2s;
+  }
+
+  
+  .action-button2 {
+    text-decoration: none;
     background-color: #f4ce14;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.2rem;
@@ -6,7 +27,8 @@
     font-size: 2rem;
   }
   
-  .action-button:hover {
+  .action-button2:hover {
+    text-decoration: none;
     background-color: #495e57;
     color: #eeeeee;
     border-style: solid;
@@ -49,11 +71,11 @@
     font-size: 18px;
   }
 
-  .reservation-form {
+  .planner-form {
     padding: 2rem 0 0.5rem 0;
     text-align: center;
   }
   
-  .reservation-form > div {
+  .planner-form > div {
     margin-bottom: 1.5rem;
   }
