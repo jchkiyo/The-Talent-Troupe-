@@ -1,5 +1,5 @@
 import MyPlanners from "../pagesections/myprofile/myplanners";
-import "./Home.css";
+import "./MyProfile.css";
 
 
  

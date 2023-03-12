@@ -50,7 +50,7 @@ export const SignedInLinks = () => {
              My Profile
         </NavLink>
         <NavBtn>
-           <a onClick={logout} href="/">Log Out!</a>
+           <a onClick={logout} href="/">Log Out</a>
         </NavBtn>
        
        </>

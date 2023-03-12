@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @keyframes slideDownFade {
     0% {
       transform: translateY(-15%);
