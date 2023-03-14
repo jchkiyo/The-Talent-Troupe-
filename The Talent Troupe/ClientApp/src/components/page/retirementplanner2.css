@@ -6,6 +6,12 @@
     align-items: flex-start;
     position: relative;
   }
+  #button {
+    background-color: red; 
+    text-align: center;
+    border: none;
+    font-size: 50px;
+  }
   .backgroundOverlayFx {
     width: 483px;
     height: 515px;
