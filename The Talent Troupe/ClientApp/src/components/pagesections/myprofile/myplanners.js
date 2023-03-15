@@ -85,7 +85,7 @@ function RetirementPlanCard(props) {
                     created: {props.creationDate}
                 </p>
                 </div>
-                <ViewPlans 
+                <RetirementViewPlans 
                     planName={props.planName} creationDate={props.creationDate} 
                     amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
                 />
@@ -115,7 +115,7 @@ function BigPurchasePlanCard(props) {
                     created: {props.creationDate}
                 </p>
                 </div>
-                <ViewPlans 
+                <BigPurchaseViewPlans 
                     planName={props.planName} creationDate={props.creationDate} 
                     amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
                 />
@@ -128,7 +128,49 @@ function BigPurchasePlanCard(props) {
     );
 }
 
-function ViewPlans(props) {
+function RetirementViewPlans(props) {
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
+    return (
+      <>
+        <button onClick={handleShow} class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{props.planName} Details</Modal.Title>
+            <Modal.Title>Created on {props.creationDate}</Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+            <p>Retirement Age: {props.amountToSave}</p>
+            <p>Amount to save: {props.amountToSave}</p>
+            <p>Monthly Contribution: {props.monthlyContribution}</p>            
+            <p>Comments: {props.comments}</p>
+
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
+
+        </Modal>
+      </>
+    );
+  }
+
+
+  function BigPurchaseViewPlans(props) {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -167,6 +209,7 @@ function ViewPlans(props) {
       </>
     );
   }
+  
 
 
 
