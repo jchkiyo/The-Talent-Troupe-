@@ -31,7 +31,9 @@ export const Signup = () => {
                  //auth.signOut();
                 addDoc(collection(db, "users"), {
                   username:username,
-                  email:email
+                  email:email,
+                  userid: auth.lastNotifiedUid
+
                   
                 })
                 
