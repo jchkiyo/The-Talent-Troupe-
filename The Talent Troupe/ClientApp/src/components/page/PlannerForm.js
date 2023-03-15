@@ -8,6 +8,7 @@ export default function PlannerForm(props) {
   const [PlanName, setPlanName] = useState("");
   const [PurchaseType, setPurchaseType] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
+  const [TimeToSave, setTimeToSave] = useState("");
   const [MonthlyContribution, setMonthlyContribution] = useState(1);
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
@@ -61,6 +62,21 @@ export default function PlannerForm(props) {
           onChange={(e) => setAmountToSave(e.target.value)}
         ></input>
       </div>
+      
+      <div>
+        <label>Time to save</label> <br></br>
+        <input
+          type="text"
+          id="timetosave"
+          placeholder="100 000"
+          value={TimeToSave}
+          required
+          minLength={1}
+          maxLength={25}
+          onChange={(e) => setTimeToSave(e.target.value)}
+        ></input>
+      </div>
+
 
       <div>
         <label>Monthly Contribution</label> <br></br>
