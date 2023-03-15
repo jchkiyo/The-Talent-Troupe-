@@ -34,6 +34,32 @@ export default function Retirementplanner2() {
         const newvalue = event.target.value
         setIncome(newvalue)
     }
+    
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+      });
+    
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+      };
+    
+      const handleFormSubmit = (event) => {
+        event.preventDefault();
+        console.log(formData);
+      };
+    
+      const handleResetClick = () => {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: "",
+        });
+      };
 
 
     return (
@@ -79,9 +105,50 @@ export default function Retirementplanner2() {
                 <br></br>
                 <Button as="input" variant="success" type="submit" value="Submit" onClick = {radioclick} />{' '}
                 <br></br>
-                <Button size="lg" id = "button">
+                <Button size="lg" id = "button" onClick={handleButtonClick}>
                   Calculate
                 </Button>{' '}
+                <button onClick={handleResetClick}>Reset</button>
+                <div>
+        <form onSubmit={handleFormSubmit}>
+            <label htmlFor="firstName">First Name:</label>
+            <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleInputChange}
+            />
+
+            <label htmlFor="lastName">Last Name:</label>
+            <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange}
+            />
+
+            <label htmlFor="email">Email:</label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            />
+
+            <label htmlFor="message">Message:</label>
+            <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
             </div>
             <img
                 alt=""
