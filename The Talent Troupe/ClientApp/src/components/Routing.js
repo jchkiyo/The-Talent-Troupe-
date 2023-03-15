@@ -21,7 +21,7 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/retirementplanner2" element={<Retirementplanner2 />} />
       </Route>
-     
+
       <Route path="/about" element={<About />} />
 
       <Route path="/login" element={<Login />} />
@@ -39,7 +39,6 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/plannerform" element={<PlannerForm />} />
       </Route>
-
     </Routes>
   );
 }
