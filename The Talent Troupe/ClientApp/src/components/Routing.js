@@ -11,6 +11,7 @@ import PrivateRoutes from "../PrivateRoutes";
 import PlannerForm from "./page/PlannerForm";
 import MyProfile from "./page/MyProfile";
 import Retirementplanner2 from "./page/retirementplanner2";
+import HDBPrices from "./page/HDBPrices";
 export default function Routing() {
   return (
     <Routes>
@@ -31,7 +32,7 @@ export default function Routing() {
         <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/viewhdbprices" element={<Viewhdbprices />} />
+        <Route path="/viewhdbprices" element={<HDBPrices />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
         <Route path="/Myprofile" element={<MyProfile />} />
