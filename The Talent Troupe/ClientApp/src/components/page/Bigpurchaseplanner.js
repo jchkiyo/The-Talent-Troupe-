@@ -1,29 +1,141 @@
-import React from 'react'
-import './Bigpurchaseplanner.css'
-import Pic1 from '../../assets/hdb.jpg'
-import Pic2 from '../../assets/carpic.jpeg'
-import {Link} from 'react-router-dom'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./BigPurchasePlanner.css";
 
 
-export default function BigPurchasePlanner () {
-	return (
+export default function PlannerForm(props) {
 
-		<div className='BigPurchasePlanner_BigPurchasePlanner'>
+  const [PlanName, setPlanName] = useState("");
+  const [PurchaseType, setPurchaseType] = useState("");
+  const [AmountToSave, setAmountToSave] = useState("");
+  const [TimeToSave, setTimeToSave] = useState("");
+  const [MonthlyContribution, setMonthlyContribution] = useState(1);
+  const [creationDate, setcreationDate] = useState("");
+  const [comments, setComments] = useState("");
 
-			<Link to='/viewhdbprices'>
-				<div className='OtherBigPurchases'>
-					<img className='Rectangle1' src = {Pic1} alt="Pic1" />
-					<span className='BuyingHDB'>Buying HDB</span>
-				</div>
 
-			</Link>
+  
+  return (
+    <form className="planner-form">
+      <div>
+        <label>Plan Name</label> <br></br>
+        <input
+          type="text"
+          id="PlanName"
+          placeholder=" Car Purchase Plan"
+          required
+          minLength={2}
+          maxLength={50}
+          value={PlanName}
+          onChange={(e) => setPlanName(e.target.value)}
+        ></input>
+      </div>
 
-			<Link to='/plannerform'>
-				<div className='BuyingHDB_1'>
-					<img className='Rectangle2' src = {Pic2} alt="Pic2" />
-					<span className='OtherBigPurchases_1'>Other Big Purchases</span>
-				</div>
-			</Link>
-		</div>
-	)
+      <div>
+        <label>Big Purchase Type</label> <br></br>
+        <select
+          id="bigpurchasetype"
+          value={setPurchaseType}
+          onChange={(e) => setPurchaseType(e.target.value)}
+        >
+          <option>Car Purchase</option>
+          <option>HDB Purchase</option>
+          <option>Others</option>
+        </select>
+      </div>
+      { PurchaseType==="HDB Purchase" &&
+      <div>
+      <Link className="action-button" to="/Viewhdbprices">
+        View recent HDB prices here!
+      </Link>
+      </div>
+      }
+      <div>
+        <label>Amount to save</label> <br></br>
+        <input
+          type="number"
+          id="amounttosave"
+          placeholder="100 000"
+          value={AmountToSave}
+          required
+          minLength={1}
+          maxLength={25}
+          onChange={(e) => setAmountToSave(e.target.value)}
+        ></input>
+      </div>
+      
+      <div>
+        <label>Time to save</label> <br></br>
+        <input
+          type="text"
+          id="timetosave"
+          placeholder="100 000"
+          value={TimeToSave}
+          required
+          minLength={1}
+          maxLength={25}
+          onChange={(e) => setTimeToSave(e.target.value)}
+        ></input>
+      </div>
+
+
+      <div>
+        <label>Monthly Contribution</label> <br></br>
+        <input
+          type="number"
+          id="monthlycontribution"
+          placeholder="5 000"
+          value={MonthlyContribution}
+          required
+          min={1}
+          max={100}
+          onChange={(e) => setMonthlyContribution(e.target.value)}
+        ></input>
+      </div>
+
+
+      
+
+      <div>
+        <label>Date Of Creation</label> <br></br>
+        <input
+          type="date"
+          id="creationDate"
+          required
+          value={creationDate}
+
+          onChange={ (e) => {
+            setcreationDate(e.target.value);
+            props.updateTimes(new Date(e.target.value));
+          }}
+
+        ></input>
+      </div>
+
+      <div>
+        <label htmlFor="comments">Notes To Self</label> <br></br>
+        <textarea
+          id="comments"
+          rows={8}
+          cols={40}
+          placeholder="Additional Comments"
+          value={comments}
+          onChange={(e) => setComments(e.target.value)}
+        ></textarea>
+      </div>
+
+      <div>
+        <br></br>
+        {
+            PlanName.length>0 &&
+            PurchaseType.length>0 &&
+            AmountToSave > 0 &&
+            MonthlyContribution !== 1 &&
+        <Link className="action-button2" to="/confirmation">
+          SAVE PLAN
+        </Link>
+        }
+      </div>
+    </form>
+  );
 }
