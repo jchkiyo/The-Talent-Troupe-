@@ -5,7 +5,6 @@ import About from "./page/About";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
 import Home from "./page/Home";
-import Viewhdbprices from "./page/Viewhdbprices";
 import PrivateRoutes from "../PrivateRoutes";
 import BigPurchasePlanner from "./page/BigPurchasePlanner";
 import MyProfile from "./page/MyProfile";

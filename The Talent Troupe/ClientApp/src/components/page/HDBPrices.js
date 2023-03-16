@@ -1,15 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Axios from "axios";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import { InputText } from "primereact/inputtext";
-import { FilterMatchMode } from "primereact/api";
 import {
   MDBBtn,
-  MDBBtnGroup,
   MDBCol,
   MDBContainer,
   MDBRow,
