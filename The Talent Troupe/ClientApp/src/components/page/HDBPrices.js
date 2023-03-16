@@ -6,26 +6,27 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import { InputText } from "primereact/inputtext";
+// import { InputText } from "primereact/inputtext";
 
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
+// import DropdownButton from "react-bootstrap/DropdownButton";
+// import Dropdown from "react-bootstrap/Dropdown";
 
 export default function HDBPrices() {
   const [hdbPrices, sethdbPrices] = useState([]);
   const [value, setValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
   const [hdbList, sethdbList] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostperPage] = useState(10);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [postPerPage, setPostperPage] = useState(10);
 
-  const dataSlicing = () => {
-    const indexofLastPage = currentPage * postPerPage;
-    const indexofFirstPage = indexofLastPage - postPerPage;
-    const currentPosts = hdbPrices.slice(indexofFirstPage, indexofLastPage);
 
-    sethdbList(currentPosts);
-  };
+  // const dataSlicing = () => {
+  //   const indexofLastPage = currentPage * postPerPage;
+  //   const indexofFirstPage = indexofLastPage - postPerPage;
+  //   const currentPosts = hdbPrices.slice(indexofFirstPage, indexofLastPage);
+
+  //   sethdbList(currentPosts);
+  // };
 
   useEffect(() => {
     fetchHdbPrice();
