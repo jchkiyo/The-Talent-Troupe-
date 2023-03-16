@@ -1,26 +1,35 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Axios from "axios";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { Button } from "primereact/button";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import {
-  MDBBtn,
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBTable,
-  MDBTableBody,
-  MDBTableHead,
-} from "mdb-react-ui-kit";
+import { InputText } from "primereact/inputtext";
+
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function HDBPrices() {
   const [hdbPrices, sethdbPrices] = useState([]);
   const [value, setValue] = useState("");
+  const [filterValue, setFilterValue] = useState("");
   const [hdbList, sethdbList] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostperPage] = useState(10);
+
+  const dataSlicing = () => {
+    const indexofLastPage = currentPage * postPerPage;
+    const indexofFirstPage = indexofLastPage - postPerPage;
+    const currentPosts = hdbPrices.slice(indexofFirstPage, indexofLastPage);
+
+    sethdbList(currentPosts);
+  };
 
   useEffect(() => {
     fetchHdbPrice();
-  }, [hdbList, hdbPrices]);
+  }, []);
 
   const fetchHdbPrice = () => {
     Axios.get(
@@ -30,26 +39,29 @@ export default function HDBPrices() {
       sethdbList(res.data.result.records);
     });
   };
-  const handleFilter = () => {
-    value === ""
-      ? sethdbList([...hdbPrices])
-      : sethdbList([
-          ...hdbPrices.filter((item) => item.town.match(value.toUpperCase())),
-        ]);
+
+  console.log(value);
+
+  const handleFilter = (e) => {
+    e.preventDefault();
+    setFilterValue(value);
+
+    const searchList =
+      filterValue === ""
+        ? hdbPrices
+        : hdbPrices.filter((item) =>
+            item.town.match(filterValue.toUpperCase())
+          );
+
+    sethdbList(searchList);
   };
 
-  console.log(hdbList);
   return (
-    <MDBContainer>
+    <div className="App">
       <form
-        style={{
-          margin: "auto",
-          padding: "15px",
-          maxWidth: "400px",
-          alignContent: "center",
+        onSubmit={(e) => {
+          handleFilter(e);
         }}
-        className="d-flex input-group w-auto"
-        onSubmit={handleFilter}
       >
         <input
           type="text"
@@ -57,53 +69,37 @@ export default function HDBPrices() {
           placeholder="Search"
           onChange={(e) => setValue(e.target.value)}
         />
-        <MDBBtn type="submit" color="dark">
+
+        <Button variant="primary" type="submit">
           Submit
-        </MDBBtn>
+        </Button>
       </form>
 
       <div style={{ marginTop: "100px" }}>
-        <MDBRow>
-          <MDBCol size="12">
-            <MDBTable>
-              <MDBTableHead dark>
-                <tr>
-                  <th scope="col">Index</th>
-                  <th scope="col">Town</th>
-                  <th scope="col">Flat Type</th>
-                  <th scope="col">Block</th>
-                  <th scope="col">Floor Area Sq</th>
-                  <th scope="col">Lease Commence Date</th>
-                  <th scope="col">Item Resale Price</th>
-                </tr>
-              </MDBTableHead>
-              {hdbList.length === 0 ? (
-                <MDBTableBody className="align-center mb-0">
-                  <tr>
-                    <td colSpan={8} className="text-center mb-0">
-                      No data found
-                    </td>
-                  </tr>
-                </MDBTableBody>
-              ) : (
-                hdbList.map((item, index) => (
-                  <MDBTableBody key={index}>
-                    <tr>
-                      <th scope="row">{index + 1}</th>
-                      <td>{item.town}</td>
-                      <td>{item.flat_type}</td>
-                      <td>{item.block}</td>
-                      <td>{item.floor_area_sqm}</td>
-                      <td>{item.lease_commence_date}</td>
-                      <td>{item.resale_price}</td>
-                    </tr>
-                  </MDBTableBody>
-                ))
-              )}
-            </MDBTable>
-          </MDBCol>
-        </MDBRow>
+        <DataTable
+          removableSort
+          value={hdbList}
+          paginator
+          rows={10}
+          rowsPerPageOptions={[5, 10, 25, 50]}
+          tableStyle={{ minWidth: "50rem" }}
+        >
+          <Column field="town" header="Town" sortable></Column>
+          <Column field="flat_type" header="Flat Type" sortable></Column>
+          <Column field="block" header="Block" sortable></Column>
+          <Column
+            field="floor_area_sqm"
+            header="Floor Area Sq"
+            sortable
+          ></Column>
+          <Column
+            field="lease_commence_date"
+            header="Lease Commence Date"
+            sortable
+          ></Column>
+          <Column field="resale_price" header="Resale Price" sortable></Column>
+        </DataTable>
       </div>
-    </MDBContainer>
+    </div>
   );
 }
