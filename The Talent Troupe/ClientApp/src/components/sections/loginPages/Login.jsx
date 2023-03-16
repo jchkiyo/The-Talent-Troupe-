@@ -10,6 +10,7 @@ export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState("");
+    
     const onLogin = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)

@@ -5,12 +5,11 @@ import About from "./page/About";
 import Login from "./page/Login";
 import Signup from "./page/Signup";
 import Home from "./page/Home";
-import Viewhdbprices from "./page/Viewhdbprices";
-import Bigpurchaseplanner from "./page/Bigpurchaseplanner";
 import PrivateRoutes from "../PrivateRoutes";
-import PlannerForm from "./page/PlannerForm";
+import BigPurchasePlanner from "./page/BigPurchasePlanner";
 import MyProfile from "./page/MyProfile";
 import Retirementplanner2 from "./page/retirementplanner2";
+import HDBPrices from "./page/HDBPrices";
 export default function Routing() {
   return (
     <Routes>
@@ -21,25 +20,21 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/retirementplanner2" element={<Retirementplanner2 />} />
       </Route>
-     
+
       <Route path="/about" element={<About />} />
 
       <Route path="/login" element={<Login />} />
 
       <Route path="/signup" element={<Signup />} />
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
-      </Route>
-      <Route exact element={<PrivateRoutes />}>
-        <Route path="/viewhdbprices" element={<Viewhdbprices />} />
+        <Route path="/viewhdbprices" element={<HDBPrices />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
         <Route path="/Myprofile" element={<MyProfile />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/plannerform" element={<PlannerForm />} />
+        <Route path="/bigpurchaseplanner" element={<BigPurchasePlanner />} />
       </Route>
-
     </Routes>
   );
 }
