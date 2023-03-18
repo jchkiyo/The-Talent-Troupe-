@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using The_Talent_Troupe.Models;
-
+using The_Talent_Troupe.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

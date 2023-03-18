@@ -14,7 +14,7 @@ using The_Talent_Troupe.Models;
 namespace The_Talent_Troupe.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("api/AppUser")]
     [ApiController]
     public class AppUserController : Controller
     {
@@ -44,35 +44,36 @@ namespace The_Talent_Troupe.Controllers
         [HttpPost("Login")]
         public IActionResult Login(AppUser user)
         {
-            if (!AuthenticateUser(user.Id, user.Password,
-                                  out ClaimsPrincipal principal))
-            {
-                message="Incorrect Username or Password";
-                return BadRequest(message);
+            // if (!AuthenticateUser(user.Id, user.Password,
+            //                       out ClaimsPrincipal principal))
+            // {
+            //     message="Incorrect Username or Password";
+            //     return BadRequest(message);
             
-            }
-            else
-            {
-                HttpContext.SignInAsync(
-                   CookieAuthenticationDefaults.AuthenticationScheme,
-                   principal,
-               new AuthenticationProperties
-               {
-                   IsPersistent = true
-               });
+            // }
+            // else
+            // {
+            //     HttpContext.SignInAsync(
+            //        CookieAuthenticationDefaults.AuthenticationScheme,
+            //        principal,
+            //    new AuthenticationProperties
+            //    {
+            //        IsPersistent = true
+            //    });
 
-                // Update the Last Login Timestamp of the User
-                int num_affected = DBUtl.ExecSQL(LASTLOGIN_SQL, user.Id);
+            //     // Update the Last Login Timestamp of the User
+            //     int num_affected = DBUtl.ExecSQL(LASTLOGIN_SQL, user.Id);
 
-                if (num_affected!=0)
-                {
-                    message = "success";
-                    return Ok(message);
-                }
-                return Ok(1);
+            //     if (num_affected!=0)
+            //     {
+            //         message = "success";
+            //         return Ok(message);
+            //     }
+            //     return Ok(1);
 
                
-            }
+            // }
+            return Ok(1);
         }
 
         private bool AuthenticateUser(string uid, string pw,
