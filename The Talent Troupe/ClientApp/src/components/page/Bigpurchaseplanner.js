@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./BigPurchasePlanner.css";
+import { Link, useLocation } from "react-router-dom";
+import "./Bigpurchaseplanner.css";
+
 
 
 export default function PlannerForm(props) {
@@ -12,8 +13,13 @@ export default function PlannerForm(props) {
   const [MonthlyContribution, setMonthlyContribution] = useState(1);
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
+  
+  
+  
+  let location = useLocation()
+  console.log(location.state.value);
 
-
+  //console.log(newValue);
   
   return (
     <form className="planner-form">

@@ -6,27 +6,20 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-// import { InputText } from "primereact/inputtext";
-
-// import DropdownButton from "react-bootstrap/DropdownButton";
-// import Dropdown from "react-bootstrap/Dropdown";
+import {NavBtn, NavBtnLink, NavLink} from "../NavbarElements";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
+import 'primeflex/primeflex.css';
+import "./HDBPrices.css";
 
 export default function HDBPrices() {
   const [hdbPrices, sethdbPrices] = useState([]);
   const [value, setValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
   const [hdbList, sethdbList] = useState([]);
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [postPerPage, setPostperPage] = useState(10);
-
-
-  // const dataSlicing = () => {
-  //   const indexofLastPage = currentPage * postPerPage;
-  //   const indexofFirstPage = indexofLastPage - postPerPage;
-  //   const currentPosts = hdbPrices.slice(indexofFirstPage, indexofLastPage);
-
-  //   sethdbList(currentPosts);
-  // };
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     fetchHdbPrice();
@@ -41,7 +34,7 @@ export default function HDBPrices() {
     });
   };
 
-  console.log(value);
+  console.log(selectedProduct);
 
   const handleFilter = (e) => {
     e.preventDefault();
@@ -59,6 +52,8 @@ export default function HDBPrices() {
 
   return (
     <div className="App">
+      <div className="box">
+        <div className = "box-left">
       <form
         onSubmit={(e) => {
           handleFilter(e);
@@ -70,13 +65,38 @@ export default function HDBPrices() {
           placeholder="Search"
           onChange={(e) => setValue(e.target.value)}
         />
-
+  
         <Button variant="primary" type="submit">
           Submit
         </Button>
-      </form>
 
-      <div style={{ marginTop: "100px" }}>
+      
+      </form>
+      </div>
+     
+      <div className = "box-push">
+      <NavBtnLink to = "/Bigpurchaseplanner"
+      state={{value:selectedProduct}}
+      
+
+      >
+        Choose this resale price
+      </NavBtnLink>
+
+      </div>
+      
+      </div>
+
+     
+
+
+     
+   
+
+    
+ 
+
+      <div style={{ marginTop: "10px" }}>
         <DataTable
           removableSort
           value={hdbList}
@@ -84,6 +104,9 @@ export default function HDBPrices() {
           rows={10}
           rowsPerPageOptions={[5, 10, 25, 50]}
           tableStyle={{ minWidth: "50rem" }}
+          selectionMode ="single"
+          selection={selectedProduct}
+          onSelectionChange={(e) => setSelectedProduct(e.value.resale_price)}
         >
           <Column field="town" header="Town" sortable></Column>
           <Column field="flat_type" header="Flat Type" sortable></Column>
