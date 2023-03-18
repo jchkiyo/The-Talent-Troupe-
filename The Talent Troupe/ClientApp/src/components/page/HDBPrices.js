@@ -6,11 +6,11 @@ import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
-import {NavBtn, NavBtnLink, NavLink} from "../NavbarElements";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
+import { NavBtnLink} from "../NavbarElements";
+//import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
+//import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import 'primeflex/primeflex.css';
 import "./HDBPrices.css";
 

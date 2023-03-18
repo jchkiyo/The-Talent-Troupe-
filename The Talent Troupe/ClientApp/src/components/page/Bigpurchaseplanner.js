@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Bigpurchaseplanner.css";
 
 
@@ -16,8 +16,8 @@ export default function PlannerForm(props) {
   
   
   
-  let location = useLocation()
-  console.log(location.state.value);
+  // let location = useLocation()
+  // console.log(location.state.value);
 
   //console.log(newValue);
   

@@ -10,7 +10,7 @@ export default function ViewHDBPrices () {
 					<img className='Logo_1' src = {Pic1} alt = "Pic1" />
 					<div className='TOWN_1'>
 						<span className='WOODLANDS_1'>WOODLANDS</span>
-					</div>
+					</div>hhaha
 					<div className='FLATTYPE_1'>
 						<span className='FLATType_1'>2-ROOM</span>
 					</div>
