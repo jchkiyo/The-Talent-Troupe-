@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 using The_Talent_Troupe.Models;
 
@@ -29,7 +30,8 @@ namespace The_Talent_Troupe
             services.AddDbContext<The_Talent_Troupe.Models.AppDbContext>();
             //services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddControllers();
-            
+            services.AddCors();
+
             services.AddDbContext<AppDbContext>(
                   options =>
                      options
@@ -54,6 +56,7 @@ namespace The_Talent_Troupe
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
                });
+            app.UseCors(options=> options.WithOrigins("http://localhost:7158").AllowAnyHeader().AllowAnyMethod());
 
         }
     }
