@@ -33,6 +33,21 @@ export default function Retirementplanner2() {
         const newvalue = event.target.value
         setIncome(newvalue)
     }
+
+    const [showTextBox, setShowTextBox] = useState(false);
+    const [showCustom, setShowCustom] = useState(false);
+
+    const handleShowCustom = () => {
+        setShowCustom(true);
+    };
+
+    const handleShowTextBox = () => {
+        setShowTextBox(true);
+    };
+
+    const handleReset = () => {
+        setShowTextBox(false);
+    };
    
 
     return (
@@ -58,13 +73,13 @@ export default function Retirementplanner2() {
                 <input id = "slider" className={data3>50?'heigh':'less'} type="range" min="18" max="100" step="1" value={data3} onChange={(e)=>setData3(e.target.value)} />
                 <p class = "number">{data3}</p>
                 <h1 class = "h1">How much income are you saving per month?</h1>
-                <input onChange = {change} type="text" />
+                <input onChange = {change} type="number" />
                 <br></br>
                 <Button as="input" variant="success" type="submit" value="Submit" onClick = {click} />{' '}
 
                 <h1 class = "h1">What is your desired retirement lifestyle?</h1>
                 <br></br>
-                <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                <ToggleButtonGroup type="radio" name="options"  >
                     <ToggleButton id="tbg-radio-1" value={radiovalues[0]} onChange= {radiochange}>
                         Modest - 2,300
                     </ToggleButton>
@@ -74,14 +89,36 @@ export default function Retirementplanner2() {
                     <ToggleButton id="tbg-radio-3" value={radiovalues[2]} onChange= {radiochange}>
                         Premier - 5,200
                     </ToggleButton>
+                    <ToggleButton id="tbg-radio-4" value="custom" onClick={handleShowCustom}>
+                        Custom
+                        </ToggleButton>
+                        {showCustom && (
+                        <div style={{ marginLeft: "10px" }}>
+                            <input type="number" onChange={radiochange} />
+                        </div>
+                        )}
                 </ToggleButtonGroup>
                 <br></br>
                 <Button as="input" variant="success" type="submit" value="Submit" onClick = {radioclick} />{' '}
                 <br></br>
-                <Button size="lg" id = "button" onClick={click}>
-                  Calculate
-                </Button>{' '}
-                
+                <div className = "buttongroup">
+                    <Button size="lg" id = "button" onClick={handleShowTextBox}>
+                    Calculate
+                    </Button>
+                    <Button  size = "lg" id = "reset" onClick={handleReset}>Reset</Button>
+                </div>
+                <br></br>
+                {showTextBox && (
+                        <div className = "input-container">
+                             <h1 class = "h1">Here are your estimated requirement funds</h1>
+                            <div className="info">
+                                <h1>You plan to retire at {data2}</h1>
+                                <h1>You are planning for {data3} of retirement</h1>
+                            </div>
+
+                        </div>
+                    )}
+
             </div>
             <img
                 alt=""
@@ -93,3 +130,4 @@ export default function Retirementplanner2() {
       </>
     );
 }
+

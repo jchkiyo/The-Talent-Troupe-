@@ -7,10 +7,24 @@
     position: relative;
   }
   #button {
-    background-color: red; 
+    background-color: red;
     text-align: center;
     border: none;
-    font-size: 50px;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .buttongroup {
+    display: flex;
+    gap: 10px; /* add a 10-pixel gap between buttons */
+  }
+  #reset{
+    margin-left: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+    background-color: red;
   }
   .backgroundOverlayFx {
     width: 483px;
@@ -75,4 +89,12 @@
 
   color: white;
   font-size: 20px;
+}
+.input-container
+{
+  background-color: grey;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
 }
