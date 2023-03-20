@@ -227,7 +227,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
       return response.json();
     })
     .then(data => {
-      // Handle the response data here
+      console.log(data);
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
