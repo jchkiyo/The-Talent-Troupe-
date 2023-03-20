@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 // import Axios from "axios";
-import "./Bigpurchaseplanner.css";
+import "./BigPurchasePlanner.css";
 
 // const style = {
 //     form: `h-14 w-full max-w-[40%] flex text-xl flex bottom-0`,
