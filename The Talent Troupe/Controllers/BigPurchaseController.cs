@@ -5,10 +5,11 @@ using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using The_Talent_Troupe.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace The_Talent_Troupe.Controllers
 {
-
+   [EnableCors("Policy1")]
    [Route("api/BigPurchase")]
    [ApiController]
     public class BigPurchaseController : Controller
@@ -21,6 +22,7 @@ namespace The_Talent_Troupe.Controllers
         };
         IFirebaseClient client;
 
+        
         [HttpPost("CreatePlan")]
         public IActionResult CreatePlan (BPurchase bigpurchase)
         {
