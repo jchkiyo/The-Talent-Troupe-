@@ -1,12 +1,12 @@
 
 import React, { useState, useContext, useEffect } from "react";
-import { auth, db } from "./sections/firebase";
+import { auth, db } from "../sections/firebase";
 import { signOut } from "firebase/auth";
 import {  NavBtn, NavBtnLink, NavLink } from './NavbarElements'
-import { AuthContext } from './AuthProvider'
+import { AuthContext } from '../AuthProvider'
 import { useNavigate } from "react-router-dom";
 //import { query } from "firebase/database";
-import { endSession } from "./session";
+import { endSession } from "../session";
 //import { async } from "@firebase/util"
 import { collection , getDocs, where, query} from "firebase/firestore";
 
@@ -56,15 +56,15 @@ function SignedOutLinks() {
     
     return (
         <>
-        <NavLink to="/" >
+        <NavLink to="/" style={{ textDecoration: 'none' }}>
             Home
         </NavLink>
-        <NavLink to="/about" >
+        <NavLink to="/about" style={{ textDecoration: 'none' }}>
             About Us
         </NavLink>
-        {currentUser && <NavLink to='/Retirementplanner'>Retirement Planner</NavLink>}
-        {currentUser && <NavLink to='/Bigpurchaseplanner' state={{data: currentUser.uid}}>Big Purchase Planner</NavLink>}
-        {currentUser && <NavLink to='/Myprofile'>My Profile</NavLink>}
+        {currentUser && <NavLink to='/Retirementplanner' style={{ textDecoration: 'none' }}>Retirement Planner</NavLink>}
+        {currentUser && <NavLink to='/Bigpurchaseplanner' state={{data: currentUser.uid}} style={{ textDecoration: 'none' }}>Big Purchase Planner</NavLink>}
+        {currentUser && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }}>My Profile</NavLink>}
         <div className="buttons">
        <a onClick={clickLogin} href="/" >
         <NavBtn>

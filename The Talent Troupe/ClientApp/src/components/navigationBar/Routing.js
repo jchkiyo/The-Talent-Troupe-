@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 //import Homepage from "./pages/HomePage";
-import Retirementplanner from "./page/RetirementPlanner";
-import About from "./page/About";
-import Login from "./page/Login";
-import Signup from "./page/Signup";
-import Home from "./page/Home";
-import PrivateRoutes from "../PrivateRoutes";
-import Bigpurchaseplanner from "./page/Bigpurchaseplanner";
-import MyProfile from "./page/MyProfile";
-import Retirementplanner2 from "./page/retirementplanner2";
-import HDBPrices from "./page/HDBPrices";
+import Retirementplanner from "../page/RetirementPlanner";
+import About from "../page/About";
+import Login from "../page/Login";
+import Signup from "../page/Signup";
+import Home from "../page/Home";
+import PrivateRoutes from "../../PrivateRoutes";
+import BigPurchasePlanner from "../page/BigPurchasePlanner";
+import MyProfile from "../page/MyProfile";
+import Retirementplanner2 from "../page/retirementplanner2";
+import HDBPrices from "../page/HDBPrices";
 export default function Routing() {
   return (
     <Routes>
@@ -33,7 +33,7 @@ export default function Routing() {
         <Route path="/Myprofile" element={<MyProfile />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
+        <Route path="/bigpurchaseplanner" element={<BigPurchasePlanner />} />
       </Route>
     </Routes>
   );

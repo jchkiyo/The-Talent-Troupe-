@@ -2,7 +2,7 @@ import { Nav, NavLink, Bars, NavMenu } from "./NavbarElements";
 
 import SignedOutLinks from "./SignedOutLinks";
 import React from "react";
-import { AuthProvider } from "./AuthProvider";
+import { AuthProvider } from "../AuthProvider";
 
 const Navigation = () => {
   return (
@@ -10,7 +10,7 @@ const Navigation = () => {
       <Nav>
         <NavLink to="/">
           <img
-            src={require("../assets/teamlogo.png")}
+            src={require("../../assets/teamlogo.png")}
             alt="The Talent Troupe logo"
             className="navigation-menu-image"
           ></img>

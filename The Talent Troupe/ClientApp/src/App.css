@@ -84,7 +84,8 @@ footer > menu {
 }
 
 .footer-header {
-  margin-bottom: -1.25rem;
+  margin-bottom: -0.5rem;
+  font-size: 30px;
 }
 
 .footer-links {
@@ -104,8 +105,8 @@ footer > menu {
 
 .footer-links > a:hover,
 .footer-links > Link:hover {
-  background-color: #495e57;
-  text-decoration: underline;
+  color: #00ff37;
+  text-decoration: none;
 }
 
 .footer-pic {
