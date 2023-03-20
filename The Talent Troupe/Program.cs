@@ -3,11 +3,23 @@ using The_Talent_Troupe.Models;
 using The_Talent_Troupe.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddCors(options=> {
+    options.AddPolicy("Policy1",
+    policy=> {
+        policy.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+
+    }
+    );
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,6 +32,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+ app.UseCors();
 
 
 app.MapControllerRoute(

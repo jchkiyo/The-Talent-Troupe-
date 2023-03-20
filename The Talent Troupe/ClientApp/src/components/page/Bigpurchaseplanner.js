@@ -1,27 +1,36 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+// import Axios from "axios";
 import "./Bigpurchaseplanner.css";
 
-
+// const style = {
+//     form: `h-14 w-full max-w-[40%] flex text-xl flex bottom-0`,
+//     button: `w-[20%] bg-green-500`,
+//   };
 
 export default function PlannerForm(props) {
 
   const [PlanName, setPlanName] = useState("");
-  const [PurchaseType, setPurchaseType] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
   const [TimeToSave, setTimeToSave] = useState("");
   const [MonthlyContribution, setMonthlyContribution] = useState(1);
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
   
-  
-  
-  // let location = useLocation()
-  // console.log(location.state.value);
 
-  //console.log(newValue);
+  let location = useLocation()
+  const userID = location.state?.data;
+
+  // useEffect(()=> {
+  //   setAmountToSave(() =>{
+  //     if (location.state!=null)
+  //       return location.state.value
+  //     else return null;
+  //   });
+  // }, []);
   
   return (
+    <>
     <form className="planner-form">
       <div>
         <label>Plan Name</label> <br></br>
@@ -37,7 +46,7 @@ export default function PlannerForm(props) {
         ></input>
       </div>
 
-      <div>
+      {/* <div>
         <label>Big Purchase Type</label> <br></br>
         <select
           id="bigpurchasetype"
@@ -55,7 +64,8 @@ export default function PlannerForm(props) {
         View recent HDB prices here!
       </Link>
       </div>
-      }
+      } */}
+
       <div>
         <label>Amount to save</label> <br></br>
         <input
@@ -112,7 +122,6 @@ export default function PlannerForm(props) {
 
           onChange={ (e) => {
             setcreationDate(e.target.value);
-            props.updateTimes(new Date(e.target.value));
           }}
 
         ></input>
@@ -130,18 +139,106 @@ export default function PlannerForm(props) {
         ></textarea>
       </div>
 
-      <div>
+      
+    </form>
+
+    <div className="planner-form">
         <br></br>
         {
-            PlanName.length>0 &&
-            PurchaseType.length>0 &&
-            AmountToSave > 0 &&
-            MonthlyContribution !== 1 &&
-        <Link className="action-button2" to="/confirmation">
-          SAVE PLAN
-        </Link>
+            PlanName.length>0 && AmountToSave > 0 && MonthlyContribution !== 1 &&
+          <SendData
+            userID={userID}
+            planName = {PlanName}
+            amountToSave = {AmountToSave}
+            monthlyContribution = {MonthlyContribution}
+            creationDate = {creationDate}
+            comments = {comments}
+          />
         }
       </div>
-    </form>
+    </>
   );
 }
+
+
+
+
+const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments, url }) => {
+  
+  const handleFormSubmit = (event) => {
+
+    event.preventDefault();
+    console.log(userID);
+
+    // let headers = new Headers();
+    // headers.append('Content-Type', 'application/json');
+    // headers.append('Accept', 'application/json');
+    // headers.append('Origin','https://localhost:44452');
+    // headers("Access-Control-Allow-Origin: https://localhost:44452");
+    // headers('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+    // headers("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+    // Axios.post('https://localhost:7158/api/BigPurchase/CreatePlan',{
+    //   userid: userID,
+    //   planName: planName,
+    //   amountToSave: amountToSave,
+    //   monthlyContribution: monthlyContribution,
+    //   dateOfCreation: creationDate,
+    //   comments: comments,
+      
+    // },
+    // {
+    //   headers:{
+    //     'Content-Type': 'application/json',
+    //     'Access-Control-Allow-Origin': '*',
+    //   },
+    // },
+    // )
+    //   .then((response) => {
+    //     console.log(response);
+    //     // Do something with the response, e.g. show a success message
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //     // Handle the error, e.g. show an error message
+    //   });
+    fetch('https://localhost:7158/api/BigPurchase/CreatePlan', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        // Request data goes here
+        userid: userID,
+        planName: planName,
+        amountToSave: amountToSave,
+        monthlyContribution: monthlyContribution,
+        dateOfCreation: creationDate,
+        comments: comments,
+      }),
+    
+      mode: 'cors'
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Handle the response data here
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      {/* Your form fields here */}
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+

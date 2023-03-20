@@ -29,8 +29,9 @@ namespace The_Talent_Troupe
         {
             services.AddDbContext<The_Talent_Troupe.Models.AppDbContext>();
             //services.AddMvc(options => options.EnableEndpointRouting = false);
+            
+
             services.AddControllers();
-            services.AddCors();
 
             services.AddDbContext<AppDbContext>(
                   options =>
@@ -49,14 +50,20 @@ namespace The_Talent_Troupe
             }
 
             app.UseStaticFiles();
-            app.UseMvc(
-               routes =>
+            // app.UseMvc(
+            //    routes =>
+            //    {
+            //        routes.MapRoute(
+            //         name: "default",
+            //         template: "{controller=Home}/{action=Index}/{id?}");
+            //    });
+              
+               app.UseRouting();
+               app.UseEndpoints(endpoints=> 
                {
-                   routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllers();
                });
-            app.UseCors(options=> options.WithOrigins("http://localhost:7158").AllowAnyHeader().AllowAnyMethod());
+            
 
         }
     }
