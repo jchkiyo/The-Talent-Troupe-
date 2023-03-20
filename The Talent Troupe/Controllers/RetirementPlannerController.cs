@@ -5,10 +5,10 @@ using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using The_Talent_Troupe.Models;
-
+using Microsoft.AspNetCore.Cors;
 namespace The_Talent_Troupe.Controllers
 {
-
+   [EnableCors("Policy1")]
    [Route("api/RetirementPlanner")]
    [ApiController]
     public class RetirementPlannerController : Controller
