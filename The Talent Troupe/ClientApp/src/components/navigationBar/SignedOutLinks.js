@@ -59,9 +59,6 @@ function SignedOutLinks() {
         <NavLink to="/" style={{ textDecoration: 'none' }}>
             Home
         </NavLink>
-        <NavLink to="/about" style={{ textDecoration: 'none' }}>
-            About Us
-        </NavLink>
         {currentUser && <NavLink to='/Retirementplanner' style={{ textDecoration: 'none' }}>Retirement Planner</NavLink>}
         {currentUser && <NavLink to='/Bigpurchaseplanner' state={{data: currentUser.uid}} style={{ textDecoration: 'none' }}>Big Purchase Planner</NavLink>}
         {currentUser && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }}>My Profile</NavLink>}

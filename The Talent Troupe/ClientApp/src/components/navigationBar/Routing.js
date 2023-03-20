@@ -1,10 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Retirementplanner from "../page/RetirementPlanner";
-import About from "../page/About";
 import Login from "../page/Login";
 import Signup from "../page/Signup";
 import Home from "../page/Home";
-import PrivateRoutes from "../../PrivateRoutes";
+import PrivateRoutes from "./PrivateRoutes";
 import BigPurchasePlanner from "../page/BigPurchasePlanner";
 import MyProfile from "../page/MyProfile";
 import Retirementplanner2 from "../page/retirementplanner2";
@@ -19,8 +18,6 @@ export default function Routing() {
       <Route exact element={<PrivateRoutes />}>
         <Route path="/retirementplanner2" element={<Retirementplanner2 />} />
       </Route>
-
-      <Route path="/about" element={<About />} />
 
       <Route path="/login" element={<Login />} />
 
