@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 // import Axios from "axios";
-import "./Bigpurchaseplanner.css";
+import "./BigPurchasePlanner.css";
 
 // const style = {
 //     form: `h-14 w-full max-w-[40%] flex text-xl flex bottom-0`,
@@ -227,7 +227,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
       return response.json();
     })
     .then(data => {
-      // Handle the response data here
+      console.log(data);
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
