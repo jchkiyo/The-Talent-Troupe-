@@ -37,7 +37,7 @@ namespace The_Talent_Troupe.Controllers
 
                 if(setResponse.StatusCode ==System.Net.HttpStatusCode.OK)
                 {
-                    return Ok("Successfully added");
+                    return Ok(data.Id);
                 }
                 else{
                     return BadRequest("An error occured");
