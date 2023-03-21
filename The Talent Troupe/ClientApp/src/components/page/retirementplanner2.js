@@ -1,10 +1,12 @@
 
 import './retirementplanner2.css';
 import old from "../../assets/old.png";
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
+import Axios from "axios";
+
 
 
 
@@ -17,6 +19,7 @@ export default function Retirementplanner2() {
     const [data3,setData3] = useState(0)
     const [radioValue, setRadioValue] = useState(0);
     const [income, setIncome] = useState(0);
+    const [cpfPrices, setcpfPrices] = useState([]);
 
     const click = () =>{
         alert(income)
@@ -48,6 +51,31 @@ export default function Retirementplanner2() {
     const handleReset = () => {
         setShowTextBox(false);
     };
+    useEffect(() => {
+        fetchCpf();
+        convertToCpf();
+      }, []);
+    
+    const fetchCpf= () => {
+        Axios.get(
+          `https://data.gov.sg/api/action/datastore_search?resource_id=ca512365-7f3a-4e5c-a7cd-8ea2807931b7&limit=100000`
+        ).then((res) => {
+          setcpfPrices(res.data.result.records);
+        });
+      };
+
+      let newCPFprice;
+
+      const convertToCpf = () => {
+        setcpfPrices(cpfPrices[(cpfPrices.length)-1]);
+        newCPFprice = cpfPrices.map(index => index.interest_rate);
+      }
+      
+      
+
+      console.log(newCPFprice);
+
+    
    
 
     return (
