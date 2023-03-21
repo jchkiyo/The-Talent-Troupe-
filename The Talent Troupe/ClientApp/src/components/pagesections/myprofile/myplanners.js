@@ -28,24 +28,23 @@ export default function MyPlanners() {
 
   let location = useLocation()
   const userID = location.state?.data;
-  const [retirementPlans] = useState([]);
-  const [bigPurchasePlans, setBigPurchasePlans] = useState([]);
-
-
-
-
-  //  console.log(userID);
+  const [retirementPlans, setretirementPlans] = useState([]);
+  const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
 
     useEffect(() => {
         async function fetchPlans() {
             try {
                 const response = await fetch('https://localhost:7158/api/BigPurchase/GetUserPlans/' + userID);
                 const data = await response.json();
-                
-                //setRetirementPlans(data.retirementPlans);
-                console.log("Successfully updated BigPurchasePlans");
-                setBigPurchasePlans(data);
-                
+                setbigPurchasePlans(data);
+
+                response = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
+                const retirementplanData = await response.json();
+                setretirementPlans(retirementplanData);
+
+                console.log("Successfully updated plans with API");
+
+
             } catch (error) {
                 console.error('Error fetching plans:', error);
             }
