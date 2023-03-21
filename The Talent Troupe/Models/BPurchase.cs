@@ -14,5 +14,6 @@ namespace The_Talent_Troupe.Models
         public double monthlyContribution { get; set; }
         public DateOnly dateOfCreation { get; set; }
         public string comments { get; set; }
+        public string result { get; set; }
     }
 }
