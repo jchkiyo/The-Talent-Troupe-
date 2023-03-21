@@ -53,29 +53,28 @@ export default function Retirementplanner2() {
     };
     useEffect(() => {
         fetchCpf();
+        convertToCpf();
       }, []);
     
     const fetchCpf= () => {
         Axios.get(
-          `https://data.gov.sg/api/action/datastore_search?resource_id=ca512365-7f3a-4e5c-a7cd-8ea2807931b7&limit=10000`
+          `https://data.gov.sg/api/action/datastore_search?resource_id=ca512365-7f3a-4e5c-a7cd-8ea2807931b7&limit=100000`
         ).then((res) => {
           setcpfPrices(res.data.result.records);
         });
       };
 
-    //get the last 5 items in the array of objects
-    const numOfItems = 5;
-    const lastItems = cpfPrices.slice(-numOfItems);
-    //console.log(lastItems);
-    const dataitems = lastItems.map((lastItems) => [lastItems.account_type, lastItems.interest_rate]);
-    console.log(dataitems);
-    
-    //reverse order of array and find the array with account_type = retirement and interest_rate is not Na
-    const targetCpf = dataitems.reverse().find((dataitems) => {
-        return dataitems[0] === 'Retirement' && !isNaN(dataitems[1]);
-      });
+      let newCPFprice;
+
+      const convertToCpf = () => {
+        setcpfPrices(cpfPrices[(cpfPrices.length)-1]);
+        newCPFprice = cpfPrices.map(index => index.interest_rate);
+      }
       
-      console.log(targetCpf[1]);
+      
+
+      console.log(newCPFprice);
+
     
    
 
