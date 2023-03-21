@@ -1,11 +1,11 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./myplanner.css";
 import Pic1 from "../../../assets/retirementplanpic.png";
 import Pic2 from "../../../assets/bigpurchasepic.png";
-
+import { useLocation } from "react-router-dom";
 export default function MyPlanners() {
 
     // This two useStates retirementPlans, bigPurchasePlans will be data pulled from API in the future
@@ -17,13 +17,32 @@ export default function MyPlanners() {
         ]
     );
 
-    const [bigPurchasePlans] = useState(
-        [
-            {planName: "Punggol HDB Plan", creationDate: "21/2/23", amountToSave: 500000, monthlyContribution: 2000, comments: "Low Floor"},
-            {planName: "Sengkang HDB Plan", creationDate: "12/3/23", amountToSave: 560000, monthlyContribution: 2000, comments: "High Floor"}
-        ]
-    );
-
+    // const [bigPurchasePlans] = useState(
+    //     [
+    //         {planName: "Punggol HDB Plan", creationDate: "21/2/23", amountToSave: 500000, monthlyContribution: 2000, comments: "Low Floor"},
+    //         {planName: "Sengkang HDB Plan", creationDate: "12/3/23", amountToSave: 560000, monthlyContribution: 2000, comments: "High Floor"}
+    //     ]
+    // );
+  let location = useLocation()
+  const userID = location.state?.data;
+    const [bigPurchasePlans, setBigPurchasePlans] = useState([]);
+   console.log(userID);
+    useEffect(() => {
+        async function fetchPlans() {
+            try {
+                const response = await fetch('https://localhost:7158/api/BigPurchase/GetUserPlans/' + userID);
+                const data = await response.json();
+                
+                //setRetirementPlans(data.retirementPlans);
+                setBigPurchasePlans(data);
+                
+            } catch (error) {
+                console.error('Error fetching plans:', error);
+            }
+        }
+        fetchPlans();
+    }, [userID]);
+    
 
     return(
         <div>
@@ -49,13 +68,13 @@ export default function MyPlanners() {
                 <h1>Your Big Purchase Plans</h1>
             </article>
 
-            <div className = "flex flex-wrap">
+            { <div className = "flex flex-wrap">
                 {bigPurchasePlans.map( (bigPurchasePlans) => {return(
-                    <BigPurchasePlanCard key={bigPurchasePlans.PlanName+bigPurchasePlans.creationDate+"key"} planName={bigPurchasePlans.planName} creationDate={bigPurchasePlans.creationDate} 
+                    <BigPurchasePlanCard key={bigPurchasePlans.planName+bigPurchasePlans.dateOfCreation+"key"} planName={bigPurchasePlans.planName} creationDate={bigPurchasePlans.creationDate} 
                                         amountToSave={bigPurchasePlans.amountToSave} monthlyContribution={bigPurchasePlans.monthlyContribution} comments={bigPurchasePlans.comments}
                     />
                 );})}
-            </div>
+            </div> }
             
             
 
@@ -112,11 +131,11 @@ function BigPurchasePlanCard(props) {
                     {props.planName}
                 </p>
                 <p class="text-slate-500 font-medium">
-                    created: {props.creationDate}
+                    created: {props.dateOfCreation}
                 </p>
                 </div>
                 <BigPurchaseViewPlans 
-                    planName={props.planName} creationDate={props.creationDate} 
+                    planName={props.planName} dateOfCreation={props.dateOfCreation} 
                     amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
                 />
             </div>
@@ -188,7 +207,7 @@ function RetirementViewPlans(props) {
         >
           <Modal.Header closeButton>
             <Modal.Title>{props.planName} Details</Modal.Title>
-            <Modal.Title>Created on {props.creationDate}</Modal.Title>
+            <Modal.Title>Created on {props.dateOfCreation}</Modal.Title>
           </Modal.Header>
 
           <Modal.Body>

@@ -14,6 +14,7 @@ namespace The_Talent_Troupe.Models
         public int yearsofincome { get; set; }
         public double savepermonth { get; set; }
         public double desiredretirement { get; set; }
+        
 
         
     }
