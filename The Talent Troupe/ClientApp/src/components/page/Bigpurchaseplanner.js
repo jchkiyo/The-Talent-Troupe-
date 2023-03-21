@@ -168,40 +168,8 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
   const handleFormSubmit = (event) => {
 
     event.preventDefault();
-    console.log(userID);
+    console.log("Inside SendData, userID: ", userID);
 
-    // let headers = new Headers();
-    // headers.append('Content-Type', 'application/json');
-    // headers.append('Accept', 'application/json');
-    // headers.append('Origin','https://localhost:44452');
-    // headers("Access-Control-Allow-Origin: https://localhost:44452");
-    // headers('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-    // headers("Access-Control-Allow-Headers: Content-Type, Authorization");
-
-    // Axios.post('https://localhost:7158/api/BigPurchase/CreatePlan',{
-    //   userid: userID,
-    //   planName: planName,
-    //   amountToSave: amountToSave,
-    //   monthlyContribution: monthlyContribution,
-    //   dateOfCreation: creationDate,
-    //   comments: comments,
-      
-    // },
-    // {
-    //   headers:{
-    //     'Content-Type': 'application/json',
-    //     'Access-Control-Allow-Origin': '*',
-    //   },
-    // },
-    // )
-    //   .then((response) => {
-    //     console.log(response);
-    //     // Do something with the response, e.g. show a success message
-    //   })
-    //   .catch((error) => {
-    //     console.error(error);
-    //     // Handle the error, e.g. show an error message
-    //   });
     fetch('https://localhost:7158/api/BigPurchase/CreatePlan', {
       method: 'POST',
       headers: {
