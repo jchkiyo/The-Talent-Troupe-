@@ -26,7 +26,8 @@
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
 
 ## Launch Guide
-
+Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.
+You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assist you
 * If using Git-Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
 * Else you may download [here](https://github.com/jchkiyo/The-Talent-Troupe-/archive/refs/heads/main.zip)
 * Once downloaded, open in your IDE and navigate to ClientApp via `cd "The-Talent-Troupe/The Talent Troupe/ClientApp"`
