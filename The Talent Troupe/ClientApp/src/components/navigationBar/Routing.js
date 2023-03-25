@@ -4,7 +4,7 @@ import Login from "../page/Login";
 import Signup from "../page/Signup";
 import Home from "../page/Home";
 import PrivateRoutes from "./PrivateRoutes";
-import BigPurchasePlanner from "../page/BigPurchasePlanner";
+import Bigpurchaseplanner from "../page/BigPurchasePlanner";
 import MyProfile from "../page/MyProfile";
 import Retirementplanner2 from "../page/retirementplanner2";
 import HDBPrices from "../page/HDBPrices";
@@ -29,7 +29,7 @@ export default function Routing() {
         <Route path="/Myprofile" element={<MyProfile />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/bigpurchaseplanner" element={<BigPurchasePlanner />} />
+        <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
       </Route>
     </Routes>
   );
