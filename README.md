@@ -19,16 +19,14 @@ We are a bunch of
 
 ## Features
 
+### View HDB Prices
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 |                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
 | --------------------------- | :--------------------: | :-----------------: |
 | 24/7 Price Enquiry          |         ✔️            |          ❌        |
 | Pressureless House Purchase |         ✔️            |          ❌        |
 | Unbiased Reccomendations    |         ✔️            |          ❌        |
 | 0 service/commissions       |         ✔️            |          ❌        |
-
-
-### View HDB Prices
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 
 ### Big Purchase Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
