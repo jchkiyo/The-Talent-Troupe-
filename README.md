@@ -36,4 +36,4 @@ If you would like to report bugs or file feature requests, you are welcomed to d
 This web application uses 
 * ReactJs for Frontend
 * API.Net & Firebase for Backend
-* [Data.gov.sg](data.gov.sg)'s APIs for real time data fetching
+* [Data.gov.sg](https://data.gov.sg)'s APIs for real time data fetching
