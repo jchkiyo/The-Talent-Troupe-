@@ -27,8 +27,9 @@
 
 ## Launch Guide
 
-* For Git Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
-* Once downloaded, navigate to ClientApp via `cd "The-Talent-Troupe/The Talent Troupe/ClientApp"`
+* If using Git-Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
+* Else you may download [here](https://github.com/jchkiyo/The-Talent-Troupe-/archive/refs/heads/main.zip)
+* Once downloaded, open in your IDE and navigate to ClientApp via `cd "The-Talent-Troupe/The Talent Troupe/ClientApp"`
 * Once inside ClientApp: `npm i` to install modules and dependencies
 * Once installed: `npm start`
 
