@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
+import {useNavigate} from 'react-router-dom';
 import { React, useState } from 'react';
 import Pic2 from "../../../assets/bigpurchasepic.png";
 
@@ -45,11 +46,10 @@ export default function BigPurchasePlanCard(props) {
     const handleDelete = () =>{
         setShow(false);
         setdeleteConfirmation(true); 
+        
     }
-    //Code to delete plan
-    const deletePlan = () =>{
-        setdeleteConfirmation(false); // set to true once done
-    }
+
+    const navigate = useNavigate();
 
     return (
       <>
@@ -103,7 +103,7 @@ export default function BigPurchasePlanCard(props) {
             <MyButton onClick={   
                 //Code to delete plan
                 () =>{
-                setdeleteConfirmation(false); // set to true once done
+                setdeleteConfirmation(false);
 
                 async function deletePlans() {
                   try {
@@ -129,20 +129,12 @@ export default function BigPurchasePlanCard(props) {
                       });
 
                       console.log(response);
-                      console.log("Successfully deleted plans");
-
-
                   } catch (error) {
                       console.error('Error deleting plans:', error);
                   }
               }
-              
-              
-    
-
-              
-
               deletePlans();
+              navigate('/Myprofile');
 
 
     }} buttonMessage="Confirm Delete"/>
