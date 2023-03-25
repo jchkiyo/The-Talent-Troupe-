@@ -40,8 +40,9 @@ export default function MyPlanners() {
                 // const response2 = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
                 // const retirementplanData = await response2.json();
                 // setretirementPlans(retirementplanData);
-
+                console.log(data);
                 console.log("Successfully updated plans with API");
+                
 
 
             } catch (error) {
@@ -96,6 +97,7 @@ export default function MyPlanners() {
                 {bigPurchasePlans.map( (bigPurchasePlans) => {return(
                     <BigPurchasePlanCard key={bigPurchasePlans.planName+bigPurchasePlans.comments+"key"} planName={bigPurchasePlans.planName} creationDate={bigPurchasePlans.creationDate} 
                                         amountToSave={bigPurchasePlans.amountToSave} monthlyContribution={bigPurchasePlans.monthlyContribution} comments={bigPurchasePlans.comments}
+                                        planID={bigPurchasePlans.id}
                     />
                 );})}
             </div> }
