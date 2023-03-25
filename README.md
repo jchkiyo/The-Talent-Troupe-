@@ -24,10 +24,11 @@ We are a bunch of
 #### Why Us?
 |                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
 | --------------------------- | :--------------------: | :-----------------: |
+| 0 service/commissions fees  |         ✔️            |          ❌        |
 | 24/7 Price Enquiry          |         ✔️            |          ❌        |
 | Pressureless House Purchase |         ✔️            |          ❌        |
 | Unbiased Reccomendations    |         ✔️            |          ❌        |
-| 0 service/commissions       |         ✔️            |          ❌        |
+
 
 
 
@@ -38,6 +39,15 @@ We are a bunch of
 
 ### Retirement Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
+#### Why Us?
+|                             | ◾ Our View HDB Prices  | Retirement Planners |
+| --------------------------- | :--------------------: | :-----------------: |
+| 0 service/commissions fees  |         ✔️            |          ❌        |
+| 24/7 Planning Service       |         ✔️            |          ❌        |
+| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
+
+
 
 ## Launch Guide
 Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.
