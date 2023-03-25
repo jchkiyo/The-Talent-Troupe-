@@ -17,10 +17,13 @@
 ## Features
 
 ### View HDB Prices
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 
 ### Big Purchase Planner
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
 
 ### Retirement Planner
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
 
 ## Launch Guide
 
