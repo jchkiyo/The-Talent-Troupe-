@@ -100,7 +100,52 @@ export default function BigPurchasePlanCard(props) {
 
           <Modal.Footer>
             <MyButton onClick={handleClose} buttonMessage="Cancel"/>
-            <MyButton onClick={deletePlan} buttonMessage="Confirm Delete"/>
+            <MyButton onClick={   
+                //Code to delete plan
+                () =>{
+                setdeleteConfirmation(false); // set to true once done
+
+                async function deletePlans() {
+                  try {
+                      console.log("Attempting to delete plan with id: ", props.planID);
+                      const response = await fetch('https://localhost:7158/api/BigPurchase/RemovePlan/'+ props.planID, {
+                        method: 'DELETE',
+                        headers: {
+                          'Content-Type': 'application/json',
+                          'Accept': 'application/json',
+                        },
+                        mode: 'cors'
+                      }).then(response => {
+                        if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                      })
+                      .then(data => {
+                        console.log(data);
+                      })
+                      .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                      });
+
+                      console.log(response);
+                      console.log("Successfully deleted plans");
+
+
+                  } catch (error) {
+                      console.error('Error deleting plans:', error);
+                  }
+              }
+              
+              
+    
+
+              
+
+              deletePlans();
+
+
+    }} buttonMessage="Confirm Delete"/>
           </Modal.Footer>
 
         </Modal>
