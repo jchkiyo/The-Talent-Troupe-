@@ -38,8 +38,8 @@ export default function MyPlanners() {
                 const data = await response.json();
                 setbigPurchasePlans(data);
 
-                response = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
-                const retirementplanData = await response.json();
+                const response2 = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
+                const retirementplanData = await response2.json();
                 setretirementPlans(retirementplanData);
 
                 console.log("Successfully updated plans with API");
@@ -61,7 +61,7 @@ export default function MyPlanners() {
                 <h1>Your Retirement Plans</h1>
 
             </article>
-            {retirementPlans.length==0 && 
+            {retirementPlans.length===0 && 
               <div className="emptyretirementplans">
                   <h3> You have no retirement plans currently </h3>
                   <Link className="emptyretirementplans-button" to="/retirementplanner"> Create new Retirement Plan !</Link>
@@ -72,7 +72,7 @@ export default function MyPlanners() {
 
 
             <div className = "flex flex-wrap">
-                { retirementPlans.length!=0 &&
+                { retirementPlans.length!==0 &&
                     retirementPlans.map( (retirementPlans) => {return(
                     <RetirementPlanCard key={retirementPlans.PlanName+retirementPlans.creationDate+"key"} planName={retirementPlans.planName} creationDate={retirementPlans.creationDate} 
                                         amountToSave={retirementPlans.amountToSave} monthlyContribution={retirementPlans.monthlyContribution} comments={retirementPlans.comments}
@@ -86,7 +86,7 @@ export default function MyPlanners() {
 
             </article>
 
-            {bigPurchasePlans.length==0 &&       
+            {bigPurchasePlans.length===0 &&       
               <div className="emptyretirementplans">
                   <h3> You have no big purchase plans currently </h3>
                   <Link className="emptyretirementplans-button" to="/bigpurchaseplanner"> Create new Big Purchase Plan !</Link>
