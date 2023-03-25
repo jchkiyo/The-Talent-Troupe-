@@ -28,16 +28,6 @@ export default function Retirementplanner2() {
     const [cpfpercent, setcpfpercent] = useState(0);
 
     
-
-
-
-    const click = () =>{
-        alert(savings)
-        alert(income)
-    }
-    const radioclick = () =>{
-        alert(radioValue)
-    }
     const radiochange = event =>{
         const newvalue = event.target.value
         setRadioValue(newvalue)
@@ -180,7 +170,6 @@ export default function Retirementplanner2() {
                 <h1 class = "h1">How much income do you earn per month?</h1>
                 <input onChange = {change} type="number" />
                 <br></br>
-                <Button as="input" variant="success" type="submit" value="Submit" onClick = {click} />{' '}
 
                 <h1 class = "h1">What is your desired retirement lifestyle?</h1>
                 <br></br>
@@ -204,7 +193,6 @@ export default function Retirementplanner2() {
                         )}
                 </ToggleButtonGroup>
                 <br></br>
-                <Button as="input" variant="success" type="submit" value="Submit" onClick = {radioclick} />{' '}
                 <br></br>
                 <div className = "buttongroup">
                     <Button size="lg" id = "button" onClick={handleShowTextBox}>
