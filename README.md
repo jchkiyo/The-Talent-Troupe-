@@ -31,6 +31,7 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 * If using Git-Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
 * Else you may download [here](https://github.com/jchkiyo/The-Talent-Troupe-/archive/refs/heads/main.zip)
 * Once downloaded, open in your IDE and navigate to ClientApp via `cd ".\The Talent Troupe\ClientApp\""`
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTlaunch1.PNG)
 * Once inside ClientApp: `npm i` to install modules and dependencies
 * Once installed: `npm start`
 
