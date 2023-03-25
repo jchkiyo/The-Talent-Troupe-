@@ -21,6 +21,7 @@ We are a bunch of
 
 ### View HDB Prices
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
+#### Why Us?
 |                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
 | --------------------------- | :--------------------: | :-----------------: |
 | 24/7 Price Enquiry          |         ✔️            |          ❌        |
@@ -28,8 +29,12 @@ We are a bunch of
 | Unbiased Reccomendations    |         ✔️            |          ❌        |
 | 0 service/commissions       |         ✔️            |          ❌        |
 
+
+
 ### Big Purchase Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
+
+
 
 ### Retirement Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
