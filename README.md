@@ -12,7 +12,10 @@
 
 
 ## Introduction
+The Talent Troupe is comprised of 5 members
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTTalents.PNG)
 
+We are a bunch of 
 
 ## Features
 
