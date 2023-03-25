@@ -4,7 +4,7 @@ import Login from "../page/Login";
 import Signup from "../page/Signup";
 import Home from "../page/Home";
 import PrivateRoutes from "./PrivateRoutes";
-import Bigpurchaseplanner from "../page/Bigpurchaseplanner";
+import Bigpurchaseplanner from "../page/BigPurchasePlanner";
 import MyProfile from "../page/MyProfile";
 import Retirementplanner2 from "../page/retirementplanner2";
 import HDBPrices from "../page/HDBPrices";

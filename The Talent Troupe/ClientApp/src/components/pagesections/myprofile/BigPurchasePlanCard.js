@@ -21,6 +21,7 @@ export default function BigPurchasePlanCard(props) {
                 <BigPurchaseViewPlans 
                     planName={props.planName} dateOfCreation={props.dateOfCreation} 
                     amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
+                    planID={props.planID}
                 />
             </div>
         </div>
@@ -45,10 +46,6 @@ export default function BigPurchasePlanCard(props) {
     const handleDelete = () =>{
         setShow(false);
         setdeleteConfirmation(true); 
-    }
-    //Code to delete plan
-    const deletePlan = () =>{
-        setdeleteConfirmation(false); // set to true once done
     }
 
     return (
@@ -100,7 +97,29 @@ export default function BigPurchasePlanCard(props) {
 
           <Modal.Footer>
             <MyButton onClick={handleClose} buttonMessage="Cancel"/>
-            <MyButton onClick={deletePlan} buttonMessage="Confirm Delete"/>
+            <MyButton onClick={   
+                //Code to delete plan
+                () =>{
+                setdeleteConfirmation(false); // set to true once done
+
+                async function deletePlans() {
+                  try {
+                      console.log("Attempting to delete plan with id: ", props.planID);
+                      const response = await fetch('https://localhost:7158/api/BigPurchase/RemovePlan/' + props.planID);
+
+                      console.log(response);
+                      console.log("Successfully deleted plans");
+
+
+                  } catch (error) {
+                      console.error('Error deleting plans:', error);
+                  }
+              }
+
+              deletePlans();
+
+
+    }} buttonMessage="Confirm Delete"/>
           </Modal.Footer>
 
         </Modal>

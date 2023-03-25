@@ -96,6 +96,7 @@ export default function MyPlanners() {
                 {bigPurchasePlans.map( (bigPurchasePlans) => {return(
                     <BigPurchasePlanCard key={bigPurchasePlans.planName+bigPurchasePlans.comments+"key"} planName={bigPurchasePlans.planName} creationDate={bigPurchasePlans.creationDate} 
                                         amountToSave={bigPurchasePlans.amountToSave} monthlyContribution={bigPurchasePlans.monthlyContribution} comments={bigPurchasePlans.comments}
+                                        planID={bigPurchasePlans.id}
                     />
                 );})}
             </div> }

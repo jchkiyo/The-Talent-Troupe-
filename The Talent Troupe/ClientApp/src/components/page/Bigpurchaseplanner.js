@@ -1,9 +1,9 @@
 import { useState,useEffect} from "react";
 import { useLocation } from "react-router-dom";
 // import Axios from "axios";
-import "./Bigpurchaseplanner.css";
-import {Routes, Route, useNavigate} from 'react-router-dom';
-import { checkActionCode } from "firebase/auth";
+import "./BigPurchasePlanner.css";
+import {useNavigate} from 'react-router-dom';
+// import { checkActionCode } from "firebase/auth";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -39,7 +39,7 @@ export default function PlannerForm(props) {
         return location.state.value
       else return null;
     });
-  }, []);
+  }, [location.state]);
 
 
   const RenderButton = () => {
