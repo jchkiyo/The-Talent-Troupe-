@@ -72,6 +72,21 @@ namespace The_Talent_Troupe.Controllers
            
         }
 
+        [HttpDelete("RemovePlan/{Id}")]
+        public IActionResult DeletePlan(String Id)
+        {
+            client= new FireSharp.FirebaseClient(config);
+            FirebaseResponse response= client.Delete($"BigPurchase/{Id}");
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return Ok("Plan deleted successfully");
+            }
+            else {
+                return BadRequest("Failed to delete plan");
+            }
+            
+        }
+
 
        
         }
