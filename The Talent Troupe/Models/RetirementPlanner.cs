@@ -9,11 +9,11 @@ namespace The_Talent_Troupe.Models
     {
         public string? Id { get; set; } //id provided by firebase
         public string userid { get;set; }
-        public int age { get; set; }
         public int retirementage { get; set; }
-        public int yearsofincome { get; set; }
-        public double savepermonth { get; set; }
-        public double desiredretirement { get; set; }
+        public int yearsOfRetirement { get; set; }
+        public int AmountToSave { get; set; }
+        public int AmountToSaveMonth { get; set; }
+        public int percentageSave { get; set; }
         
 
         
