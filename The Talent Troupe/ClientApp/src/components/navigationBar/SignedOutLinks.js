@@ -11,6 +11,9 @@ import { endSession } from "../session";
 import { collection , getDocs, where, query} from "firebase/firestore";
 
 
+
+
+
 function SignedOutLinks() {
     const { currentUser } = useContext(AuthContext);
     const [info, setInfo]= useState("");
@@ -59,7 +62,7 @@ function SignedOutLinks() {
         <NavLink to="/" style={{ textDecoration: 'none' }}>
             Home
         </NavLink>
-        {currentUser && <NavLink to='/Retirementplanner' style={{ textDecoration: 'none' }}>Retirement Planner</NavLink>}
+        {currentUser && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }}  state={{data: currentUser.uid}} >Retirement Planner</NavLink>}
         {currentUser && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>Big Purchase Planner</NavLink>}
         {currentUser && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>My Profile</NavLink>}
         <div className="buttons">

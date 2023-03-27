@@ -6,6 +6,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
 import Axios from "axios";
+import { useLocation } from "react-router-dom";
 
 
 export default function Retirementplanner2() {
@@ -26,6 +27,10 @@ export default function Retirementplanner2() {
     const [monthlysave, setmonthlysave] = useState(0);
     const [cpfincome, setcpfincome] = useState(0);
     const [cpfpercent, setcpfpercent] = useState(0);
+
+    let location = useLocation()
+    const userID = location.state?.data;
+  
 
     
     const radiochange = event =>{
@@ -56,6 +61,7 @@ export default function Retirementplanner2() {
         calculateRetirementSum();
         calculateSavingSum();
         calculatecpfincome();
+        console.log(userID);
     };
 
     const handleReset = () => {
