@@ -11,12 +11,12 @@ export default function MyPlanners() {
 
     // This two useStates retirementPlans, bigPurchasePlans will be data pulled from API in the future
 
-    const [retirementPlans] = useState(
+   /* const [retirementPlans] = useState(
         [
             {planName: "My Retirement Plan", creationDate: "11/2/23", amountToSave: 1000000, monthlyContribution: 2000, comments: "NIL"},
             {planName: "Wife's Retirement Plan", creationDate: "12/2/23", amountToSave: 800000, monthlyContribution: 1400, comments: "Did by husband"}
         ]
-    );
+    );*/
 
     // const [bigPurchasePlans] = useState(
     //     [
@@ -27,7 +27,7 @@ export default function MyPlanners() {
 
   let location = useLocation()
   const userID = location.state?.data;
-  // const [retirementPlans, setretirementPlans] = useState([]);
+  const [retirementPlans, setretirementPlans] = useState([]);
   const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
 
     useEffect(() => {
@@ -37,10 +37,11 @@ export default function MyPlanners() {
                 const data = await response.json();
                 setbigPurchasePlans(data);
 
-                // const response2 = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
-                // const retirementplanData = await response2.json();
-                // setretirementPlans(retirementplanData);
+                const response2 = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
+                const retirementplanData = await response2.json();
+                setretirementPlans(retirementplanData);
                 console.log(data);
+                console.log(retirementplanData);
                 console.log("Successfully updated plans with API");
                 
 

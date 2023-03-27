@@ -144,6 +144,52 @@ export default function Retirementplanner2() {
          setcpfpercent(percent);
 
       };
+
+      const SendData = ({ userID, age, amountToSave, monthlyContribution, retirementyears, percent }) => {
+  
+        const handleFormSubmit = (event) => {
+      
+          event.preventDefault();
+          console.log("Inside SendData, userID: ", userID);
+      
+          fetch('https://localhost:7158/api/RetirementPlanner/CreateRetirement', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+              // Request data goes here
+              userid: userID,
+              retirementage: age,
+              amounttosave: amountToSave,
+              savepermonth: monthlyContribution,
+              desiredretirement: retirementyears,
+              yearsofincome: percent,
+            }),
+          
+            mode: 'cors'
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+        };
+        return (
+          <form onSubmit={handleFormSubmit}>
+            {/* Your form fields here */}
+            <button type="submit">Submit</button>
+          </form>
+        );
+      }
     
  
    
@@ -230,6 +276,9 @@ export default function Retirementplanner2() {
                             </div>
                             <div>
                                 <h1>You need to save {cpfpercent} % of your income</h1>
+                            </div>
+                            <div>
+                              <SendData userID = {userID} age = {data} amountToSave = {needsave} monthlyContribution = {monthlysave} retirementyears = {data3} percent = {cpfpercent} />
                             </div>
 
 
