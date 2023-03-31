@@ -1,6 +1,6 @@
 # The-Talent-Troupe-
 <p align="center">
-<a href="#-introduction">Introduction</a> | <a href="#-features">Features</a> | <a href="#-getting-started">Getting Started</a> | <a href="#-feedback">Feedback</a> | <a href="#-technologies-Used">Technologies Used</a> | <a href="#-contributors">Contributors</a>
+🌐 <a href="#-introduction">Introduction</a> 🌐 <a href="#-features">Features</a> 🌐 <a href="#-getting-started">Getting Started</a> 🌐 <a href="#-feedback">Feedback</a> 🌐 <a href="#-technologies-Used">Technologies Used</a> 🌐 <a href="#-contributors">Contributors</a>
 </p>
 
 
