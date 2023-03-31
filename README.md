@@ -64,11 +64,9 @@ If you would like to report bugs or file feature requests, you are welcomed to d
 <br /><br />
 ## Technologies Used
 This web application is built with 
-* API.Net & Firebase for Backend
-* [Data.gov.sg](https://data.gov.sg)'s APIs for real time data fetching
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-
+* [![.NET][.NET.com]][.NET-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -76,3 +74,5 @@ This web application is built with
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
+[.NET]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
+[.NET-url]: https://getbootstrap.com](https://dotnet.microsoft.com/en-us/
