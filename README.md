@@ -63,7 +63,9 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 If you would like to report bugs or file feature requests, you are welcomed to do so [here](https://github.com/jchkiyo/The-Talent-Troupe-/issues/new)
 <br /><br />
 ## Technologies Used
-This web application uses 
-* ReactJs for Frontend
+This web application is built with 
 * API.Net & Firebase for Backend
 * [Data.gov.sg](https://data.gov.sg)'s APIs for real time data fetching
+* [![React][React.js]][React-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
