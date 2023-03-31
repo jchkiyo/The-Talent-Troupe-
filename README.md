@@ -14,7 +14,7 @@
   <ol>
     <li> <a href="#Introduction">Introduction</a> </li>
     <li>
-      <a href="#Features">Features</a>
+      <a href="#features">Features</a>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
