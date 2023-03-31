@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Pic1 from "../../../assets/retirementplanpic.png";
+import {useNavigate} from 'react-router-dom';
 
 export default function RetirementPlanCard(props) {
     return (    
@@ -14,6 +15,7 @@ export default function RetirementPlanCard(props) {
                     retirementage ={props.retirementage} 
                     amountToSave={props.amountToSave} amountToSaveMonth={props.amountToSaveMonth}
                     yearsOfRetirement = {props.yearsOfRetirement} percentageSave = {props.percentageSave}
+                    id = {props.id}
 
                 />
 
@@ -31,10 +33,26 @@ function RetirementViewPlans(props) {
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const navigate = useNavigate();
+
     const handleDelete = () =>{
       setShow(true);
 
       //Code to delete this plan
+      const response = fetch('https://localhost:7158/api/RetirementPlanner/RemoveRetirement/ ' + props.id ,{
+         method: 'DELETE',
+         headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        mode: 'cors'
+         
+      }).then(() => {
+        console.log(props.id);
+        console.log(response);
+        navigate('/Myprofile');
+      })
+    
 
     }
   
@@ -62,10 +80,8 @@ function RetirementViewPlans(props) {
           </Modal.Body>
 
           <Modal.Footer>
-
-            <MyButton onClick={handleClose} >
-              Close
-            </MyButton>
+            <MyButton onClick={handleClose}  buttonMessage="Close"/>
+            <MyButton onClick={handleDelete} buttonMessage="Delete Plan"/>
           </Modal.Footer>
 
         </Modal>
@@ -83,7 +99,7 @@ function RetirementViewPlans(props) {
   
     return (
       <button onClick={props.onClick}style={buttonStyles}>
-        Close
+        {props.buttonMessage}
       </button>
     );
   }

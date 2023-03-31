@@ -75,9 +75,11 @@ export default function MyPlanners() {
             <div className = "flex flex-wrap">
                 { retirementPlans.length!==0 &&
                     retirementPlans.map( (retirementPlans) => {return(
-                    <RetirementPlanCard   retirementage ={retirementPlans.retirementage} 
+                    <RetirementPlanCard key = {retirementPlans.id}
+                                        retirementage ={retirementPlans.retirementage} 
                                         amountToSave={retirementPlans.amountToSave} amountToSaveMonth ={retirementPlans.amountToSaveMonth}
                                         yearsOfRetirement = {retirementPlans.yearsOfRetirement} percentageSave = {retirementPlans.percentageSave}
+                                        id = {retirementPlans.id}
                     />
                 );})}
             </div>
