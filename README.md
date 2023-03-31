@@ -12,7 +12,7 @@
 
 <summary>🏁 Table of Contents</summary>
   <ol>
-    <li> <a href="#Introduction">Introduction</a> </li>
+    <li> <a href="#introduction">Introduction</a> </li>
     <li>
       <a href="#features">Features</a>
       <ul>
@@ -21,9 +21,9 @@
         <li><a href="#retirement-planner">Retirement Planner</a></li>
       </ul>
     </li>
-    <li> <a href="#Launch-Guide">Launch Guide</a> </li>
-    <li><a href="#Feedback">Feedback</a></li>
-    <li><a href="#Technologies-Used">Technologies Used</a></li>
+    <li> <a href="#launch-guide">Launch Guide</a> </li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#technologies-Used">Technologies Used</a></li>
 
   </ol>
 
