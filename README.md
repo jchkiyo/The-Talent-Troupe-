@@ -12,18 +12,18 @@
 
 <summary>🏁 Table of Contents</summary>
   <ol>
-    <li> <a href="#-introduction">Introduction</a> </li>
+    <li> <a href="#introduction">Introduction</a> </li>
     <li>
-      <a href="#-Features">Features</a>
+      <a href="#Features">Features</a>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
         <li><a href="#retirement-planner">Retirement Planner</a></li>
       </ul>
     </li>
-    <li> <a href="#-launch-guide">Launch Guide</a> </li>
-    <li><a href="#-feedback">Feedback</a></li>
-    <li><a href="#-technologies-used">Technologies Used</a></li>
+    <li> <a href="#launch-guide">Launch Guide</a> </li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#technologies-used">Technologies Used</a></li>
 
   </ol>
 
