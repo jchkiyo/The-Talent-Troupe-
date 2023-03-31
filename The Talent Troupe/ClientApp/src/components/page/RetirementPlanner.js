@@ -2,8 +2,14 @@ import React from 'react';
 import picture1 from "../../assets/homepic.png";
 import "./RetirementPlanner.css";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function HomePage() {
+
+   let location = useLocation()
+   const userID = location.state?.data;
+   console.log(userID);
+
   return (
     <React.Fragment>
        <div className = "body">

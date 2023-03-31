@@ -1,6 +1,5 @@
 import { useState,useEffect} from "react";
 import { useLocation } from "react-router-dom";
-// import Axios from "axios";
 import "./BigPurchasePlanner.css";
 import {useNavigate} from 'react-router-dom';
 // import { checkActionCode } from "firebase/auth";
@@ -8,12 +7,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 
-// const style = {
-//     form: `h-14 w-full max-w-[40%] flex text-xl flex bottom-0`,
-//     button: `w-[20%] bg-green-500`,
-//   };
-
-export default function PlannerForm(props) {
+export default function BigPurchasePlanner(props) {
 
   const [PlanName, setPlanName] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
@@ -29,7 +23,7 @@ export default function PlannerForm(props) {
 
   let location = useLocation()
   const userID = location.state?.data;
-
+  console.log("Hello ", userID);
 
   const navigate = useNavigate();
   useEffect(()=> {
@@ -41,14 +35,12 @@ export default function PlannerForm(props) {
     });
   }, [location.state]);
 
-
   const RenderButton = () => {
     if(isLoadingButton){
-      return <button class="btn btn-primary" onClick={navigateTohdbprices}>ViewhdbPrices</button>
+      return <button className="btn btn-primary" onClick={navigateTohdbprices}>ViewhdbPrices</button>
     }
   }
   
-
   const navigateTohdbprices = () =>{
     navigate('/Viewhdbprices');
   }
@@ -57,36 +49,29 @@ export default function PlannerForm(props) {
     //e.preventDefault
     setLoadPage(false)
     setLoadFinal(true)
-    
     doCalculations()
-    
   }
-
 
   const onHandleRetry=() => {
     //e.preventDefault
     setLoadPage(true)
     setLoadFinal(false)
-    
-    
   }
+
   const doCalculations = () =>{
     let total_amount
-    
     total_amount = parseInt(TimeToSave,10) * parseInt(MonthlyContribution,10);
     total_amount = total_amount.toString()
-
     setCalculations(total_amount)
-   
   }
 
- // console.log(LoadPage)
- // console.log(AmountToSave)
-  
   const render_success = () =>{
+
     let remainingamount =  parseInt(Calculations,10) - parseInt(AmountToSave,10)
     console.log(remainingamount)
     let amountTopUp
+
+    // Good Plan
     if(remainingamount>= 0){
       return(
 
@@ -100,57 +85,60 @@ export default function PlannerForm(props) {
             You are able to hit your target of
              {AmountToSave}  at your current monthly contribution
           </Card.Text>
-          <Button variant="primary active"onClick={onHandleRetry}>Retry</Button>
+          <Button variant="primary active"onClick={onHandleRetry}>Edit Plan</Button>
+          <SendData
+            userID={userID}
+            planName = {PlanName}
+            amountToSave = {AmountToSave}
+            monthlyContribution = {MonthlyContribution}
+            creationDate = {creationDate}
+            comments = {comments}
+          />
+
+
         </Card.Body>
       </Card>
 
         </div>
       )
     }
-    if(remainingamount <0){
+
+  // Bad Plan
+  if(remainingamount <0){
       amountTopUp = -(remainingamount) / parseInt(TimeToSave,10)
       return(
-    
 
+        <div className="d-flex justify-content-center">
+            <Card style={{ width: '18rem',
+                            }}>
+              <Card.Img variant="top" src={require("../../assets/frustrated_man.jpg")} />
+              <Card.Body>
+                <Card.Title>Sorry!</Card.Title>
+                <Card.Text>
+                  You are required to top up {amountTopUp} to your monthly contribution
+                  to hit your target of {AmountToSave}
+                </Card.Text>
+                <Button variant="primary active"onClick={onHandleRetry}>Retry</Button>
+              </Card.Body>
+            </Card>
 
-
-  <div className="d-flex justify-content-center">
-      <Card style={{ width: '18rem',
-                      }}>
-        <Card.Img variant="top" src={require("../../assets/frustrated_man.jpg")} />
-        <Card.Body>
-          <Card.Title>Sorry!</Card.Title>
-          <Card.Text>
-            You are required to top up {amountTopUp} to your monthly contribution
-             to hit your target of {AmountToSave}
-          </Card.Text>
-          <Button variant="primary active"onClick={onHandleRetry}>Retry</Button>
-        </Card.Body>
-      </Card>
-
-      
-      </div>
-
-      
-      
+            
+        </div>
       )
-    }
-    
-
-   
-
+  }
   }
   
   return (
     <div>
     {(LoadPage)?  
+
     <form className="planner-form">
     <div>
       <label>Plan Name</label> <br></br>
       <input
         type="text"
         id="PlanName"
-        placeholder=" Car Purchase Plan"
+        placeholder=" HDB Purchase Plan"
         required
         minLength={2}
         maxLength={50}
@@ -158,29 +146,6 @@ export default function PlannerForm(props) {
         onChange={(e) => setPlanName(e.target.value)}
       ></input>
     </div>
-
-
-    
-
-    {/* <div>
-      <label>Big Purchase Type</label> <br></br>
-      <select
-        id="bigpurchasetype"
-        value={setPurchaseType}
-        onChange={(e) => setPurchaseType(e.target.value)}
-      >
-        <option>Car Purchase</option>
-        <option>HDB Purchase</option>
-        <option>Others</option>
-      </select>
-    </div>
-    { PurchaseType==="HDB Purchase" &&
-    <div>
-    <Link className="action-button" to="/Viewhdbprices">
-      View recent HDB prices here!
-    </Link>
-    </div>
-    } */}
 
 
 
@@ -200,9 +165,7 @@ export default function PlannerForm(props) {
     </div>
 
     
-   
-    
-    {RenderButton()}
+    {/* {RenderButton()} */}
     
     <div className = "mt-3">
       <label>Time to save</label> <br></br>
@@ -263,10 +226,7 @@ export default function PlannerForm(props) {
       ></textarea>
     </div>
 
-    
-  
-
-  <div className="planner-form">
+    {/* <div className="planner-form">
       <br></br>
       {
           PlanName.length>0 && AmountToSave > 0 && MonthlyContribution !== 1 &&
@@ -279,52 +239,31 @@ export default function PlannerForm(props) {
           comments = {comments}
         />
       }
-    </div>
+    </div> */}
 
     
     <div>
-    <button class="btn btn-primary" onClick={onHandleSubmit}>Submit</button>
+    <button className="btn btn-primary" onClick={onHandleSubmit}>Submit !</button>
     </div>
-
 
     </form>
    
     : null}
 
-    {(LoadFinal)?
-
-        
-        
-          render_success()
-
-          
-
-          
-        
-
-      
-
-
-        : null
-    
-    } 
-
-         
-      
+      {(LoadFinal)? render_success() : null }
 
     </div>
   );
 }
 
 
-
-
-const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments, url }) => {
+const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments }) => {
   
   const handleFormSubmit = (event) => {
 
     event.preventDefault();
-    console.log("Inside SendData, userID: ", userID);
+    console.log(userID);
+
 
     fetch('https://localhost:7158/api/BigPurchase/CreatePlan', {
       method: 'POST',
@@ -351,7 +290,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
       return response.json();
     })
     .then(data => {
-      console.log(data);
+      // Handle the response data here
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
@@ -359,10 +298,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      {/* Your form fields here */}
-      <button type="submit">Submit</button>
-    </form>
+      <Button variant="primary active" onClick={handleFormSubmit}>Save Plan</Button>
   );
 };
 
