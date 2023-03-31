@@ -1,15 +1,5 @@
 # The-Talent-Troupe-
 
-## Table of contents
-- [Introduction](#introduction)
-- [Features](#features)
-    - [View HDB Prices](#view-hdb-prices)
-    - [Big Purchase Planner](#big-purchase-planner)
-    - [Retirement Planner](#retirement-planner)
-- [Launch Guide](#launch-guide)
-- [Feedback](#feedback)
-- [Technologies Used](#technologies-used)
-
 <details>
 <summary>🏁 Table of Contents</summary>
   <ol>
@@ -22,7 +12,7 @@
         <li><a href="#retirement-planner">Retirement Planner</a></li>
       </ul>
     </li>
-    <li> <a href="#launch-guide">Launch Guide</a> </li>
+    <li> <a href="#-getting-started">Getting Started</a> </li>
     <li><a href="#feedback">Feedback</a></li>
     <li><a href="#technologies-Used">Technologies Used</a></li>
 
@@ -68,7 +58,7 @@ We are a bunch of
 
 
 
-## Launch Guide
+## 🤸 Getting Started
 Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.
 You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assist you
 * If using Git-Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
