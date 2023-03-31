@@ -21,7 +21,7 @@
 
   TO BE DONE
 
-# 📖 Features
+# 🔍 Features
 
 <details>
 <summary>🏁 We have 3 main features </summary>
