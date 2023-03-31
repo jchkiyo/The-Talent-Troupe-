@@ -6,6 +6,8 @@
 </a>
 <br />
 <br />
+ 
+</div>
   
 
 <p align="center">
@@ -16,10 +18,8 @@
 
 
 # 💡 Introduction
-The Talent Troupe is comprised of 5 members
 
-
-We are a bunch of 
+  TO BE DONE
 
 # 📖 Features
 
