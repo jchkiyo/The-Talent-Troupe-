@@ -10,8 +10,26 @@
 - [Feedback](#feedback)
 - [Technologies Used](#technologies-used)
 
+<summary>🏁 Table of Contents</summary>
+  <ol>
+    <li> <a href="#-introduction">Introduction</a> </li>
+    <li>
+      <a href="#-Features">Features</a>
+      <ul>
+        <li><a href="#view-hdb-prices">View HDB Prices</a></li>
+        <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
+        <li><a href="#retirement-planner">Retirement Planner</a></li>
+      </ul>
+    </li>
+    <li> <a href="#-launch-guide">Launch Guide</a> </li>
+    <li><a href="#-feedback">Feedback</a></li>
+    <li><a href="#-technologies-used">Technologies Used</a></li>
 
-## Introduction
+  </ol>
+
+
+
+# 💡 Introduction
 The Talent Troupe is comprised of 5 members
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTTalents.PNG)
 
