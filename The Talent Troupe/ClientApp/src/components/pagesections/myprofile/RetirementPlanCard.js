@@ -10,17 +10,11 @@ export default function RetirementPlanCard(props) {
         <div class="m-4 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
             <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src={Pic1} alt="props.pic"></img>
             <div class="text-center space-y-2 sm:text-left">
-                <div class="space-y-0.5">
-                <p class="text-lg text-black font-semibold">
-                    {props.planName}
-                </p>
-                <p class="text-slate-500 font-medium">
-                    created: {props.creationDate}
-                </p>
-                </div>
                 <RetirementViewPlans 
-                    planName={props.planName} creationDate={props.creationDate} 
-                    amountToSave={props.amountToSave} monthlyContribution={props.monthlyContribution} comments={props.comments}
+                    retirementage ={props.retirementage} 
+                    amountToSave={props.amountToSave} amountToSaveMonth={props.amountToSaveMonth}
+                    yearsOfRetirement = {props.yearsOfRetirement} percentageSave = {props.percentageSave}
+
                 />
 
             </div>
@@ -54,16 +48,16 @@ function RetirementViewPlans(props) {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
-            <Modal.Title>{props.planName} Details</Modal.Title>
-            <Modal.Title>Created on {props.creationDate}</Modal.Title>
-          </Modal.Header>
+          
 
           <Modal.Body>
-            <p>Retirement Age: {props.amountToSave}</p>
+            <p>Retirement Age: {props.retirementage}</p>
             <p>Amount to save: {props.amountToSave}</p>
-            <p>Monthly Contribution: {props.monthlyContribution}</p>            
-            <p>Comments: {props.comments}</p>
+            <p>Monthly Contribution: {props.amountToSaveMonth}</p>            
+            <p>retirementyears: {props.yearsOfRetirement}</p>
+            <p>percentageofincome: {props.percentageSave}</p>
+
+    
 
           </Modal.Body>
 
