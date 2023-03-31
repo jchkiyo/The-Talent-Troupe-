@@ -1,7 +1,16 @@
-# The-Talent-Troupe-
+<div align="center" style="margin: 30px;">
+<a href="https://refine.dev/">
+  <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/teamlogo.png" 
+       style="width:250px;"
+       align="center" />
+</a>
+<br />
+
 <p align="center">
 🌐 <a href="#-introduction">Introduction</a> 🌐 <a href="#-features">Features</a> 🌐 <a href="#-getting-started">Getting Started</a> 🌐 <a href="#-feedback">Feedback</a> 🌐 <a href="#-technologies-Used">Technologies Used</a> 🌐 <a href="#-contributors">Contributors</a> 🌐
 </p>
+
+
 
 
 # 💡 Introduction
