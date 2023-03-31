@@ -78,8 +78,6 @@ This web application is built with
 * [![.NET][NET.com]][NET-url]
 
 # 👩‍👩‍👧‍👦 Contributors
-
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTTalents.PNG)
 | Profile  | Name | School |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------- |
 | <a href='https://github.com/dinojw10' title='CheongJingWen'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentjingwen.png' height='50' width='50'/></a> | Cheong Jing Wen | Nanyang Technological University (NTU) |
