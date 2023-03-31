@@ -5,7 +5,7 @@
   <ol>
     <li> <a href="#-introduction">Introduction</a> </li>
     <li>
-      <a href="#features">Features</a>
+      <a href="#-features">Features</a>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
@@ -13,8 +13,8 @@
       </ul>
     </li>
     <li> <a href="#-getting-started">Getting Started</a> </li>
-    <li><a href="#feedback">Feedback</a></li>
-    <li><a href="#technologies-Used">Technologies Used</a></li>
+    <li><a href="#-feedback">Feedback</a></li>
+    <li><a href="#-technologies-Used">Technologies Used</a></li>
 
   </ol>
 </details>
@@ -26,7 +26,7 @@ The Talent Troupe is comprised of 5 members
 
 We are a bunch of 
 
-## Features
+## 📖 Features
 
 ### View HDB Prices
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
@@ -68,10 +68,10 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 * Once inside ClientApp: `npm i` to install modules and dependencies
 * Once installed: `npm start`
 
-## Feedback
+## 📜 Feedback
 If you would like to report bugs or file feature requests, you are welcomed to do so [here](https://github.com/jchkiyo/The-Talent-Troupe-/issues/new)
 <br /><br />
-## Technologies Used
+## ☁️ Technologies Used
 This web application is built with 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
