@@ -12,6 +12,17 @@ We are a bunch of
 
 # 📖 Features
 
+<details>
+<summary>🏁 We have 3 main features </summary>
+  <ol>
+      <ul>
+        <li><a href="#view-hdb-prices">View HDB Prices</a></li>
+        <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
+        <li><a href="#retirement-planner">Retirement Planner</a></li>
+      </ul>
+  </ol>
+</details>
+
 ### View HDB Prices
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 #### Why Us?
