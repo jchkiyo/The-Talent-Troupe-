@@ -10,6 +10,7 @@
 - [Feedback](#feedback)
 - [Technologies Used](#technologies-used)
 
+<details>
 <summary>🏁 Table of Contents</summary>
   <ol>
     <li> <a href="#-introduction">Introduction</a> </li>
@@ -26,7 +27,7 @@
     <li><a href="#technologies-Used">Technologies Used</a></li>
 
   </ol>
-
+</details>
 
 
 # 💡 Introduction
