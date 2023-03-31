@@ -19,7 +19,7 @@
 
 # 💡 Introduction
 
-  TO BE DONE
+Introducing a new web app built by 5 students to ace their Software Engineering mod. This web app has been designed to provide users with a range of useful tools and resources that can help them make informed decisions about their finances with real-time data from data.gov.sg through APIs. It is an essential tool for anyone looking to take control of their finances and plan for a secure and stable future.
 
 # 🔍 Features
 We have implemented 
