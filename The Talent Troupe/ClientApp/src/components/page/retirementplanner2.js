@@ -6,6 +6,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
 import Axios from "axios";
+import { useLocation } from "react-router-dom";
 
 
 export default function Retirementplanner2() {
@@ -26,6 +27,10 @@ export default function Retirementplanner2() {
     const [monthlysave, setmonthlysave] = useState(0);
     const [cpfincome, setcpfincome] = useState(0);
     const [cpfpercent, setcpfpercent] = useState(0);
+
+    let location = useLocation()
+    const userID = location.state?.data;
+  
 
     
     const radiochange = event =>{
@@ -56,6 +61,7 @@ export default function Retirementplanner2() {
         calculateRetirementSum();
         calculateSavingSum();
         calculatecpfincome();
+        console.log(userID);
     };
 
     const handleReset = () => {
@@ -138,6 +144,52 @@ export default function Retirementplanner2() {
          setcpfpercent(percent);
 
       };
+
+      const SendData = ({ userID, age, amountToSave, monthlyContribution, retirementyears, percent }) => {
+  
+        const handleFormSubmit = (event) => {
+      
+          event.preventDefault();
+          console.log("Inside SendData, userID: ", userID);
+      
+          fetch('https://localhost:7158/api/RetirementPlanner/CreateRetirement', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+              // Request data goes here
+              userid: userID,
+              retirementage: age,
+              amountToSave: amountToSave,
+              amountToSaveMonth: monthlyContribution,
+              yearsOfRetirement: retirementyears,
+              percentageSave: percent,
+            }),
+          
+            mode: 'cors'
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+          });
+        };
+        return (
+          <form onSubmit={handleFormSubmit}>
+            {/* Your form fields here */}
+            <button type="submit">Submit</button>
+          </form>
+        );
+      }
     
  
    
@@ -225,6 +277,9 @@ export default function Retirementplanner2() {
                             <div>
                                 <h1>You need to save {cpfpercent} % of your income</h1>
                             </div>
+                            <div>
+                              <SendData userID = {userID} age = {Math.floor(data)} amountToSave = {Math.floor(needsave)} monthlyContribution = {Math.floor(monthlysave)} retirementyears = {Math.floor(data3)} percent = {Math.floor(cpfpercent)} />
+                            </div>
 
 
                         </div>
@@ -241,4 +296,5 @@ export default function Retirementplanner2() {
       </>
     );
 }
+
 
