@@ -15,18 +15,18 @@
     <li> <a href="#-getting-started">Getting Started</a> </li>
     <li><a href="#-feedback">Feedback</a></li>
     <li><a href="#-technologies-Used">Technologies Used</a></li>
-
+    <li><a href="#-contributors">Contributors</a></li>
   </ol>
 </details>
 
 
 # 💡 Introduction
 The Talent Troupe is comprised of 5 members
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTTalents.PNG)
+
 
 We are a bunch of 
 
-## 📖 Features
+# 📖 Features
 
 ### View HDB Prices
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
@@ -41,12 +41,12 @@ We are a bunch of
 
 
 
-### Big Purchase Planner
+## Big Purchase Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
 
 
 
-### Retirement Planner
+## Retirement Planner
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
 #### Why Us?
 |                             | ◾ Our View HDB Prices  | Retirement Planners |
@@ -58,7 +58,7 @@ We are a bunch of
 
 
 
-## 🤸 Getting Started
+# 🤸 Getting Started
 Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.
 You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assist you
 * If using Git-Bash: Clone this repository `$ git clone https://github.com/jchkiyo/The-Talent-Troupe-.git`
@@ -68,14 +68,26 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 * Once inside ClientApp: `npm i` to install modules and dependencies
 * Once installed: `npm start`
 
-## 📜 Feedback
+# 📜 Feedback
 If you would like to report bugs or file feature requests, you are welcomed to do so [here](https://github.com/jchkiyo/The-Talent-Troupe-/issues/new)
 <br /><br />
-## ☁️ Technologies Used
+# ☁️ Technologies Used
 This web application is built with 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![.NET][NET.com]][NET-url]
+
+# 👩‍👩‍👧‍👦 Contributors
+
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTTalents.PNG)
+| Profile  | Name | School |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------- |
+| <a href='https://github.com/LimJiaEarn' title='LimJiaEarn'> <img src='https://github.com/LimJiaEarn.png' height='50' width='50'/></a> | Cheong Jing Wen       | Nanyang Technological University (NTU) |
+| <a href='https://github.com/yuandjom' title='yuandjom'> <img src='https://github.com/yuandjom.png' height='50' width='50'/></a>                   | Joseph Chng John | Nanyang Technological University (NTU) |
+| <a href='https://github.com/jklye' title='jklye'> <img src='https://github.com/jklye.png' height='50' width='50'/></a>                   | Lim Jia Earn | Nanyang Technological University (NTU) |
+| <a href='https://github.com/Purifish' title='Purifish'> <img src='https://github.com/Purifish.png' height='50' width='50'/></a>                   | Pachigulla Ramtej 
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
