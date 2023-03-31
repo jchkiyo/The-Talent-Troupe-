@@ -3,25 +3,6 @@
 <a href="#-introduction">Introduction</a> | <a href="#-features">Features</a> | <a href="#-getting-started">Getting Started</a> | <a href="#-feedback">Feedback</a> | <a href="#-technologies-Used">Technologies Used</a> | <a href="#-contributors">Contributors</a>
 </p>
 
-<details>
-<summary>🏁 Table of Contents</summary>
-  <ol>
-    <li> <a href="#-introduction">Introduction</a> </li>
-    <li>
-      <a href="#-features">Features</a>
-      <ul>
-        <li><a href="#view-hdb-prices">View HDB Prices</a></li>
-        <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
-        <li><a href="#retirement-planner">Retirement Planner</a></li>
-      </ul>
-    </li>
-    <li> <a href="#-getting-started">Getting Started</a> </li>
-    <li><a href="#-feedback">Feedback</a></li>
-    <li><a href="#-technologies-Used">Technologies Used</a></li>
-    <li><a href="#-contributors">Contributors</a></li>
-  </ol>
-</details>
-
 
 # 💡 Introduction
 The Talent Troupe is comprised of 5 members
