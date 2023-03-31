@@ -165,7 +165,7 @@ export default function BigPurchasePlanner(props) {
     </div>
 
     
-    {/* {RenderButton()} */}
+    {RenderButton()}
     
     <div className = "mt-3">
       <label>Time to save</label> <br></br>
