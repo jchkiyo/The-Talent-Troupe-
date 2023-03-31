@@ -22,9 +22,9 @@
   TO BE DONE
 
 # 🔍 Features
-
+We have implemented 
 <details>
-<summary>🏁 We have 3 main features </summary>
+  <summary>3 main features</summary>
   <ol>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
