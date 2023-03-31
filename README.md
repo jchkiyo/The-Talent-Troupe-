@@ -83,14 +83,10 @@ This web application is built with
 | Profile  | Name | School |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------- |
 | <a href='https://github.com/dinojw10' title='CheongJingWen'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentjingwen.png' height='50' width='50'/></a> | Cheong Jing Wen | Nanyang Technological University (NTU) |
-| <a href='https://github.com/yuandjom' title='yuandjom'> <img src='https://github.com/yuandjom.png' height='50' width='50'/></a> | Joseph Chng John |
-Nanyang Technological University (NTU) |
-| <a href='https://github.com/jklye' title='jklye'> <img src='https://github.com/jklye.png' height='50' width='50'/></a>  | Lim Jia Earn |
-Nanyang Technological University (NTU) |
-| <a href='https://github.com/Purifish' title='Purifish'> <img src='https://github.com/Purifish.png' height='50' width='50'/></a>  | Pachigulla Ramtej |
-Nanyang Technological University (NTU) |
-| <a href='https://github.com/Purifish' title='Purifish'> <img src='https://github.com/Purifish.png' height='50' width='50'/></a>  | Tan Wei Herng |
-Nanyang Technological University (NTU) |
+| <a href='https://github.com/jchkiyo' title='JosephChngJohn'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentjoseph.png' height='50' width='50'/></a> | Joseph Chng John | Nanyang Technological University (NTU) |
+| <a href='https://github.com/LimJiaEarn' title='LimJiaEarn'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentjiaearn.png' height='50' width='50'/></a>  | Lim Jia Earn | Nanyang Technological University (NTU) |
+| <a href='https://github.com/jchkiyo/The-Talent-Troupe-' title='PachigullaRamtej'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentram.png' height='50' width='50'/></a>  | Pachigulla Ramtej | Nanyang Technological University (NTU) |
+| <a href='https://github.com/weiherng2000' title='TanWeiHerng'> <img src='https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/talentweiherng.png' height='50' width='50'/></a>  | Tan Wei Herng | Nanyang Technological University (NTU) |
 
 
 
