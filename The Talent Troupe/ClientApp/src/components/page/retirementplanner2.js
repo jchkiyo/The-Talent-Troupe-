@@ -7,18 +7,23 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Button from 'react-bootstrap/Button';
 import Axios from "axios";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 export default function Retirementplanner2() {
 
     //input values
     const radiovalues = [2300,2900,5200];
-    const [data,setData] = useState(0)
-    const [data2,setData2] = useState(0)
-    const [data3,setData3] = useState(0)
-    const [radioValue, setRadioValue] = useState(0);
-    const [income, setIncome] = useState(0);
-    const [savings, setSavings] = useState(0);
+    const [data,setData] = useState(25)
+    const [data2,setData2] = useState(65)
+    const [data3,setData3] = useState(15)
+    const [radioValue, setRadioValue] = useState(2300);
+    const [income, setIncome] = useState(1500);
+    const [savings, setSavings] = useState(2000);
     const [cpfPrices, setcpfPrices] = useState([]);
 
     //output values
@@ -31,7 +36,6 @@ export default function Retirementplanner2() {
     let location = useLocation()
     const userID = location.state?.data;
   
-
     
     const radiochange = event =>{
         const newvalue = event.target.value
@@ -67,11 +71,12 @@ export default function Retirementplanner2() {
 
     const handleReset = () => {
         setShowTextBox(false);
-        setData(0);
-        setData2(0);
-        setData3(0);
-        setRadioValue(0);
-        setIncome(0);
+        setData(25);
+        setData2(65);
+        setData3(15);
+        setRadioValue(2300);
+        setIncome(1500);
+        setSavings(2000);
        
 
 
@@ -155,11 +160,16 @@ export default function Retirementplanner2() {
       };
 
       const SendData = ({ userID, age, amountToSave, monthlyContribution, retirementyears, percent }) => {
-  
+        
+        const [isLoading, setIsLoading] = useState(false);
+
+        const navigate= useNavigate();
+
         const handleFormSubmit = (event) => {
       
           event.preventDefault();
           console.log("Inside SendData, userID: ", userID);
+          setIsLoading(true);
       
           fetch('https://localhost:7158/api/RetirementPlanner/CreateRetirement', {
             method: 'POST',
@@ -187,15 +197,23 @@ export default function Retirementplanner2() {
           })
           .then(data => {
             console.log(data);
+            setTimeout(() => {
+              setIsLoading(false);
+            }, 3000);
+            navigate('/MyProfile', { state: { data: userID } });
+
+           
           })
           .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
           });
+        
         };
         return (
           <form onSubmit={handleFormSubmit}>
-            {/* Your form fields here */}
-            <button className = "button" type="submit">Submit</button>
+             
+              <Button id="submitbutton" type="submit">{isLoading ? 'Loading...' : 'Submit'}</Button>
+            
           </form>
         );
       }
@@ -220,21 +238,30 @@ export default function Retirementplanner2() {
                 <input id = "slider" className={data>50?'heigh':'less'} type="range" min="18" max="100" step="1" value={data} onChange={(e)=>setData(e.target.value)} />
                 <p class = "number">{data}</p>
                 <h1 class = "h1">At what age do you plan to retire?</h1>
-                <input id = "slider" className={data2>50?'heigh':'less'} type="range" min="18" max="100" step="1" value={data2} onChange={(e)=>setData2(e.target.value)} />
+                <input id = "slider" className={data2>50?'heigh':'less'} type="range" min="18" max="100" step="1" value={data2 }  
+                  onChange={(e) => {
+                    const newValue = parseInt(e.target.value);
+                    if (newValue <= data) {
+                      setData2(parseInt(data)+1);
+                    } else {
+                      setData2(newValue);
+                    }
+                  }} 
+                 />
                 <p class = "number">{data2}</p>
                 <h1 class = "h1">How many years of income do you require during retirement?</h1>
                 <input id = "slider" className={data3>50?'heigh':'less'} type="range" min="0" max="100" step="1" value={data3} onChange={(e)=>setData3(e.target.value)} />
                 <p class = "number">{data3}</p>
                 <h1 class = "h1">How much do you have in all your savings?</h1>
-                <input onChange = {newchange} type="number" />
+                <input onChange = {newchange} type="number"  placeholder = "2000"/>
                 <br></br>
                 <h1 class = "h1">How much income do you earn per month?</h1>
-                <input onChange = {change} type="number" />
+                <input onChange = {change} type="number" placeholder = "1500" />
                 <br></br>
 
                 <h1 class = "h1">What is your desired retirement lifestyle?</h1>
                 <br></br>
-                <ToggleButtonGroup  type="radio" name="options"   >
+                <ToggleButtonGroup  type="radio" name="options"   size="sm" >
                     <ToggleButton id="tbg-radio-1" value={radiovalues[0]} onChange= {radiochange} style={{marginRight: "10px"}} >
                         Modest - 2,300
                     </ToggleButton>
@@ -249,7 +276,7 @@ export default function Retirementplanner2() {
                         </ToggleButton>
                         {showCustom && (
                         <div style={{ marginLeft: "10px" }}>
-                            <input type="number" onChange={radiochange} />
+                            <input type="number" onChange={radiochange} placeholder = "2300" />
                         </div>
                         )}
                 </ToggleButtonGroup>
@@ -262,37 +289,49 @@ export default function Retirementplanner2() {
                     <Button  size = "lg" id = "reset" onClick={handleReset}>Reset</Button>
                 </div>
                 <br></br>
-                {showTextBox && (
-                        <div className = "input-container">
-                             <h1 class = "h1">Here are your estimated requirement funds</h1>
-                            <div className="info">
-                                <h1>Your are age {data}</h1>
-                                <h1>You plan to retire at {data2}</h1>
-                                <h1>You are planning for {data3} of retirement</h1>
-                            </div>
-                            <div>   
-                                 <h1>The amount u need at your retirement age is { retirementSum}</h1>
-                            </div>
+                {showTextBox && 
+                          <Container fluid className = "input-container">
+                            <Row className="justify-content-md-center">
+                              <h1 class = "h1">Here are your estimated requirement funds</h1>
+                            </Row>
+                            <Row>
+                                <Col >
+                                  <h1>Your are age <p className = "retirementdata">{data}</p></h1>
+                                </Col>
+                                <Col>
+                                  <h1>You plan to retire at <p className = "retirementdata">{data2}</p></h1>
+                                </Col>
+                                <Col>
+                                  <h1>You are planning for <p className = "retirementdata">{data}</p> years of retirement</h1>
+                                </Col>
+                            </Row>
+                            <Row style={{marginLeft: "30px"}}>
+                               <h1>The amount you need at your retirement age is  <span className = "retirementdata">${ retirementSum}</span></h1>
+                            </Row>  
+                            <Row style={{marginLeft: "30px"}}>
+                              <Col md = "auto">
+                                 <h1>You need to save  <span className = "retirementdata">${needsave}</span></h1>
+                              </Col>
+                              <Col md = "auto">
+                                 <h1>Every month u have to save  <span className = "retirementdata">${Math.round(monthlysave)}</span></h1>
+                              </Col>
+                            </Row>
                             <br></br>
-                            <div>
-                              <h1>You need to save {needsave}</h1>
-                            </div>
-                            <div>
-                              <h1>Every month u have to save {monthlysave }</h1>
-                            </div>
-                            <div>
-                                <h1>Adjusted for cpf your current income is {cpfincome}</h1>
-                            </div>
-                            <div>
-                                <h1>You need to save {cpfpercent } % of your income</h1>
-                            </div>
-                            <div>
-                              <SendData userID = {userID} age = {Math.floor(data)} amountToSave = {Math.floor(needsave)} monthlyContribution = {Math.floor(monthlysave)} retirementyears = {Math.floor(data3)} percent = {Math.floor(cpfpercent)} />
-                            </div>
+                            <Row style={{marginLeft: "30px"}}>
+                                <Col md = "auto">
+                                   <h1>Adjusted for cpf your current income is  <span className = "retirementdata">${cpfincome}</span></h1>
+                                </Col>
+                                <Col md = "auto">
+                                   <h1>You need to save  <span className = "retirementdata">{Math.round(cpfpercent)} %</span> of your income</h1>
+                                </Col>
+                            </Row>
+                            <br></br>
+                             
+                            <SendData userID = {userID} age = {Math.floor(data)} amountToSave = {Math.floor(needsave)} monthlyContribution = {Math.floor(monthlysave)} retirementyears = {Math.floor(data3)} percent = {Math.floor(cpfpercent)} />
 
+                          </Container>
 
-                        </div>
-                    )}
+                    }
 
             </div>
             <img
