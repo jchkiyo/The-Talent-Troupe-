@@ -64,8 +64,17 @@ export default function Retirementplanner2() {
         console.log(userID);
     };
 
+
     const handleReset = () => {
         setShowTextBox(false);
+        setData(0);
+        setData2(0);
+        setData3(0);
+        setRadioValue(0);
+        setIncome(0);
+       
+
+
        
     };
     useEffect(() => {
@@ -186,7 +195,7 @@ export default function Retirementplanner2() {
         return (
           <form onSubmit={handleFormSubmit}>
             {/* Your form fields here */}
-            <button type="submit">Submit</button>
+            <button className = "button" type="submit">Submit</button>
           </form>
         );
       }
@@ -225,17 +234,17 @@ export default function Retirementplanner2() {
 
                 <h1 class = "h1">What is your desired retirement lifestyle?</h1>
                 <br></br>
-                <ToggleButtonGroup type="radio" name="options"  >
-                    <ToggleButton id="tbg-radio-1" value={radiovalues[0]} onChange= {radiochange}>
+                <ToggleButtonGroup  type="radio" name="options"   >
+                    <ToggleButton id="tbg-radio-1" value={radiovalues[0]} onChange= {radiochange} style={{marginRight: "10px"}} >
                         Modest - 2,300
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-2" value={radiovalues[1]} onChange= {radiochange}>
+                    <ToggleButton id="tbg-radio-2" value={radiovalues[1]} onChange= {radiochange} style={{marginRight: "10px"}}>
                         Comfortable - 2,900
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-3" value={radiovalues[2]} onChange= {radiochange}>
+                    <ToggleButton id="tbg-radio-3" value={radiovalues[2]} onChange= {radiochange} style={{marginRight: "10px"}}>
                         Premier - 5,200
                     </ToggleButton>
-                    <ToggleButton id="tbg-radio-4" value="custom" onClick={handleShowCustom}>
+                    <ToggleButton id="tbg-radio-4" value="custom" onClick={handleShowCustom} style={{marginRight: "10px"}}>
                         Custom
                         </ToggleButton>
                         {showCustom && (
@@ -269,13 +278,13 @@ export default function Retirementplanner2() {
                               <h1>You need to save {needsave}</h1>
                             </div>
                             <div>
-                              <h1>Every month u have to save {monthlysave}</h1>
+                              <h1>Every month u have to save {monthlysave }</h1>
                             </div>
                             <div>
                                 <h1>Adjusted for cpf your current income is {cpfincome}</h1>
                             </div>
                             <div>
-                                <h1>You need to save {cpfpercent} % of your income</h1>
+                                <h1>You need to save {cpfpercent } % of your income</h1>
                             </div>
                             <div>
                               <SendData userID = {userID} age = {Math.floor(data)} amountToSave = {Math.floor(needsave)} monthlyContribution = {Math.floor(monthlysave)} retirementyears = {Math.floor(data3)} percent = {Math.floor(cpfpercent)} />
