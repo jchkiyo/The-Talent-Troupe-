@@ -1,7 +1,7 @@
-import { React, useState } from 'react';
+import { React, useState,useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Pic1 from "../../../assets/retirementplanpic.png";
-import {useNavigate} from 'react-router-dom';
+
 
 export default function RetirementPlanCard(props) {
     return (    
@@ -30,36 +30,51 @@ export default function RetirementPlanCard(props) {
 
 function RetirementViewPlans(props) {
     const [show, setShow] = useState(false);
+    const [isDeleted, setIsDeleted] = useState(false);
+    const [deleteConfirmation, setdeleteConfirmation] = useState(false);
   
-    const handleClose = () => setShow(false);
+    const handleClose = () =>{
+      setShow(false);
+      setdeleteConfirmation(false);
+  }
     const handleShow = () => setShow(true);
-    const navigate = useNavigate();
+
+    const beforeDelete = ()=>{
+      setdeleteConfirmation(true);
+      setShow(false);
+    }
 
     const handleDelete = () =>{
-      setShow(true);
 
       //Code to delete this plan
-      const response = fetch('https://localhost:7158/api/RetirementPlanner/RemoveRetirement/ ' + props.id ,{
-         method: 'DELETE',
-         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        mode: 'cors'
-         
-      }).then(() => {
-        console.log(props.id);
-        console.log(response);
-        navigate('/Myprofile');
-      })
-    
+      
+      const response = fetch('https://localhost:7158/api/RetirementPlanner/RemoveRetire/' + props.id, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      mode: 'cors'
+    }).then(() => {
+      console.log(props.id);
+      console.log(response);
+      setIsDeleted(true);
+    });
+
+   
 
     }
+
+    useEffect(() => {
+      if (isDeleted) {
+        window.location.reload();
+      }
+    }, [isDeleted]);
   
     return (
       <>
         <button onClick={handleShow} class="px-4 py-1 text-sm text-purple-600 font-bold rounded-full border border-purple-200 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
-        <button onClick={handleDelete} class="px-4 py-1 text-sm text-purple-600 font-bold rounded-full border border-purple-200 hover:text-white hover:bg-red-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Delete Plan</button>
+        <button onClick={beforeDelete} class="px-4 py-1 text-sm text-purple-600 font-bold rounded-full border border-purple-200 hover:text-white hover:bg-red-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Delete Plan</button>
         <Modal
           show={show}
           onHide={handleClose}
@@ -82,6 +97,30 @@ function RetirementViewPlans(props) {
           <Modal.Footer>
             <MyButton onClick={handleClose}  buttonMessage="Close"/>
             <MyButton onClick={handleDelete} buttonMessage="Delete Plan"/>
+          </Modal.Footer>
+
+        </Modal>
+
+        
+        <Modal
+          show={deleteConfirmation}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Are you sure you want to delete?</Modal.Title>
+
+          </Modal.Header>
+
+          <Modal.Body>
+            <p> Once deleted it cannot be recovered !</p>
+
+          </Modal.Body>
+
+          <Modal.Footer>
+            <MyButton onClick={handleClose} buttonMessage="Cancel"/>
+            <MyButton onClick={handleDelete} buttonMessage="Confirm Delete"/>
           </Modal.Footer>
 
         </Modal>
