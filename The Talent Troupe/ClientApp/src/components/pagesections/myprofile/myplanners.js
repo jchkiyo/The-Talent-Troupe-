@@ -9,21 +9,7 @@ import { useLocation, Link } from "react-router-dom";
 
 export default function MyPlanners() {
 
-    // This two useStates retirementPlans, bigPurchasePlans will be data pulled from API in the future
-
-    /*const [retirementPlans] = useState(
-        [
-            {planName: "My Retirement Plan", creationDate: "11/2/23", amountToSave: 1000000, monthlyContribution: 2000, comments: "NIL"},
-            {planName: "Wife's Retirement Plan", creationDate: "12/2/23", amountToSave: 800000, monthlyContribution: 1400, comments: "Did by husband"}
-        ]
-    );*/
-
-    // const [bigPurchasePlans] = useState(
-    //     [
-    //         {planName: "Punggol HDB Plan", creationDate: "21/2/23", amountToSave: 500000, monthlyContribution: 2000, comments: "Low Floor"},
-    //         {planName: "Sengkang HDB Plan", creationDate: "12/3/23", amountToSave: 560000, monthlyContribution: 2000, comments: "High Floor"}
-    //     ]
-    // );
+   
 
   let location = useLocation()
   const userID = location.state?.data;
