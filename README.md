@@ -126,7 +126,7 @@ Connecting to our firebase database and Web API
 * The C# code would run on your own localhost 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/localhostC%23.png)
 * Make sure to this this localhost running while testing our the REACT application
-
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png)
 
 # 📜 Feedback
 If you would like to report bugs or file feature requests, you are welcomed to do so [here](https://github.com/jchkiyo/The-Talent-Troupe-/issues/new)
