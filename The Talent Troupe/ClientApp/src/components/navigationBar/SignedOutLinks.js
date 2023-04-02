@@ -14,8 +14,11 @@ import { collection , getDocs, where, query} from "firebase/firestore";
 function SignedOutLinks() {
     const { currentUser } = useContext(AuthContext);
     const  userid = sessionStorage.getItem("accessToken") == null ? false : true;
-    
-   
+    const [userID, setuserID] = useState(0);
+    setTimeout(() => {
+      setuserID(currentUser.uid);
+    }, 3000);
+
     const [info, setInfo]= useState("");
     const navigate = useNavigate();
 
@@ -54,10 +57,10 @@ function SignedOutLinks() {
         <NavLink to="/" style={{ textDecoration: 'none' }}>
             Home
         </NavLink>
-        {userid && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }} >Retirement Planner</NavLink>}
-        {userid && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} >Big Purchase Planner</NavLink>}
-        {userid && <NavLink to='/Viewhdbprices' style={{ textDecoration: 'none' }} >View HDB Prices</NavLink>}
-        {userid && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>My Profile</NavLink>}
+        {userid && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }} state={{data: userID}}>Retirement Planner</NavLink>}
+        {userid && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} state={{data: userID}}>Big Purchase Planner</NavLink>}
+        {userid && <NavLink to='/Viewhdbprices' style={{ textDecoration: 'none' }} state={{data: userID}}>View HDB Prices</NavLink>}
+        {userid && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }} state={{data: userID}}>My Profile</NavLink>}
         <div className="buttons">
        <a onClick={clickLogin} href="/" >
         <NavBtn>
