@@ -1,40 +1,28 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
+.box-push {
+  margin-top: 10px;
+}
 
-
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 120px;
-    
-  }
-
-
-  .box-left{
-    margin-top: 30px;
-    margin-left:50px
-    
-
-  }
-
-
-  .box-push{
-    margin-left:auto;
-    margin-right:170px;
-    margin-bottom:100px;
-  }
-
-  .submitButton {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    height: 28px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 14px;
-    width: 100%;
-  }
+.submitButton {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  height: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  width: 30%;
+}

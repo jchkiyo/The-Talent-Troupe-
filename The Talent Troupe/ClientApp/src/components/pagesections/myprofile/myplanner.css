@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .retirementplans > h1 {
   text-align: center;
   font-size: 3rem;
   margin: 4rem 0 1rem 0;
-
 }
 
 .emptyretirementplans {
@@ -18,7 +15,6 @@
   margin: 4rem 0 1rem 0;
   color: #ff2002;
 }
-
 
 .emptyretirementplans-button {
   background-color: rgb(117, 117, 243);
@@ -58,11 +54,10 @@
   margin: 4rem 0 1rem 0;
 }
 
-.body{
-  min-height: 100vh;
+.body {
+  min-height: 130vh;
   background-color: white;
   flex-direction: column;
   display: flex;
   justify-content: center;
-  
 }
