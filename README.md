@@ -70,14 +70,19 @@ Are you planning for your retirement in Singapore? Our website provides a interf
 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
 
-
+<details>
   <summary>An example of retirement plan of a 25 year old</summary>
   <ol>
       <ul>
-        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
+        <p>An example of retirement plan of a 25 year old</p>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="retirementplannereg1" style="margin-right: 20px;">
+      </ul>
+      <ul>
+        <p>An example of our retirement guide of a 25 year old</p>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample2.PNG" alt="retirementplannereg2" style="margin-right: 20px;">
       </ul>
   </ol>
-
+</details>
 
 #### Why Us?
 |                             | ◾ Our View HDB Prices  | Retirement Planners |
