@@ -74,11 +74,15 @@ Are you planning for your retirement in Singapore? Our website provides a interf
   <summary>An example of retirement plan of a 25 year old</summary>
   <ol>
       <ul>
-        <p>\nAn example of retirement plan of a 25 year old</p>
+        <p/>
+        <p>An example of retirement plan of a 25 year old</p>
+        <p/>
         <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="retirementplannereg1" style="margin-right: 20px;">
       </ul>
       <ul>
+        <p/>
         <p>An example of our retirement guide of a 25 year old</p>
+        <p/>
         <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample2.PNG" alt="retirementplannereg2" style="margin-right: 20px;">
       </ul>
   </ol>
