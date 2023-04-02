@@ -93,6 +93,7 @@ export default function BigPurchasePlanner(props) {
             monthlyContribution = {MonthlyContribution}
             creationDate = {creationDate}
             comments = {comments}
+            TimeToSave = {TimeToSave}
           />
 
 
@@ -257,12 +258,12 @@ export default function BigPurchasePlanner(props) {
 }
 
 
-const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments }) => {
+const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments, TimeToSave }) => {
   
   const handleFormSubmit = (event) => {
 
     event.preventDefault();
-    console.log(userID);
+    console.log(TimeToSave);
 
 
     fetch('https://localhost:7158/api/BigPurchase/CreatePlan', {
@@ -279,6 +280,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
         monthlyContribution: monthlyContribution,
         dateOfCreation: creationDate,
         comments: comments,
+        timeToSave: TimeToSave
       }),
     
       mode: 'cors'
