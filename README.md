@@ -40,15 +40,13 @@ Looking for a home in Singapore? Our website provides a database of government b
 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 <details>
-  <summary>3 main features</summary>
+  <summary>An example of a list of Bedok HDB Prices</summary>
   <ol>
       <ul>
-        <li><a href="#view-hdb-prices">An example of a list of Bedok HDB Prices</a></li>
+        ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG)
       </ul>
   </ol>
 </details>
-
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG)
 
 #### Why Us?
 |                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
