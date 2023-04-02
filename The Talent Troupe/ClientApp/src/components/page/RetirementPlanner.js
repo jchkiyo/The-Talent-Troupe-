@@ -1,41 +1,43 @@
-import React from 'react';
 import picture1 from "../../assets/homepic.png";
 import "./RetirementPlanner.css";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { AuthProvider, AuthContext } from "../AuthProvider";
+import React, { useContext } from "react";
 
 function HomePage() {
-
-   let location = useLocation()
-   const userID = location.state?.data;
-   console.log(userID);
-
   return (
     <React.Fragment>
-       <div className = "body">
-          <div className = "orange">
-             Make 
-             <br></br>
-             Retirement
-             <br></br>
-             planning 
-             <br></br>
-             easier
-             <br></br>
-             <Link to = "/retirementplanner2">
-               <button id = "button1">START NOW</button>
-             </Link>
-            </div>
-            <img
-               alt=""
-               src={picture1}
-               className= "home-pic"
-            />
-         </div>
+      <AuthProvider>
+        <User />
+      </AuthProvider>
     </React.Fragment>
-  
-);
-  
+  );
+}
+
+function User() {
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
+
+  return (
+    <div className="body">
+      <div className="orange">
+        Make
+        <br />
+        Retirement
+        <br />
+        planning
+        <br />
+        easier
+        <br />
+        {currentUser && (
+          <Link to="/retirementplanner2" state={{ data: currentUser.uid }}>
+            <button id="button1">START NOW</button>
+          </Link>
+        )}
+      </div>
+      <img alt="" src={picture1} className="home-pic" />
+    </div>
+  );
 }
 
 export default HomePage;
