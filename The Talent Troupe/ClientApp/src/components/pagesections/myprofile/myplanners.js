@@ -1,14 +1,12 @@
 import { React, useState, useEffect } from 'react';
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./myplanner.css";
 import RetirementPlanCard from "./RetirementPlanCard";
 import BigPurchasePlanCard from "./BigPurchasePlanCard";
-import Button from 'react-bootstrap/Button';
-import { useNavigate } from 'react-router-dom';
 import { useLocation, Link } from "react-router-dom";
 import bot1 from "../../../assets/EmptyRetirementPlanbot.png";
+import bot2 from "../../../assets/EmptyBigPurchasePlanbot.png";
+
 
 
 
@@ -20,8 +18,6 @@ export default function MyPlanners() {
   const userID = location.state?.data;
   const [retirementPlans, setretirementPlans] = useState([]);
   const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
-  console.log("Hello: ", userID);
-  const navigate= useNavigate();
 
     useEffect(() => {
         
@@ -34,23 +30,15 @@ export default function MyPlanners() {
                 const response2 = await fetch('https://localhost:7158/api/RetirementPlanner/GetUserRetirements/' + userID);
                 const retirementplanData = await response2.json();
                 setretirementPlans(retirementplanData);
-                console.log(retirementplanData);
                 console.log("Successfully updated plans with API");
                 
-
-
             } catch (error) {
                 console.error('Error fetching plans:', error);
             }
         }
 
         fetchPlans();
-    }, [userID]);
-
-    function handleClick() {
-        navigate('/bigpurchaseplanner', { state: { data: userID }});
-      }
-    
+    }, [userID]);  
     
     return(
         <div className="body">
@@ -97,8 +85,9 @@ export default function MyPlanners() {
             {bigPurchasePlans.length===0 &&       
               <div className="emptyretirementplans">
                   <h3> You have no big purchase plans currently </h3>
-
-                  <Button className="emptyretirementplans-button" to="/bigpurchaseplanner" onClick = {handleClick}> Create new Big Purchase Plan !</Button>
+                  <Link to="/retirementplanner">
+                    <img className="emptyretirementplans-chatbot"  src={bot2} alt="chatbot" style={{ width: '15%', height: '90%' }} />
+                  </Link>
 
               </div>
             }

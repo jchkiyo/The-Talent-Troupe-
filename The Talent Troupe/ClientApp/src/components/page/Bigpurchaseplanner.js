@@ -1,7 +1,6 @@
 import { useState , useContext} from "react";
 import {Link} from 'react-router-dom';
 import "./BigPurchasePlanner.css";
-import {useNavigate} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import chatbot from "../../assets/ChatbotBigPurchase.png";
@@ -31,7 +30,6 @@ function BigPurchasePlanner2(props) {
   setTimeout(() => {
     setuserID(currentUser.uid);
   }, 3000);
-  console.log("Hello from LEGEND: ", userID);
 
   const [PlanName, setPlanName] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
@@ -40,24 +38,11 @@ function BigPurchasePlanner2(props) {
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
   const [Calculations, setCalculations] = useState("");
-  const [isLoadingButton] = useState(true);
-  // const [isLoadingButton, setisLoadingButton] = useState(true);
 
   const [LoadPage, setLoadPage] = useState(true);
   const [LoadFinal, setLoadFinal] = useState(false);
 
-  const navigate = useNavigate();
 
-
-  const RenderButton = () => {
-    if(isLoadingButton){
-      return <button className="btn btn-primary" onClick={navigateTohdbprices}>ViewhdbPrices</button>
-    }
-  }
-  
-  const navigateTohdbprices = () =>{
-    navigate('/Viewhdbprices');
-  }
 
   const onHandleSubmit=() => {
     //e.preventDefault
@@ -169,12 +154,10 @@ function BigPurchasePlanner2(props) {
         value={AmountToSave}
         required
         minLength={1}
-        maxLength={25}
+        maxLength={25} 
         onChange={(e) => setAmountToSave(e.target.value)}
       ></input>
     </div>
-
-    {RenderButton()}
     
     <div className = "mt-3">
       <label>Months to Save</label> <br></br>

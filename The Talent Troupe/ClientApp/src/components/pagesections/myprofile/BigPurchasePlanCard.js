@@ -64,8 +64,8 @@ export default function BigPurchasePlanCard(props) {
           </Modal.Header>
 
           <Modal.Body>
-            <p>Amount to save: {props.amountToSave}</p>
-            <p>Monthly Contribution: {props.monthlyContribution}</p>            
+            <p>Amount to save: ${props.amountToSave}</p>
+            <p>Monthly Contribution: ${props.monthlyContribution}</p>            
             <p>Comments: {props.comments}</p>
 
           </Modal.Body>
