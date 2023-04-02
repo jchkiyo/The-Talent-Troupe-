@@ -4,9 +4,7 @@ import Pic1 from "../../../assets/retirementplanpic.png";
 
 
 export default function RetirementPlanCard(props) {
-  console.log("props.planName: ", props.planName);
     return (    
-
         <>
         <br></br>
         <div class="m-4 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
@@ -63,7 +61,6 @@ function RetirementViewPlans(props) {
       },
       mode: 'cors'
     }).then(() => {
-      console.log(props.id);
       console.log(response);
       setIsDeleted(true);
     });
@@ -92,12 +89,13 @@ function RetirementViewPlans(props) {
 
           <Modal.Body>
             <p>Retirement Age: {props.retirementage}</p>
-            <p>Amount To Save: {props.amountToSave}</p>
-            <p>Monthly Contribution: {props.amountToSaveMonth}</p>            
+            <p>Amount To Save: ${props.amountToSave}</p>
+            <p>Monthly Contribution: ${props.amountToSaveMonth}</p>            
             <p>Years of Retirement: {props.yearsOfRetirement}</p>
-            <p>% Of Income to Save: {props.percentageSave}</p>
+            <p>% Of Income to Save: {Math.round(props.percentageSave) < 0 ? 0: Math.round(props.percentageSave)}%</p>
 
-    
+
+            
 
           </Modal.Body>
 

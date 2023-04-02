@@ -1,121 +1,120 @@
 .elderlyBanner {
-    background-color: rgba(30, 30, 30, 1);
-    overflow: hidden;
-    padding: 20px 27px 638.52px 76px;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-  }
-  #button {
-    background-color: red;
-    text-align: center;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
-    margin-right: 10px;
-  }
+  background-color: rgba(30, 30, 30, 1);
+  overflow: hidden;
+  padding: 20px 27px 638.52px 76px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+#button {
+  background-color: red;
+  text-align: center;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  margin-right: 10px;
+}
 
-  #submitbutton {
-    background-color: red;
-    text-align: center;
-    font-size: 20px;
-    display: block;
-    margin: auto;
-    
-  }
-  
-  .buttongroup {
-    display: flex;
-    gap: 10px; /* add a 10-pixel gap between buttons */
-  }
-  #reset{
-    margin-left: 10px;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 30px;
-    background-color: red;
-  }
-  .backgroundOverlayFx {
-    width: 483px;
-    height: 515px;
-    background-color: rgba(255, 52, 101, 1);
-    border-radius: 50%;
-    position: absolute;
-    left: -218px;
-    bottom: -69px;
-    border: 1px solid rgba(0, 0, 0, 1);
-    filter: blur(300px);
-  }
-  .flexWrapperOne {
-    margin-right: 219px;
-    padding: 78px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: flex-start ;
-  }
-  .retirementdata
-  {
-      font-weight: bold;
-      font-size:30px;
-      margin-left:5px;
-      border: 1px solid #c9e4f4;
-      padding: 5px;
-      display: inline-block;
-      background-color: lightblue;
-      border-radius: 5px;
-    
-  }
-  .planYourRetirementWithUs {
-    height: 40px;
-    width: 542px;
-    font-family: "Readex Pro";
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-    color: white;
-    display: flex;
-    margin-bottom: 12px;
-  }
-  .findOutHowMuchYouNeedForYourDesi {
-    height: 74px;
-    width: 490px;
-    font-family: "Readex Pro";
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 40px;
-    color: white;
-    display: flex;
-  }
-  .vector1 {
-    width: 416px;
-    height: 333.48px;
-  }
+#submitbutton {
+  background-color: red;
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+}
 
-  .less{
-    accent-color: green;
+.buttongroup {
+  display: flex;
+  gap: 10px; /* add a 10-pixel gap between buttons */
 }
-.heigh{
-    accent-color: rgb(198, 78, 219);
+#reset {
+  margin-left: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 30px;
+  background-color: red;
 }
-#slider
-{
-  width:750px;
-  border-radius: 10px; 
+.backgroundOverlayFx {
+  width: 483px;
+  height: 515px;
+  background-color: rgba(255, 52, 101, 1);
+  border-radius: 50%;
+  position: absolute;
+  left: -218px;
+  bottom: -69px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  filter: blur(300px);
 }
-.h1{
-   color: white;
+.flexWrapperOne {
+  margin-right: 219px;
+  padding: 78px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
 }
-.number{
+.retirementdata {
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 5px;
+  border: 1px solid #c9e4f4;
+  padding: 5px;
+  display: inline-block;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+.planYourRetirementWithUs {
+  height: 40px;
+  width: 542px;
+  font-family: "Readex Pro";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  color: white;
+  display: flex;
+  margin-bottom: 12px;
+}
+.findOutHowMuchYouNeedForYourDesi {
+  height: 74px;
+  width: 490px;
+  font-family: "Readex Pro";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+  color: white;
+  display: flex;
+}
+.vector1 {
+  width: 416px;
+  height: 333.48px;
+}
 
+.less {
+  accent-color: green;
+}
+.heigh {
+  accent-color: rgb(198, 78, 219);
+}
+#slider {
+  width: 750px;
+  border-radius: 10px;
+}
+.h1 {
+  color: white;
+}
+.number {
   color: white;
   font-size: 20px;
 }
-.input-container
-{
+.input-container {
   background-color: grey;
 }
-.info{
+.info {
   display: flex;
   justify-content: space-between;
+}
+
+.image {
+  right: 0;
+  position: absolute;
 }

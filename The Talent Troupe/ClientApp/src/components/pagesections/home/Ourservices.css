@@ -9,90 +9,80 @@
   }
 }
 
-
 .our-services {
-    padding: 2rem 5rem 0 5rem;
-    animation-duration: 0.33s;
-    animation-timing-function: ease-in-out;
-    animation-name: slideDownFade;
-  }
-  
-  .our-services-topbar {
-    align-items: center;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .our-services-topbar > h1 {
-    font-size: 3rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .our-services-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vw;
+  padding: 2rem 5rem 0 5rem;
+  animation-duration: 0.33s;
+  animation-timing-function: ease-in-out;
+  animation-name: slideDownFade;
+}
 
-  
-   
-    
-    
-  }
+.our-services-topbar {
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
-  .service-card {
-    background-color: #edefee;
-    padding-bottom: 1.5rem;
-    height: 110%;
+.our-services-topbar > h1 {
+  font-size: 3rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
 
-  }
-  
-  .service-card > img {
-    height: 30vh;
-    width: 100%;
-    object-fit: cover;
-  }
-  
-  service-card-content {
-    margin: 0.5rem 2rem 1rem 2rem;
-  }
-  
-  .service-card-content > h1 {
-    font-size: 2.2rem;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
- 
+.our-services-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+}
 
-  }
-  
-  .service-card-content > h3 {
-    font-size: 1.8rem;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.service-card {
+  background-color: #edefee;
+  padding-bottom: 1.5rem;
+  height: 115%;
+}
 
-  .service-card-para {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.service-card > img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
 
-  .start-now-button {
-    background-color: #4650dd;
-    border-radius: 0.2rem;
-    font-size: 1.5rem;
-    padding: 1rem;
-    position: absolute;
-  }
-  
-  .start-now-button:hover {
-    background-color: #8aabf9;
-    text-decoration: none;
-    color: #eeeeee;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: black;
-    transition: 0.2s;
-  }
+service-card-content {
+  margin: 0.5rem 2rem 1rem 2rem;
+}
 
+.service-card-content > h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.service-card-content > h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.service-card-para {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.start-now-button {
+  background-color: #4650dd;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  position: absolute;
+}
+
+.start-now-button:hover {
+  background-color: #8aabf9;
+  text-decoration: none;
+  color: #eeeeee;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: black;
+  transition: 0.2s;
+}

@@ -79,8 +79,9 @@ footer {
   margin-top: -1.4rem;
 }
 
-.footer-bigcontainer{
-  margin-top:auto
+.footer-bigcontainer {
+  margin-top: auto;
+  width: 100%;
 }
 
 footer > menu {
@@ -90,6 +91,7 @@ footer > menu {
 .footer-header {
   margin-bottom: -0.5rem;
   font-size: 30px;
+  margin-top: 10px;
 }
 
 .footer-links {
@@ -129,7 +131,6 @@ footer > menu {
   margin-right: 3rem;
 
   background-color: white;
-  padding: 0.5rem;
 }
 
 .redirect-button:hover {

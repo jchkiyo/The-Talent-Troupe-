@@ -34,8 +34,6 @@ export default function HDBPrices() {
     });
   };
 
-  console.log(selectedProduct);
-
   const handleFilter = (e) => {
     e.preventDefault();
     setFilterValue(value);
