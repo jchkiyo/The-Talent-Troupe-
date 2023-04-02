@@ -1,10 +1,12 @@
 import { useState,useEffect} from "react";
+import {Link} from 'react-router-dom';
 import { useLocation } from "react-router-dom";
 import "./BigPurchasePlanner.css";
 import {useNavigate} from 'react-router-dom';
 // import { checkActionCode } from "firebase/auth";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import chatbot from "../../assets/ChatbotBigPurchase.png";
 
 export default function BigPurchasePlanner(props) {
 
@@ -27,7 +29,7 @@ export default function BigPurchasePlanner(props) {
 
   const navigate = useNavigate();
   useEffect(()=> {
-    setisLoadingButton(true)
+    setisLoadingButton(false)
     setAmountToSave(() =>{
       if (location.state!=null)
         return location.state.value
@@ -116,8 +118,8 @@ export default function BigPurchasePlanner(props) {
               <Card.Body>
                 <Card.Title>Sorry!</Card.Title>
                 <Card.Text>
-                  You are required to top up {amountTopUp} to your monthly contribution
-                  to hit your target of {AmountToSave}
+                  You are required to top up ${amountTopUp} to your monthly contribution
+                  to hit your target of ${AmountToSave}
                 </Card.Text>
                 <Button variant="primary active"onClick={onHandleRetry}>Retry</Button>
               </Card.Body>
@@ -132,11 +134,10 @@ export default function BigPurchasePlanner(props) {
   
   
   return (
-    <div className="body1">
+    <div>
     {(LoadPage)?  
 
-    <form style={{ width: '18rem',
-                            }}className="planner-form">
+    <form className="planner-form">
     <div>
       <label>Plan Name</label> <br></br>
       <input
@@ -227,6 +228,8 @@ export default function BigPurchasePlanner(props) {
         value={comments}
         onChange={(e) => setComments(e.target.value)}
       ></textarea>
+
+
     </div>
   {
     PlanName!=="" && 
@@ -236,10 +239,17 @@ export default function BigPurchasePlanner(props) {
     TimeToSave.length!=="" &&
 
     <div>
-    <button className="btn btn-primary" onClick={onHandleSubmit}>Submit !</button>
+      <button className="btn btn-primary" onClick={onHandleSubmit}>Submit !</button>
     </div>
   }
 
+  <div>
+    <Link to="/Viewhdbprices">
+      <img src={chatbot} alt="chatbot" style={{ position: 'fixed', top: '50%', right: 100, transform: 'translateY(-50%)', width: '20%', height: '30%' }} />
+    </Link>
+  </div>
+
+  
 
     </form>
    

@@ -13,6 +13,7 @@
 
 .emptyretirementplans {
   text-align: center;
+  justify-content: center;
   font-size: 2.5rem;
   margin: 4rem 0 1rem 0;
   color: #ff2002;
@@ -20,8 +21,7 @@
 
 
 .emptyretirementplans-button {
-  background-color: #4650dd;
-  border: none;
+  border: blue;
   color: white;
   padding: 20px;
   text-align: center;
@@ -30,6 +30,14 @@
   font-size: 20px;
   margin: 5rem;
   border-radius: 18px;
+}
+
+.emptyretirementplans-chatbot {
+  color: white;
+  justify-content: center;
+  padding: 1px;
+  text-align: center;
+  display: inline-block;
 }
 
 .emptyretirementplans-button:hover {

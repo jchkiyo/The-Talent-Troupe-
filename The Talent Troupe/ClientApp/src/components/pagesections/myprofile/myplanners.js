@@ -5,6 +5,9 @@ import RetirementPlanCard from "./RetirementPlanCard";
 import BigPurchasePlanCard from "./BigPurchasePlanCard";
 // import { AuthContext } from '../AuthProvider';
 import { useLocation, Link } from "react-router-dom";
+import bot1 from "../../../assets/EmptyRetirementPlanbot.png";
+import bot2 from "../../../assets/EmptyBigPurchasePlanbot.png";
+
 
 
 export default function MyPlanners() {
@@ -56,8 +59,10 @@ export default function MyPlanners() {
             </article>
             {retirementPlans.length===0 && 
               <div className="emptyretirementplans">
-                  <h3> You have no retirement plans currently </h3>
-                  <Link className="emptyretirementplans-button" to="/retirementplanner"> Create new Retirement Plan !</Link>
+                  <Link to="/retirementplanner">
+                  <img className="emptyretirementplans-chatbot"  src={bot1} alt="chatbot" style={{ width: '15%', height: '90%' }} />
+
+                    </Link>
 
               </div>
             } 
@@ -85,8 +90,10 @@ export default function MyPlanners() {
 
             {bigPurchasePlans.length===0 &&       
               <div className="emptyretirementplans">
-                  <h3> You have no big purchase plans currently </h3>
-                  <Link className="emptyretirementplans-button" to="/bigpurchaseplanner"> Create new Big Purchase Plan !</Link>
+                  <Link to="/bigpurchaseplanner">
+                  <img className="emptyretirementplans-chatbot" src={bot2} alt="chatbot" style={{ width: '15%', height: '90%' }} />
+
+                    </Link>
 
               </div>
             }
