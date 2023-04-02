@@ -1,5 +1,5 @@
 .home-banner {
-  background-color: black ;
+  background-color: rgb(0, 0, 0) ;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,18 +7,21 @@
   margin-top: -1.4rem;
 }
 .home-banner-subsection {
-  margin-top: -2rem;
+  margin-top: 0rem;
+  text-align: justify;
+  
 }
 
 .home-banner-text > h1 {
   font-size: 7rem;
-  margin-top: 0rem;
-  margin-bottom: -3rem;
+  margin-top: 0.5rem;
+
 }
 
 .home-banner-text > h2 {
-  margin-top: -1.4rem;
-  font-size: 5rem;
+  font-size: 35px;
+  margin-top: 1rem;
+ 
 }
 
 .home-banner-dps-container {

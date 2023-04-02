@@ -28,7 +28,7 @@ export default function BigPurchasePlanner(props) {
 
   const navigate = useNavigate();
   useEffect(()=> {
-    setisLoadingButton(false)
+    setisLoadingButton(true)
     setAmountToSave(() =>{
       if (location.state!=null)
         return location.state.value
@@ -133,10 +133,11 @@ export default function BigPurchasePlanner(props) {
   
   
   return (
-    <div>
+    <div className="body1">
     {(LoadPage)?  
 
-    <form className="planner-form">
+    <form style={{ width: '18rem',
+                            }}className="planner-form">
     <div>
       <label>Plan Name</label> <br></br>
       <input

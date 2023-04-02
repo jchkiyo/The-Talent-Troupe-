@@ -1,3 +1,7 @@
+
+import "../../page/Home.css";
+
+
 export default function Heading() {
     return (
         <header>
@@ -6,6 +10,7 @@ export default function Heading() {
                     
                     <h1>Talent Troupe</h1>
                     <h2>Singapore</h2>
+                    <br></br>
                     <p className="home-banner-subsection">We are a troupe of 5 aspiring software engineers with a range of skills and experience committed to creating a successful and innovative website</p>
                     
                     <br></br>

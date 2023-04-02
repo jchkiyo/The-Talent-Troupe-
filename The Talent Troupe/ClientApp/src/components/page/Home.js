@@ -10,9 +10,8 @@ import "./Home.css";
 export default function Homepage() {
   
   return (
-    <>
-      <Heading />
-
+    <div>
+      <Heading/>
       <main>
         <Ourservices />
         <Ourreviews />
@@ -21,6 +20,6 @@ export default function Homepage() {
         
       </main>
       
-    </>
+    </div>
   );
 }

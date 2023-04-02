@@ -20,10 +20,11 @@
   .our-services-topbar {
     align-items: center;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .our-services-topbar > h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
   }
@@ -32,15 +33,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2vw;
+
+  
+   
+    
+    
   }
 
   .service-card {
     background-color: #edefee;
     padding-bottom: 1.5rem;
+    height: 110%;
+
   }
   
   .service-card > img {
-    height: 25vh;
+    height: 30vh;
     width: 100%;
     object-fit: cover;
   }
@@ -54,6 +62,8 @@
     margin: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+ 
+
   }
   
   .service-card-content > h3 {
@@ -69,10 +79,11 @@
   }
 
   .start-now-button {
-    background-color: #f4ce14;
+    background-color: #4650dd;
     border-radius: 0.2rem;
     font-size: 1.5rem;
     padding: 1rem;
+    position: absolute;
   }
   
   .start-now-button:hover {

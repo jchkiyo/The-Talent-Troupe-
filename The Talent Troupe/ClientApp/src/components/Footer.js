@@ -29,9 +29,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li>50 Nanyang Avenue,</li>
             <li>639798</li>
-            <br></br>
             <li>(+65)-67612345</li>
-            <br></br>
             <a
               href="mailto: contactus@TheTalentTroupe.com"
               target="_blank"

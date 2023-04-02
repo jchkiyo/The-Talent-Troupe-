@@ -42,7 +42,7 @@ export default function MyPlanners() {
     
 
     return(
-        <div>
+        <div className="body">
             
             <article className="retirementplans">
                 <h1>Your Retirement Plans</h1>

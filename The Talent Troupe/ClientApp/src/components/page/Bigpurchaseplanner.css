@@ -65,6 +65,16 @@
   
   .planner-form > div {
     margin-bottom: 1.5rem;
+    text-align: center;
+    
+  }
+
+  .body1{
+  min-height: 100vh;
+  background-color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
   }
 
   

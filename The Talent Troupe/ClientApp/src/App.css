@@ -73,10 +73,14 @@ a:link {
 
 footer {
   min-height: 13rem;
-  background-color: #edbe56;
+  background-color: black;
   color: #ffffff;
   padding-bottom: 1rem;
   margin-top: -1.4rem;
+}
+
+.footer-bigcontainer{
+  margin-top:auto
 }
 
 footer > menu {
@@ -100,12 +104,12 @@ footer > menu {
   display: block;
   color: white;
   padding-top: 0.2rem;
-  font-family: "Karla", "Sans Serif";
+  font-size: 20px;
 }
 
 .footer-links > a:hover,
 .footer-links > Link:hover {
-  color: #00ff37;
+  color: #4650dd;
   text-decoration: none;
 }
 

@@ -8,7 +8,7 @@ export default function MyProfile() {
   
   return (
     <>
-
+          
       <main>
         <MyPlanners />
       </main>

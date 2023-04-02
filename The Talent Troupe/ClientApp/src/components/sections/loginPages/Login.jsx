@@ -38,11 +38,14 @@ export const Login = () => {
          <div className="row align-items-center">
            
              <div className="card">
-               <div className="card-header px-lg-5">
+               <div className="card-header pg-lg-5 ">Hey, Welcome Back
+          
+               
+
               
                </div>
                <div className="card-body p-lg-5">
-                 <h3 className="mb-4">Hi, welcome back</h3>
+                 
                  {error && <Alert variant="danger">{error}</Alert>}
                  <form id="loginForm" action="index.html">
                    <div className="form-floating mb-3">
