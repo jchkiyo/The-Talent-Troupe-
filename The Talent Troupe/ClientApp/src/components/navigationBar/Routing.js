@@ -1,14 +1,16 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import Retirementplanner from "../page/RetirementPlanner";
 import Login from "../page/Login";
 import Signup from "../page/Signup";
 import Home from "../page/Home";
 import PrivateRoutes from "./PrivateRoutes";
-import Bigpurchaseplanner from "../page/BigPurchasePlanner";
+import Bigpurchaseplanner from "../page/Bigpurchaseplanner";
 import MyProfile from "../page/MyProfile";
 import Retirementplanner2 from "../page/retirementplanner2";
 import HDBPrices from "../page/HDBPrices";
 export default function Routing() {
+  const {id} = useParams();
+  console.log(id);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -26,10 +28,10 @@ export default function Routing() {
         <Route path="/viewhdbprices" element={<HDBPrices />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/Myprofile" element={<MyProfile />} />
+        <Route path="/Myprofile/:uid" component={id} element={<MyProfile />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
+        <Route path="/bigpurchaseplanner" element={< Bigpurchaseplanner />} />
       </Route>
     </Routes>
   );

@@ -4,7 +4,7 @@ import Pic2 from "../../../assets/bigpurchasepic.png";
 
 export default function BigPurchasePlanCard(props) {
     return (    
-
+      
         <>
         <br></br>
         <div class="m-4 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
@@ -35,6 +35,7 @@ export default function BigPurchasePlanCard(props) {
   function BigPurchaseViewPlans(props) {
     const [show, setShow] = useState(false);
     const [deleteConfirmation, setdeleteConfirmation] = useState(false);
+
   
     const handleClose = () =>{
         setShow(false);

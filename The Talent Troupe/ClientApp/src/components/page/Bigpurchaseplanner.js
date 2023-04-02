@@ -23,6 +23,7 @@ export default function BigPurchasePlanner(props) {
 
   let location = useLocation()
   const userID = location.state?.data;
+  
   console.log("Hello ", userID);
 
   const navigate = useNavigate();
