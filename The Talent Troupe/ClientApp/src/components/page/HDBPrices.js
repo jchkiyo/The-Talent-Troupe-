@@ -66,7 +66,7 @@ export default function HDBPrices() {
           onChange={(e) => setValue(e.target.value)}
         />
   
-        <Button variant="primary" type="submit">
+        <Button variant="primary" className = "submitButton" type="submit">
           Submit
         </Button>
 
@@ -75,9 +75,9 @@ export default function HDBPrices() {
       </div>
      
       <div className = "box-push">
-      <NavBtnLink to = "/Bigpurchaseplanner"
+      <NavBtnLink to = "/Bigpurchaseplanner" 
       state={{value:selectedProduct}}
-      
+      style={{ textDecoration: 'none' }}
 
       >
         Choose this resale price

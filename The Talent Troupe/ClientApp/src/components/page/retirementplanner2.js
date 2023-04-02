@@ -36,7 +36,8 @@ export default function Retirementplanner2() {
     let location = useLocation()
     const userID = location.state?.data;
   
-    
+    console.log(userID);
+
     const radiochange = event =>{
         const newvalue = event.target.value
         setRadioValue(newvalue)

@@ -2,8 +2,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { auth, db } from "../sections/firebase";
 import { signOut } from "firebase/auth";
-import {  NavBtn, NavBtnLink, NavLink } from './NavbarElements'
-import { AuthContext } from '../AuthProvider'
+import {  NavBtn, NavBtnLink, NavLink } from './NavbarElements';
+import { AuthContext } from '../AuthProvider';
 import { useNavigate } from "react-router-dom";
 //import { query } from "firebase/database";
 import { endSession } from "../session";
@@ -32,8 +32,6 @@ function SignedOutLinks() {
        
     }, );
     
-
-    
     const clickLogin = () => {
         if (currentUser) {
           signOut(auth);
@@ -43,13 +41,7 @@ function SignedOutLinks() {
           console.log("access token", sessionStorage.getItem("accessToken"))
        
         } else {
-           
            navigate("/login");
-          
-           
-      
-            
-          
         }
       };
       
