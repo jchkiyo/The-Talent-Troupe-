@@ -34,8 +34,6 @@ export default function HDBPrices() {
     });
   };
 
-  console.log(selectedProduct);
-
   const handleFilter = (e) => {
     e.preventDefault();
     setFilterValue(value);
@@ -65,7 +63,7 @@ export default function HDBPrices() {
           placeholder="Search"
           onChange={(e) => setValue(e.target.value)}
         />
-  
+
         <Button variant="primary" className = "submitButton" type="submit">
           Submit
         </Button>
@@ -84,17 +82,8 @@ export default function HDBPrices() {
       </NavBtnLink>
 
       </div>
-      
+
       </div>
-
-     
-
-
-     
-   
-
-    
- 
 
       <div style={{ marginTop: "10px" }}>
         <DataTable
