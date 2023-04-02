@@ -47,6 +47,7 @@ Looking for a home in Singapore? Our website provides a database of government b
       </ul>
   </ol>
 </details>
+
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG)
 
 #### Why Us?
