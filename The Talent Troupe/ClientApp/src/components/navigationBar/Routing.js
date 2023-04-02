@@ -29,7 +29,7 @@ export default function Routing() {
         <Route path="/Myprofile" element={<MyProfile />} />
       </Route>
       <Route exact element={<PrivateRoutes />}>
-        <Route path="/bigpurchaseplanner" element={<Bigpurchaseplanner />} />
+        <Route path="/bigpurchaseplanner" element={< Bigpurchaseplanner />} />
       </Route>
     </Routes>
   );
