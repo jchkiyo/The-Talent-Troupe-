@@ -34,7 +34,7 @@ We have implemented
   </ol>
 </details>
 
-### View HDB Prices
+## View HDB Prices
 
 Looking for a home in Singapore? Our website provides a database of government backed HDB prices in Singapore, allowing you to search and view property prices by location! Our user-friendly interface makes it easy to find the perfect home for your needs, so start searching today!
 
@@ -65,6 +65,8 @@ Looking for a home in Singapore? Our website provides a database of government b
 
 
 ## Retirement Planner
+
+Are you planning for your retirement in Singapore? Our website provides a interface for you to store your financial plans towards financial freedom. Start planning for your retirement today with our easy-to-use tool !
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
 #### Why Us?
 |                             | ◾ Our View HDB Prices  | Retirement Planners |
