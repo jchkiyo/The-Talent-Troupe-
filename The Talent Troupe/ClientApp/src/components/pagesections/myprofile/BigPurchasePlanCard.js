@@ -1,5 +1,4 @@
 import Modal from 'react-bootstrap/Modal';
-import {useNavigate} from 'react-router-dom';
 import { React, useState } from 'react';
 import Pic2 from "../../../assets/bigpurchasepic.png";
 
@@ -49,7 +48,7 @@ export default function BigPurchasePlanCard(props) {
         
     }
 
-    const navigate = useNavigate();
+
 
     return (
       <>
@@ -134,7 +133,7 @@ export default function BigPurchasePlanCard(props) {
                   }
               }
               deletePlans();
-              navigate('/Myprofile');
+              window.location.reload();
 
 
     }} buttonMessage="Confirm Delete"/>
