@@ -118,6 +118,11 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/TTTlaunch1.PNG)
 * Once inside ClientApp: `npm i` to install modules and dependencies
 * Once installed: `npm start`
+Connecting to our firebase database and Web API
+* Install .NET on your computer (https://dotnet.microsoft.com/en-us/download)
+* Add the extension "C#" into your project 
+* Head to the debug window and make sure you run on ".Net Core Launch(web)" 
+* 
 
 # 📜 Feedback
 If you would like to report bugs or file feature requests, you are welcomed to do so [here](https://github.com/jchkiyo/The-Talent-Troupe-/issues/new)
