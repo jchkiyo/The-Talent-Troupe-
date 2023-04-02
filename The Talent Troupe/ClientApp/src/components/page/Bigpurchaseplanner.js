@@ -1,14 +1,37 @@
-import { useState,useEffect} from "react";
+import { useState , useContext} from "react";
 import {Link} from 'react-router-dom';
-import { useLocation } from "react-router-dom";
 import "./BigPurchasePlanner.css";
 import {useNavigate} from 'react-router-dom';
-// import { checkActionCode } from "firebase/auth";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import chatbot from "../../assets/ChatbotBigPurchase.png";
+import { AuthProvider, AuthContext } from "../AuthProvider";
+import React from "react";
 
-export default function BigPurchasePlanner(props) {
+export default function BigPurchasePlanner() {
+  return (
+    <React.Fragment>
+      <AuthProvider>
+        <BigPurchasePlanner2 />
+      </AuthProvider>
+    </React.Fragment>
+  );
+}
+
+
+function BigPurchasePlanner2(props) {
+
+  const [userID, setuserID] = useState(0);
+
+
+
+
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
+  setTimeout(() => {
+    setuserID(currentUser.uid);
+  }, 3000);
+  console.log("Hello from LEGEND: ", userID);
 
   const [PlanName, setPlanName] = useState("");
   const [AmountToSave, setAmountToSave] = useState("");
@@ -17,25 +40,14 @@ export default function BigPurchasePlanner(props) {
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
   const [Calculations, setCalculations] = useState("");
-  const [isLoadingButton, setisLoadingButton] = useState(true);
+  const [isLoadingButton] = useState(true);
+  // const [isLoadingButton, setisLoadingButton] = useState(true);
+
   const [LoadPage, setLoadPage] = useState(true);
   const [LoadFinal, setLoadFinal] = useState(false);
-  //const [remainingamount, setRemainingAmount] = useState(0);
-
-  let location = useLocation()
-  const userID = location.state?.data;
-  
-  console.log("Hello ", userID);
 
   const navigate = useNavigate();
-  useEffect(()=> {
-    setisLoadingButton(false)
-    setAmountToSave(() =>{
-      if (location.state!=null)
-        return location.state.value
-      else return null;
-    });
-  }, [location.state]);
+
 
   const RenderButton = () => {
     if(isLoadingButton){
@@ -97,8 +109,6 @@ export default function BigPurchasePlanner(props) {
             comments = {comments}
             TimeToSave = {TimeToSave}
           />
-
-
         </Card.Body>
       </Card>
 
@@ -124,14 +134,11 @@ export default function BigPurchasePlanner(props) {
                 <Button variant="primary active"onClick={onHandleRetry}>Retry</Button>
               </Card.Body>
             </Card>
-
-            
         </div>
       )
   }
   }
 
-  
   
   return (
     <div>
@@ -151,8 +158,6 @@ export default function BigPurchasePlanner(props) {
         onChange={(e) => setPlanName(e.target.value)}
       ></input>
     </div>
-
-
 
     <div>
       <label>Amount to save</label> <br></br>
@@ -185,7 +190,6 @@ export default function BigPurchasePlanner(props) {
       ></input>
     </div>
 
-
     <div>
       <label>Monthly Contribution</label> <br></br>
       <input
@@ -199,9 +203,6 @@ export default function BigPurchasePlanner(props) {
         onChange={(e) => setMonthlyContribution(e.target.value)}
       ></input>
     </div>
-
-
-    
 
     <div>
       <label>Date Of Creation</label> <br></br>
@@ -228,8 +229,6 @@ export default function BigPurchasePlanner(props) {
         value={comments}
         onChange={(e) => setComments(e.target.value)}
       ></textarea>
-
-
     </div>
   {
     PlanName!=="" && 
@@ -248,8 +247,6 @@ export default function BigPurchasePlanner(props) {
       <img src={chatbot} alt="chatbot" style={{ position: 'fixed', top: '50%', right: 100, transform: 'translateY(-50%)', width: '20%', height: '30%' }} />
     </Link>
   </div>
-
-  
 
     </form>
    
@@ -353,71 +350,6 @@ function Confirmation ({ open, onClose }){
   );
 };
 
-// function ConfirmSave(props) {
-//   const [show, setShow] = useState(false);
-//   const [deleteConfirmation, setdeleteConfirmation] = useState(false);
-
-//   const handleClose = () =>{
-//       setShow(false);
-//       setdeleteConfirmation(false);
-//   }
-//   const handleShow = () => setShow(true);
-
-//   const handleDelete = () =>{
-//       setShow(false);
-//       setdeleteConfirmation(true); 
-      
-//   }
-//   return (
-//     <>
-//       <button onClick={handleShow} class="px-4 py-1 text-sm text-purple-600 font-bold rounded-full border border-purple-200 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">View</button>
-//       <button onClick={handleDelete} class="px-4 py-1 text-sm text-purple-600 font-bold rounded-full border border-purple-200 hover:text-white hover:bg-red-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Delete Plan</button>
-
-//       <Modal
-//         show={show}
-//         onHide={handleClose}
-//         backdrop="static"
-//         keyboard={false}
-//       >
-//         <Modal.Header closeButton>
-//           <Modal.Title> Plan Saved !</Modal.Title>
-//         </Modal.Header>
-
-//         <Modal.Body>
-//           <p>Plan Name: {props.planName} </p>
-//           <p>Amount to save: {props.amountToSave}</p>
-//           <p> Months to Save: {props.timeToSave}</p>
-//           <p>Date of Creation: {props.dateOfCreation} </p>
-//           <p>Monthly Contribution: {props.monthlyContribution}</p>            
-//           <p>Comments: {props.comments}</p>
-
-//         </Modal.Body>
-
-//         <Modal.Footer>
-//           <MyButton onClick={handleDelete} buttonMessage="Delete Plan"/>
-//           <MyButton onClick={handleClose} buttonMessage="Close"/>
-//         </Modal.Footer>
-
-//       </Modal>
-
-//     </>
-//   );
-// }
-
-// function MyButton(props) {
-//   const buttonStyles = {
-//     backgroundColor: 'red',
-//     color: 'white',
-//     borderRadius: '5px',
-//     padding: '10px 20px'
-//   };
-
-//   return (
-//     <button onClick={props.onClick}style={buttonStyles}>
-//       {props.buttonMessage}
-//     </button>
-//   );
-// }
 
 
 

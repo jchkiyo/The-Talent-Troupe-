@@ -371,9 +371,11 @@ export default function Retirementplanner2() {
                             </Row>
                             <br></br>
                             <Row style={{marginLeft: "30px"}}>
+
                                 <Col md = "auto">
                                    <h1>Adjusted for cpf your current income is  <span className = "retirementdata">${cpfincome}</span></h1>
                                 </Col>
+
                                 <Col md = "auto">
                                    <h1>You need to save  <span className = "retirementdata">{Math.round(cpfpercent) < 0 ? 0: Math.round(cpfpercent)} %</span> of your income</h1>
                                 </Col>

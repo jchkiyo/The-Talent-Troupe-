@@ -36,8 +36,7 @@
     border-color: #edefee;
     transition: 0.2s;
   }
-
-  
+ 
   .redirect-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -1,4 +1,6 @@
 import { React, useState, useEffect } from 'react';
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./myplanner.css";
 import RetirementPlanCard from "./RetirementPlanCard";
@@ -13,8 +15,6 @@ import bot1 from "../../../assets/EmptyRetirementPlanbot.png";
 
 export default function MyPlanners() {
 
-    // const [currentUser, setCurrentUser ] = useState(null);
-    // setCurrentUser(useContext(AuthContext));
 
   let location = useLocation()
   const userID = location.state?.data;
@@ -24,10 +24,6 @@ export default function MyPlanners() {
   const navigate= useNavigate();
 
     useEffect(() => {
-
-        
-        // const userID2 = currentUser.uid;
-        // console.log(userID2);
         
         async function fetchPlans() {
             try {
@@ -78,12 +74,16 @@ export default function MyPlanners() {
             <div className = "flex flex-wrap">
                 { retirementPlans.length!==0 &&
                     retirementPlans.map( (retirementPlans) => {return(
-                    <RetirementPlanCard key = {retirementPlans.id}
-                                        planName = {retirementPlans.planName}
-                                        retirementage ={retirementPlans.retirementage} 
-                                        amountToSave={retirementPlans.amountToSave} amountToSaveMonth ={retirementPlans.amountToSaveMonth}
-                                        yearsOfRetirement = {retirementPlans.yearsOfRetirement} percentageSave = {retirementPlans.percentageSave}
-                                        id = {retirementPlans.id}
+
+                    <RetirementPlanCard
+                        key = {retirementPlans.id}
+                        planName = {retirementPlans.planName}
+                        retirementage ={retirementPlans.retirementage} 
+                        amountToSave={retirementPlans.amountToSave}
+                        amountToSaveMonth ={retirementPlans.amountToSaveMonth}
+                        yearsOfRetirement = {retirementPlans.yearsOfRetirement}
+                        percentageSave = {retirementPlans.percentageSave}
+                        id = {retirementPlans.id}
                     />
                 );})}
             </div>
@@ -97,6 +97,7 @@ export default function MyPlanners() {
             {bigPurchasePlans.length===0 &&       
               <div className="emptyretirementplans">
                   <h3> You have no big purchase plans currently </h3>
+
                   <Button className="emptyretirementplans-button" to="/bigpurchaseplanner" onClick = {handleClick}> Create new Big Purchase Plan !</Button>
 
               </div>

@@ -92,10 +92,10 @@ function RetirementViewPlans(props) {
 
           <Modal.Body>
             <p>Retirement Age: {props.retirementage}</p>
-            <p>Amount to save: {props.amountToSave}</p>
+            <p>Amount To Save: {props.amountToSave}</p>
             <p>Monthly Contribution: {props.amountToSaveMonth}</p>            
-            <p>retirementyears: {props.yearsOfRetirement}</p>
-            <p>percentageofincome: {props.percentageSave}</p>
+            <p>Years of Retirement: {props.yearsOfRetirement}</p>
+            <p>% Of Income to Save: {props.percentageSave}</p>
 
     
 

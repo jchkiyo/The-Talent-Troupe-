@@ -21,6 +21,7 @@
 
 
 .emptyretirementplans-button {
+  background-color: rgb(117, 117, 243);
   border: blue;
   color: white;
   padding: 20px;
@@ -41,7 +42,7 @@
 }
 
 .emptyretirementplans-button:hover {
-  background-color: #8aabf9;
+  background-color: blue;
   text-decoration: none;
   color: #eeeeee;
   border-style: solid;
