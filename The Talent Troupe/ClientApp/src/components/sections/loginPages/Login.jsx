@@ -56,7 +56,7 @@ export const Login = () => {
                     
                    </div>
                   
-                   <button className="btn btn-primary" type="button" onClick={onLogin}>Login</button>
+                   <button className="btn btn-primary active" type="button" onClick={onLogin}>Login</button>
                  </form>
                </div>
                <div className="card-footer px-lg-5 py-lg-4">
