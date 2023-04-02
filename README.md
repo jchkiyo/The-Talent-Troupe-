@@ -41,7 +41,7 @@ Looking for a home in Singapore? Our website provides a database of government b
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
 
 <div style="display: flex;">
-  <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG" alt="searchHDBPrices" width="200" height="200" style="margin-right: 20px;">
+  <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG" alt="searchHDBPrices" width="600" height="200" style="margin-right: 20px;">
   <p style="flex: 1;">Here is an example of a list of Bedok HDB Prices</p>
 </div>
 
