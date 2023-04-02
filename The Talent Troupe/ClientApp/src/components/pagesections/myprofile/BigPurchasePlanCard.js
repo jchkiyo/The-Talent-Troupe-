@@ -35,8 +35,7 @@ export default function BigPurchasePlanCard(props) {
   function BigPurchaseViewPlans(props) {
     const [show, setShow] = useState(false);
     const [deleteConfirmation, setdeleteConfirmation] = useState(false);
-    const { currentUser } = useContext(AuthContext);
-    console.log(currentUser.uid)
+
   
     const handleClose = () =>{
         setShow(false);
