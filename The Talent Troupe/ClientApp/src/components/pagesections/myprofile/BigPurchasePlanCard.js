@@ -130,6 +130,7 @@ export default function BigPurchasePlanCard(props) {
                   }
               }
               deletePlans();
+              console.log("deleted plans");
               window.location.reload();
 
 

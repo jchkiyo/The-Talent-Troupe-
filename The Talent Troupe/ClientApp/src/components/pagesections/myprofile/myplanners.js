@@ -10,6 +10,8 @@ import bot2 from "../../../assets/EmptyBigPurchasePlanbot.png";
 export default function MyPlanners() {
   let location = useLocation();
   const userID = location.state?.data;
+  
+  // console.log(userID);
   const [retirementPlans, setretirementPlans] = useState([]);
   const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
 
@@ -21,6 +23,7 @@ export default function MyPlanners() {
         );
         const data = await response.json();
         setbigPurchasePlans(data);
+        console.log(data);
 
         const response2 = await fetch(
           "https://localhost:7158/api/RetirementPlanner/GetUserRetirements/" +
