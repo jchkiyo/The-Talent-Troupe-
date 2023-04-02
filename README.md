@@ -30,6 +30,7 @@ We have implemented
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
         <li><a href="#retirement-planner">Retirement Planner</a></li>
+        <li><a href="#track-all-your-plans">Track All Your Plans</a></li>
       </ul>
   </ol>
 </details>
