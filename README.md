@@ -54,7 +54,7 @@ Looking for a home in Singapore? Our website provides a database of government b
   <summary>An example of a list of Bedok HDB Prices</summary>
   <ol>
       <ul>
-        ![plot]("https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG")
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
       </ul>
   </ol>
 </details>
@@ -82,7 +82,7 @@ Are you planning for your retirement in Singapore? Our website provides a interf
         <p/>
         <p>An example of retirement plan of a 25 year old</p>
         <p/>
-        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="retirementplannereg1" style="margin-right: 20px;">
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="retirementplannereg1" style="margin-right: 10px;">
       </ul>
       <ul>
         <p/>
