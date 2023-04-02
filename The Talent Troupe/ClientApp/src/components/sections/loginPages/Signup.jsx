@@ -100,7 +100,7 @@ export const Signup = () => {
                       
                      </div>
                     
-                     <button className="btn btn-primary" type="button" onClick={onSubmit}>Register</button>
+                     <button className="btn btn-primary active" type="button" onClick={onSubmit}>Register</button>
                    </form>
                  </div>
                  <div className="card-footer px-lg-5 py-lg-4">

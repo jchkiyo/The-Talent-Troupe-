@@ -21,48 +21,93 @@
 
 Introducing a new web app built by 5 students to ace their Software Engineering mod. This web app has been designed to provide users with a range of useful tools and resources that can help them make informed decisions about their finances with real-time data from data.gov.sg through APIs. It is an essential tool for anyone looking to take control of their finances and plan for a secure and stable future.
 
+#### Why Use Our Platform?
+|                             | ◾ Our Web App         |  ◾ Other Platform   |
+| --------------------------- | :--------------------: | :-----------------: |
+| 0 service/commissions fees  |         ✔️            |          ❌        |
+| 24/7 Price Enquiry          |         ✔️            |          ❌        |
+| 24/7 Planning Service       |         ✔️            |          ❌        |
+| Pressureless Viewings       |         ✔️            |          ❌        |
+| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
+
 # 🔍 Features
 We have implemented 
 <details>
-  <summary>3 main features</summary>
+  <summary>4 main features</summary>
   <ol>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
         <li><a href="#retirement-planner">Retirement Planner</a></li>
+        <li><a href="#track-all-your-plans">Track All Your Plans</a></li>
       </ul>
   </ol>
 </details>
 
-### View HDB Prices
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
-#### Why Us?
-|                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Price Enquiry          |         ✔️            |          ❌        |
-| Pressureless House Purchase |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
+## View HDB Prices
 
+Looking for a home in Singapore? Our website provides a database of government backed HDB prices in Singapore, allowing you to search and view property prices by location! Our user-friendly interface makes it easy to find the perfect home for your needs, so start searching today!
+
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
+<details>
+  <summary>An example of a list of Bedok HDB Prices</summary>
+  <ol>
+      <ul>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
+      </ul>
+  </ol>
+</details>
 
 
 
 ## Big Purchase Planner
+
+Looking to make a big purchase or buy a HDB? Our website provides a powerful financial planning tool to help you track your progress towards your goals. With our user-friendly interface, you can easily set savings goals and create saving plans. Start planning for your big purchase or home today with our easy-to-use tool !
+
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
 
 
 
 ## Retirement Planner
+
+Are you planning for your retirement in Singapore? Our website provides a interface for you to store your financial plans towards financial freedom. Start planning for your retirement today with our easy-to-use tool !
+
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanningPage.PNG)
-#### Why Us?
-|                             | ◾ Our View HDB Prices  | Retirement Planners |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Planning Service       |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
+<details>
+  <summary>An example of retirement plan of a 25 year old</summary>
+  <ol>
+      <ul>
+        <p/>
+        <p>An example of retirement plan of a 25 year old</p>
+        <p/>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample1.PNG" alt="retirementplannereg1" style="margin-right: 20px;">
+      </ul>
+      <ul>
+        <p/>
+        <p>An example of our retirement guide of a 25 year old</p>
+        <p/>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/RetirementPlanExample2.PNG" alt="retirementplannereg2" style="margin-right: 20px;">
+      </ul>
+  </ol>
+</details>
 
 
 
+## Track all your plans
+
+Our profile page helps you to track your financial plans and goals. With our user-friendly interface, you can easily create retirement plans, create a budget, and track your expenses. Start planning for your big purchase or home today with our easy-to-use tool.
+
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage2.PNG)
+<details>
+  <summary>An example of user "Jia Earn" with 3 plans</summary>
+  <ol>
+      <ul>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage1.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
+      </ul>
+  </ol>
+</details>
 
 # 🤸 Getting Started
 Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.

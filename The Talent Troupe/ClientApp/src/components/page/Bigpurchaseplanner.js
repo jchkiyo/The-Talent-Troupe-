@@ -5,7 +5,6 @@ import {useNavigate} from 'react-router-dom';
 // import { checkActionCode } from "firebase/auth";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-// import Modal from 'react-bootstrap/Modal';
 
 export default function BigPurchasePlanner(props) {
 
@@ -23,6 +22,7 @@ export default function BigPurchasePlanner(props) {
 
   let location = useLocation()
   const userID = location.state?.data;
+  
   console.log("Hello ", userID);
 
   const navigate = useNavigate();
