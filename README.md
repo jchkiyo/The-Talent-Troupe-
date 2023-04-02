@@ -62,6 +62,9 @@ Looking for a home in Singapore? Our website provides a database of government b
 
 
 ## Big Purchase Planner
+
+Looking to make a big purchase or buy a HDB? Our website provides a powerful financial planning tool to help you track your progress towards your goals. With our user-friendly interface, you can easily set savings goals and create saving plans. Start planning for your big purchase or home today with our easy-to-use tool !
+
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
 
 
