@@ -27,9 +27,6 @@ function BigPurchasePlanner2(props) {
 
   const [userID, setuserID] = useState(0);
 
-
-
-
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
   setTimeout(() => {

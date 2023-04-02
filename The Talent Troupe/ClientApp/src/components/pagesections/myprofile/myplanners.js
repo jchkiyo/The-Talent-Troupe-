@@ -79,7 +79,7 @@ export default function MyPlanners() {
 
       {bigPurchasePlans.length === 0 && (
         <div className="emptyretirementplans">
-          <Link to="/retirementplanner">
+          <Link to="/Bigpurchaseplanner">
             <img
               className="emptyretirementplans-chatbot"
               src={bot2}
