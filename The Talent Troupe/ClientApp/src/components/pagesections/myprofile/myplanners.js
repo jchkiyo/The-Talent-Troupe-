@@ -3,7 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./myplanner.css";
 import RetirementPlanCard from "./RetirementPlanCard";
 import BigPurchasePlanCard from "./BigPurchasePlanCard";
+<<<<<<< Updated upstream
 // import { AuthContext } from '../AuthProvider';
+=======
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+
+>>>>>>> Stashed changes
 import { useLocation, Link } from "react-router-dom";
 import bot1 from "../../../assets/EmptyRetirementPlanbot.png";
 import bot2 from "../../../assets/EmptyBigPurchasePlanbot.png";
@@ -19,7 +25,11 @@ export default function MyPlanners() {
   const userID = location.state?.data;
   const [retirementPlans, setretirementPlans] = useState([]);
   const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
+<<<<<<< Updated upstream
   console.log("Hello: ", userID);
+=======
+  const navigate= useNavigate();
+>>>>>>> Stashed changes
 
     useEffect(() => {
 
@@ -48,6 +58,10 @@ export default function MyPlanners() {
 
         fetchPlans();
     }, [userID]);
+
+    function handleClick() {
+        navigate('/bigpurchaseplanner', { state: { data: userID }});
+      }
     
     
     return(
@@ -90,10 +104,15 @@ export default function MyPlanners() {
 
             {bigPurchasePlans.length===0 &&       
               <div className="emptyretirementplans">
+<<<<<<< Updated upstream
                   <Link to="/bigpurchaseplanner">
                   <img className="emptyretirementplans-chatbot" src={bot2} alt="chatbot" style={{ width: '15%', height: '90%' }} />
 
                     </Link>
+=======
+                  <h3> You have no big purchase plans currently </h3>
+                  <Button className="emptyretirementplans-button" to="/bigpurchaseplanner" onClick = {handleClick}> Create new Big Purchase Plan !</Button>
+>>>>>>> Stashed changes
 
               </div>
             }
