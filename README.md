@@ -99,12 +99,12 @@ Are you planning for your retirement in Singapore? Our website provides a interf
 
 Our profile page helps you to track your financial plans and goals. With our user-friendly interface, you can easily create retirement plans, create a budget, and track your expenses. Start planning for your big purchase or home today with our easy-to-use tool.
 
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage2.PNG)
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage1.PNG)
 <details>
   <summary>An example of user "Jia Earn" with multiple saved plans</summary>
   <ol>
       <ul>
-        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage1.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage2.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
       </ul>
   </ol>
 </details>
