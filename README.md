@@ -21,10 +21,20 @@
 
 Introducing a new web app built by 5 students to ace their Software Engineering mod. This web app has been designed to provide users with a range of useful tools and resources that can help them make informed decisions about their finances with real-time data from data.gov.sg through APIs. It is an essential tool for anyone looking to take control of their finances and plan for a secure and stable future.
 
+#### Why Use Our Platform?
+|                             | ◾ Our Web App         |  ◾ Other Platform   |
+| --------------------------- | :--------------------: | :-----------------: |
+| 0 service/commissions fees  |         ✔️            |          ❌        |
+| 24/7 Price Enquiry          |         ✔️            |          ❌        |
+| 24/7 Planning Service       |         ✔️            |          ❌        |
+| Pressureless Viewings       |         ✔️            |          ❌        |
+| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
+
 # 🔍 Features
 We have implemented 
 <details>
-  <summary>3 main features</summary>
+  <summary>4 main features</summary>
   <ol>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
@@ -48,15 +58,6 @@ Looking for a home in Singapore? Our website provides a database of government b
       </ul>
   </ol>
 </details>
-
-#### Why Us?
-|                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Price Enquiry          |         ✔️            |          ❌        |
-| Pressureless House Purchase |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
-
 
 
 
@@ -89,12 +90,7 @@ Are you planning for your retirement in Singapore? Our website provides a interf
   </ol>
 </details>
 
-#### Why Us?
-|                             | ◾ Our View HDB Prices  | Retirement Planners |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Planning Service       |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
 
 ## Track all your plans
 
