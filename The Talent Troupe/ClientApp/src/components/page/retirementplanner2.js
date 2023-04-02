@@ -18,12 +18,12 @@ export default function Retirementplanner2() {
 
     //input values
     const radiovalues = [2300,2900,5200];
-    const [data,setData] = useState(25)
-    const [data2,setData2] = useState(65)
-    const [data3,setData3] = useState(15)
+    const [data,setData] = useState(0)
+    const [data2,setData2] = useState(0)
+    const [data3,setData3] = useState(0)
     const [radioValue, setRadioValue] = useState(2300);
-    const [income, setIncome] = useState(1500);
-    const [savings, setSavings] = useState(2000);
+    const [income, setIncome] = useState(800);
+    const [savings, setSavings] = useState(0);
     const [cpfPrices, setcpfPrices] = useState([]);
 
     //output values
@@ -38,14 +38,10 @@ export default function Retirementplanner2() {
   
     
     const radiochange = event =>{
-        const newvalue = event.target.value
+        const newvalue = event.target.value;
         setRadioValue(newvalue)
     }
 
-    const change = event =>{
-        const newvalue = event.target.value
-        setIncome(newvalue)
-    }
 
     const newchange = event =>{
         const newvalue2 = event.target.value
@@ -68,15 +64,30 @@ export default function Retirementplanner2() {
         console.log(userID);
     };
 
+    const handleChange = (event) => {
+      const input = event.target.value;
+      setIncome(input);
+    };
+  
+    let timeout;
+    const handleBlur = () => {
+      clearTimeout(timeout);
+      if (income < 800) {
+        timeout = setTimeout(() => {
+          alert('Please enter a valid income of at least 800');
+        }, 500);
+      }
+    };
+
 
     const handleReset = () => {
         setShowTextBox(false);
-        setData(25);
-        setData2(65);
-        setData3(15);
+        setData(0);
+        setData2(0);
+        setData3(0);
         setRadioValue(2300);
-        setIncome(1500);
-        setSavings(2000);
+        setIncome(800);
+        setSavings(0);
        
 
 
@@ -218,6 +229,10 @@ export default function Retirementplanner2() {
         );
       }
     
+    
+  
+
+     
  
    
 
@@ -255,8 +270,9 @@ export default function Retirementplanner2() {
                 <h1 class = "h1">How much do you have in all your savings?</h1>
                 <input onChange = {newchange} type="number"  placeholder = "2000"/>
                 <br></br>
-                <h1 class = "h1">How much income do you earn per month?</h1>
-                <input onChange = {change} type="number" placeholder = "1500" />
+                <h1 class = "h1">How much income do you earn per month? (min {800})</h1>
+                <input type="number" min="800" value={income} onChange={handleChange} onBlur={handleBlur} placeholder="800" />
+                
                 <br></br>
 
                 <h1 class = "h1">What is your desired retirement lifestyle?</h1>
@@ -283,7 +299,7 @@ export default function Retirementplanner2() {
                 <br></br>
                 <br></br>
                 <div className = "buttongroup">
-                    <Button size="lg" id = "button" onClick={handleShowTextBox}>
+                    <Button size="lg" id = "button" onClick={handleShowTextBox}  disabled={data === 0 || data2 === 0 || data3 === 0 || income < 800 || radioValue <= 0}>
                     Calculate
                     </Button>
                     <Button  size = "lg" id = "reset" onClick={handleReset}>Reset</Button>
