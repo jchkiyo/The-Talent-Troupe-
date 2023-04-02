@@ -37,7 +37,6 @@ export const Signup = () => {
                   
                 })
                 
-                
                 .then(() => {
                   alert('Account Created Successfully 👍' );
                 })
