@@ -3,20 +3,27 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./myplanner.css";
 import RetirementPlanCard from "./RetirementPlanCard";
 import BigPurchasePlanCard from "./BigPurchasePlanCard";
-
+// import { AuthContext } from '../AuthProvider';
 import { useLocation, Link } from "react-router-dom";
 
 
 export default function MyPlanners() {
 
-   
+    // const [currentUser, setCurrentUser ] = useState(null);
+    // setCurrentUser(useContext(AuthContext));
 
   let location = useLocation()
   const userID = location.state?.data;
   const [retirementPlans, setretirementPlans] = useState([]);
   const [bigPurchasePlans, setbigPurchasePlans] = useState([]);
+  console.log("Hello: ", userID);
 
     useEffect(() => {
+
+        
+        // const userID2 = currentUser.uid;
+        // console.log(userID2);
+        
         async function fetchPlans() {
             try {
                 const response = await fetch('https://localhost:7158/api/BigPurchase/GetUserPlans/' + userID);
@@ -27,7 +34,6 @@ export default function MyPlanners() {
                 const retirementplanData = await response2.json();
                 setretirementPlans(retirementplanData);
                 console.log(retirementplanData);
-                console.log(data);
                 console.log("Successfully updated plans with API");
                 
 
@@ -40,7 +46,7 @@ export default function MyPlanners() {
         fetchPlans();
     }, [userID]);
     
-
+    
     return(
         <div className="body">
             
@@ -51,7 +57,7 @@ export default function MyPlanners() {
             {retirementPlans.length===0 && 
               <div className="emptyretirementplans">
                   <h3> You have no retirement plans currently </h3>
-                  <Link className="emptyretirementplans-button" to="/retirementplanner"> Create new Retirement Plan !</Link>
+                  <Link className="emptyretirementplans-button" to="/retirementplanner2"> Create new Retirement Plan !</Link>
 
               </div>
             } 
@@ -62,6 +68,7 @@ export default function MyPlanners() {
                 { retirementPlans.length!==0 &&
                     retirementPlans.map( (retirementPlans) => {return(
                     <RetirementPlanCard key = {retirementPlans.id}
+                                        planName = {retirementPlans.planName}
                                         retirementage ={retirementPlans.retirementage} 
                                         amountToSave={retirementPlans.amountToSave} amountToSaveMonth ={retirementPlans.amountToSaveMonth}
                                         yearsOfRetirement = {retirementPlans.yearsOfRetirement} percentageSave = {retirementPlans.percentageSave}

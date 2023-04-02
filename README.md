@@ -21,15 +21,26 @@
 
 Introducing a new web app built by 5 students to ace their Software Engineering mod. This web app has been designed to provide users with a range of useful tools and resources that can help them make informed decisions about their finances with real-time data from data.gov.sg through APIs. It is an essential tool for anyone looking to take control of their finances and plan for a secure and stable future.
 
+#### Why Use Our Platform?
+|                             | ◾ Our Web App         |  ◾ Other Platform   |
+| --------------------------- | :--------------------: | :-----------------: |
+| 0 service/commissions fees  |         ✔️            |          ❌        |
+| 24/7 Price Enquiry          |         ✔️            |          ❌        |
+| 24/7 Planning Service       |         ✔️            |          ❌        |
+| Pressureless Viewings       |         ✔️            |          ❌        |
+| Unbiased Reccomendations    |         ✔️            |          ❌        |
+
+
 # 🔍 Features
 We have implemented 
 <details>
-  <summary>3 main features</summary>
+  <summary>4 main features</summary>
   <ol>
       <ul>
         <li><a href="#view-hdb-prices">View HDB Prices</a></li>
         <li><a href="#big-purchase-planner">Big Purchase Planner</a></li>
         <li><a href="#retirement-planner">Retirement Planner</a></li>
+        <li><a href="#track-all-your-plans">Track All Your Plans</a></li>
       </ul>
   </ol>
 </details>
@@ -48,18 +59,12 @@ Looking for a home in Singapore? Our website provides a database of government b
   </ol>
 </details>
 
-#### Why Us?
-|                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Price Enquiry          |         ✔️            |          ❌        |
-| Pressureless House Purchase |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
-
-
 
 
 ## Big Purchase Planner
+
+Looking to make a big purchase or buy a HDB? Our website provides a powerful financial planning tool to help you track your progress towards your goals. With our user-friendly interface, you can easily set savings goals and create saving plans. Start planning for your big purchase or home today with our easy-to-use tool !
+
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/BigPurchasePlannerPage.PNG)
 
 
@@ -88,15 +93,21 @@ Are you planning for your retirement in Singapore? Our website provides a interf
   </ol>
 </details>
 
-#### Why Us?
-|                             | ◾ Our View HDB Prices  | Retirement Planners |
-| --------------------------- | :--------------------: | :-----------------: |
-| 0 service/commissions fees  |         ✔️            |          ❌        |
-| 24/7 Planning Service       |         ✔️            |          ❌        |
-| Unbiased Reccomendations    |         ✔️            |          ❌        |
 
 
+## Track all your plans
 
+Our profile page helps you to track your financial plans and goals. With our user-friendly interface, you can easily create retirement plans, create a budget, and track your expenses. Start planning for your big purchase or home today with our easy-to-use tool.
+
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage2.PNG)
+<details>
+  <summary>An example of user "Jia Earn" with multiple saved plans</summary>
+  <ol>
+      <ul>
+        <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/MyProfilePage1.PNG" alt="viewHDBPrices" style="margin-right: 20px;">
+      </ul>
+  </ol>
+</details>
 
 # 🤸 Getting Started
 Before continuing, ensure you have [React](https://react-cn.github.io/react/downloads.html) downloaded.

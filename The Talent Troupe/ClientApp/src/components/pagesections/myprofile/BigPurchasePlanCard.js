@@ -14,9 +14,6 @@ export default function BigPurchasePlanCard(props) {
                 <p class="text-lg text-black font-semibold">
                     {props.planName}
                 </p>
-                <p class="text-slate-500 font-medium">
-                    created: {props.dateOfCreation}
-                </p>
                 </div>
                 <BigPurchaseViewPlans 
                     planName={props.planName} dateOfCreation={props.dateOfCreation} 
@@ -64,7 +61,6 @@ export default function BigPurchasePlanCard(props) {
         >
           <Modal.Header closeButton>
             <Modal.Title>{props.planName} Details</Modal.Title>
-            <Modal.Title>Created on {props.dateOfCreation}</Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
