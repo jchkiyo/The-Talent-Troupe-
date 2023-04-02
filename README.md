@@ -39,11 +39,15 @@ We have implemented
 Looking for a home in Singapore? Our website provides a database of government backed HDB prices in Singapore, allowing you to search and view property prices by location! Our user-friendly interface makes it easy to find the perfect home for your needs, so start searching today!
 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/ViewHDBPricesPage.PNG)
-
+<details>
+  <summary>3 main features</summary>
+  <ol>
+      <ul>
+        <li><a href="#view-hdb-prices">An example of a list of Bedok HDB Prices</a></li>
+      </ul>
+  </ol>
+</details>
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/SearchHDBPrices.PNG)
-
-  <p style="flex: 1;">Here is an example of a list of Bedok HDB Prices</p>
-</div>
 
 #### Why Us?
 |                             | ◾ Our View HDB Prices  |  ◾ Property Agents  |
