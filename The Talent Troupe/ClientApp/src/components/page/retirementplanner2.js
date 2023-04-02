@@ -115,7 +115,15 @@ export default function Retirementplanner2() {
     useEffect(() => {
         if (retirementSum !== 0 && savings !== 0) {
           const save = retirementSum - savings;
-          setneedsave(save);
+          if(save < 0)
+          {
+             setneedsave(0);
+          }
+          else
+          {
+            setneedsave(save);
+          }
+          
         }
       }, [retirementSum, savings]);
 
@@ -128,7 +136,15 @@ export default function Retirementplanner2() {
     useEffect(() => {
         if (needsave!== 0 && retirementSum !== 0 && savings !== 0) {
           const monthsave = needsave/ ((data2 - data) * 12);
-          setmonthlysave(monthsave);
+          if(monthsave < 0)
+          {
+            setmonthlysave(0);
+          }
+          else
+          {
+            setmonthlysave(monthsave);
+          }
+         
         }
       }, [monthlysave,retirementSum, savings,data2,data,needsave]);
       
@@ -218,7 +234,6 @@ export default function Retirementplanner2() {
             }, 3000);
             console.log("sent: ", planName);
             navigate('/MyProfile', { state: { data: userID } });
-
            
           })
           .catch(error => {
@@ -345,12 +360,13 @@ export default function Retirementplanner2() {
                             <Row style={{marginLeft: "30px"}}>
                                <h1>The amount you need at your retirement age is  <span className = "retirementdata">${ retirementSum}</span></h1>
                             </Row>  
+                            <br></br>
                             <Row style={{marginLeft: "30px"}}>
                               <Col md = "auto">
-                                 <h1>You need to save  <span className = "retirementdata">${needsave}</span></h1>
+                              <h1>You need to save <span className="retirementdata">${needsave < 0 ? 0 : needsave}</span></h1>
                               </Col>
                               <Col md = "auto">
-                                 <h1>Every month u have to save  <span className = "retirementdata">${Math.round(monthlysave)}</span></h1>
+                                 <h1>Every month u have to save  <span className = "retirementdata">${monthlysave < 0 ? 0: Math.round(monthlysave)}</span></h1>
                               </Col>
                             </Row>
                             <br></br>
@@ -359,7 +375,7 @@ export default function Retirementplanner2() {
                                    <h1>Adjusted for cpf your current income is  <span className = "retirementdata">${cpfincome}</span></h1>
                                 </Col>
                                 <Col md = "auto">
-                                   <h1>You need to save  <span className = "retirementdata">{Math.round(cpfpercent)} %</span> of your income</h1>
+                                   <h1>You need to save  <span className = "retirementdata">{Math.round(cpfpercent) < 0 ? 0: Math.round(cpfpercent)} %</span> of your income</h1>
                                 </Col>
                             </Row>
                             <br></br>
