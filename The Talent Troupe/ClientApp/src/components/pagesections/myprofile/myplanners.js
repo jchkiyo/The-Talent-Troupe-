@@ -57,7 +57,7 @@ export default function MyPlanners() {
             {retirementPlans.length===0 && 
               <div className="emptyretirementplans">
                   <h3> You have no retirement plans currently </h3>
-                  <Link className="emptyretirementplans-button" to="/retirementplanner2"> Create new Retirement Plan !</Link>
+                  <Link className="emptyretirementplans-button" to="/retirementplanner"> Create new Retirement Plan !</Link>
 
               </div>
             } 
