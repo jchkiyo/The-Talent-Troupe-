@@ -6,7 +6,6 @@ import {useNavigate} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-
 export default function BigPurchasePlanner(props) {
 
   const [PlanName, setPlanName] = useState("");
@@ -168,7 +167,6 @@ export default function BigPurchasePlanner(props) {
       ></input>
     </div>
 
-    
     {RenderButton()}
     
     <div className = "mt-3">
@@ -176,7 +174,7 @@ export default function BigPurchasePlanner(props) {
       <input
         type="text"
         id="timetosave"
-        placeholder="100 000"
+        placeholder="10"
         value={TimeToSave}
         required
         minLength={1}
@@ -229,24 +227,7 @@ export default function BigPurchasePlanner(props) {
         onChange={(e) => setComments(e.target.value)}
       ></textarea>
     </div>
-
-    {/* <div className="planner-form">
-      <br></br>
-      {
-          PlanName.length>0 && AmountToSave > 0 && MonthlyContribution !== 1 &&
-        <SendData
-          userID={userID}
-          planName = {PlanName}
-          amountToSave = {AmountToSave}
-          monthlyContribution = {MonthlyContribution}
-          creationDate = {creationDate}
-          comments = {comments}
-        />
-      }
-    </div> */}
-
-
-    
+   
     <div>
     <button className="btn btn-primary" onClick={onHandleSubmit}>Submit !</button>
     </div>
@@ -302,25 +283,14 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
               return response.json();
             })
             .then(data => {
-              
-              // <ConfirmSave 
-              //   planName = {planName}
-              //   amountToSave =  {amountToSave}
-              //   monthlyContribution = {monthlyContribution}
-              //   dateOfCreation = {creationDate}
-              //   comments = {comments}
-              //   timeToSave = {TimeToSave}
-              // />
             })
             .catch(error => {
               console.error('There was a problem with the fetch operation:', error);
             });
 
             setOpenModal(true);
-            console.log("reached here");
+            alert("Plan Saved !");
             
-
-
       }}>
         Save plan
       </button>
@@ -328,6 +298,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
 };
 
 function Confirmation ({ open, onClose }){
+  
   if (!open) return null;
 
   return (

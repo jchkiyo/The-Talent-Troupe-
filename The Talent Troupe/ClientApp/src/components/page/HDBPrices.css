@@ -23,3 +23,18 @@
     margin-right:170px;
     margin-bottom:100px;
   }
+
+  .submitButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    height: 28px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    width: 100%;
+  }

@@ -4,6 +4,7 @@ import Pic1 from "../../../assets/retirementplanpic.png";
 
 
 export default function RetirementPlanCard(props) {
+  console.log("props.planName: ", props.planName);
     return (    
 
         <>
@@ -11,8 +12,14 @@ export default function RetirementPlanCard(props) {
         <div class="m-4 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
             <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src={Pic1} alt="props.pic"></img>
             <div class="text-center space-y-2 sm:text-left">
+            <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">
+                    {props.planName}
+                </p>
+                </div>
                 <RetirementViewPlans 
                     retirementage ={props.retirementage} 
+                    planName = {props.planName}
                     amountToSave={props.amountToSave} amountToSaveMonth={props.amountToSaveMonth}
                     yearsOfRetirement = {props.yearsOfRetirement} percentageSave = {props.percentageSave}
                     id = {props.id}
