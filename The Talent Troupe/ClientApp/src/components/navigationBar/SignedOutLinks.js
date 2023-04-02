@@ -1,5 +1,5 @@
 
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState,useContext, useEffect } from "react";
 import { auth, db } from "../sections/firebase";
 import { signOut } from "firebase/auth";
 import {  NavBtn, NavBtnLink, NavLink } from './NavbarElements';
@@ -13,6 +13,9 @@ import { collection , getDocs, where, query} from "firebase/firestore";
 
 function SignedOutLinks() {
     const { currentUser } = useContext(AuthContext);
+    const  userid = sessionStorage.getItem("accessToken") == null ? false : true;
+    
+   
     const [info, setInfo]= useState("");
     const navigate = useNavigate();
 
@@ -51,24 +54,24 @@ function SignedOutLinks() {
         <NavLink to="/" style={{ textDecoration: 'none' }}>
             Home
         </NavLink>
-        {currentUser && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>Retirement Planner</NavLink>}
-        {currentUser && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>Big Purchase Planner</NavLink>}
-        {currentUser && <NavLink to='/Viewhdbprices' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>View HDB Prices</NavLink>}
-        {currentUser && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>My Profile</NavLink>}
+        {userid && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }} >Retirement Planner</NavLink>}
+        {userid && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} >Big Purchase Planner</NavLink>}
+        {userid && <NavLink to='/Viewhdbprices' style={{ textDecoration: 'none' }} >View HDB Prices</NavLink>}
+        {userid && <NavLink to='/Myprofile' style={{ textDecoration: 'none' }} >My Profile</NavLink>}
         <div className="buttons">
        <a onClick={clickLogin} href="/" >
         <NavBtn>
         <NavBtnLink>
-          {currentUser ? "Log Out" : "Login"}
+          {userid ? "Log Out" : "Login"}
         </NavBtnLink>
         </NavBtn>
         </a>
         </div>
-        {!currentUser && <NavLink to='/Signup'>Sign Up</NavLink>}
+        {!userid && <NavLink to='/Signup'>Sign Up</NavLink>}
 
       {
        
-         currentUser && <p style={{color: "white"}}>Hi, {info.username}</p>
+       userid && <p style={{color: "white"}}>Hi, {info.username}</p>
         
       }
        
