@@ -34,7 +34,6 @@ export default function MyPlanners() {
                 const retirementplanData = await response2.json();
                 setretirementPlans(retirementplanData);
                 console.log(retirementplanData);
-                console.log(data);
                 console.log("Successfully updated plans with API");
                 
 
@@ -47,7 +46,7 @@ export default function MyPlanners() {
         fetchPlans();
     }, [userID]);
     
-
+    
     return(
         <div>
             
@@ -69,6 +68,7 @@ export default function MyPlanners() {
                 { retirementPlans.length!==0 &&
                     retirementPlans.map( (retirementPlans) => {return(
                     <RetirementPlanCard key = {retirementPlans.id}
+                                        planName = {retirementPlans.planName}
                                         retirementage ={retirementPlans.retirementage} 
                                         amountToSave={retirementPlans.amountToSave} amountToSaveMonth ={retirementPlans.amountToSaveMonth}
                                         yearsOfRetirement = {retirementPlans.yearsOfRetirement} percentageSave = {retirementPlans.percentageSave}
