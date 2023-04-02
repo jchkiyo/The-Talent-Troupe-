@@ -53,6 +53,7 @@ function SignedOutLinks() {
         </NavLink>
         {currentUser && <NavLink to='/retirementplanner2' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>Retirement Planner</NavLink>}
         {currentUser && <NavLink to='/Bigpurchaseplanner' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>Big Purchase Planner</NavLink>}
+        {currentUser && <NavLink to='/Viewhdbprices' style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>View HDB Prices</NavLink>}
         {currentUser && <NavLink to={`/Myprofile/${currentUser.uid}`} style={{ textDecoration: 'none' }} state={{data: currentUser.uid}}>My Profile</NavLink>}
         <div className="buttons">
        <a onClick={clickLogin} href="/" >

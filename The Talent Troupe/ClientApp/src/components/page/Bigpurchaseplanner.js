@@ -228,11 +228,17 @@ export default function BigPurchasePlanner(props) {
         onChange={(e) => setComments(e.target.value)}
       ></textarea>
     </div>
-   
+  {
+    PlanName!=="" && 
+    AmountToSave!=="" &&
+    MonthlyContribution > 1 &&
+    creationDate !== "" &&
+    TimeToSave.length!=="" &&
+
     <div>
     <button className="btn btn-primary" onClick={onHandleSubmit}>Submit !</button>
     </div>
-
+  }
 
 
     </form>
