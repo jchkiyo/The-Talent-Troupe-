@@ -139,8 +139,8 @@ This web application is built with
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Tailwind][Tailwind.com]][Tailwind-url]
 * [![.NET][NET.com]][NET-url]
-* [![Figma][Figma.js]][Figma-url]
-* [![Firebase][Firebase.js]][Firebase-url]
+* [![Figma][Figma.com]][Figma-url]
+* [![Firebase][Firebase.com]][Firebase-url]
 
 
 # 👩‍👩‍👧‍👦 Contributors
