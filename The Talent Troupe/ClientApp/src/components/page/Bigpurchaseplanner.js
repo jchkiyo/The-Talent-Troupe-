@@ -48,9 +48,13 @@ function BigPurchasePlanner2(props) {
   setTimeout(() => {
     console.log("Update");
     if (props.town!=null){
-      setPlanName(props.town.charAt(0).toUpperCase() + props.town.slice(1).toLowerCase()+" HDB Plan");
+      setPlanName(props.town.split(" ")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(" ")+" HDB Plan");
       setAmountToSave(props.amountToSave);
-      setComments("Plan for HDB in "+props.town+" with expected price around $"+props.amountToSave+". "+props.flatType.toLowerCase()+" flat with floor area of "+props.floorArea+". ");
+      setComments("Plan for HDB in "+props.town.split(" ")
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(" ")+" with expected price around $"+props.amountToSave+". "+props.flatType.toLowerCase()+" flat with floor area of "+props.floorArea+". ");
     }
   }, 500);
 
