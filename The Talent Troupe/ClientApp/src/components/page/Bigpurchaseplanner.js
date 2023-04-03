@@ -37,8 +37,8 @@ function BigPurchasePlanner2(props) {
   const [userID, setuserID] = useState(0);
   const [PlanName, setPlanName] = useState("");
   const [AmountToSave, setAmountToSave] = useState(0);
-  const [TimeToSave, setTimeToSave] = useState("");
-  const [MonthlyContribution, setMonthlyContribution] = useState(1);
+  const [TimeToSave, setTimeToSave] = useState(0);
+  const [MonthlyContribution, setMonthlyContribution] = useState(0);
   const [creationDate, setcreationDate] = useState("");
   const [comments, setComments] = useState("");
   const [Calculations, setCalculations] = useState("");
