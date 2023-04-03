@@ -55,7 +55,7 @@
 }
 
 .body {
-  min-height: 150vh;
+  min-height: 130vh;
   background-color: white;
   flex-direction: column;
   display: flex;

@@ -17,7 +17,6 @@ export default function Footer() {
           <h1 className="footer-header">Navigation</h1>
           <ul className="footer-links">
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
             <Link to="/Retirementplanner">Retirement Planner</Link>
             <Link to="/Retirementplanner">Big Purchase Planner</Link>
             <Link to="/login">Contact Us</Link>

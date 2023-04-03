@@ -188,7 +188,7 @@ export default function Retirementplanner2() {
     percent,
   }) => {
     const [isLoading, setIsLoading] = useState(false);
-
+    
     const navigate = useNavigate();
 
     const handleFormSubmit = (event) => {
