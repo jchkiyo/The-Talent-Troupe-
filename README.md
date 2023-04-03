@@ -133,9 +133,15 @@ If you would like to report bugs or file feature requests, you are welcomed to d
 <br /><br />
 # ☁️ Technologies Used
 This web application is built with 
+* [![Javascript][Javascript.com]][Javascript-url]
+* [![C#][C#.com]][C#-url]
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Tailwind][Tailwind.com]][Tailwind-url]
 * [![.NET][NET.com]][NET-url]
+* [![Figma][Figma.com]][Figma-url]
+* [![Firebase][Firebase.com]][Firebase-url]
+
 
 # 👩‍👩‍👧‍👦 Contributors
 | Profile  | Name | School |
@@ -149,10 +155,19 @@ This web application is built with
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [NET.com]: https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white
 [NET-url]: https://getbootstrap.com](https://dotnet.microsoft.com/en-us/
+[C#.com]: https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white
+[C#-url]: https://www.microsoft.com/en-us/download/details.aspx?id=7029
+[Javascript.com]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[Javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[Tailwind.com]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindui.com/
+[Figma.com]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
+[Figma-url]: https://www.figma.com/
+[Firebase.com]: https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
+[Firebase-url]: https://firebase.google.com/
