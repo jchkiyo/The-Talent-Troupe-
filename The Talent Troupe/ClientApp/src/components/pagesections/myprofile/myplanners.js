@@ -47,7 +47,7 @@ export default function MyPlanners() {
       </article>
       {retirementPlans.length === 0 && (
         <div className="emptyretirementplans">
-          <Link to="/retirementplanner2">
+          <Link to="/retirementplanner">
             <img
               className="emptyretirementplans-chatbot"
               src={bot1}
