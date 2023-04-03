@@ -109,7 +109,6 @@ export const Signup = () => {
                </div>
                <div className="col-lg-6 col-xl-5 ms-xl-auto px-lg-4 text-center text-primary"><img className="img-fluid mb-4" width="300" src="https://therichpost.com/wp-content/uploads/2021/06/login_page_image.png" alt="" style={{transform: "rotate(10deg)"}} />
             <h1 className="mb-4">Plan Your Future <br className="d-none d-lg-inline" />With Us Today.</h1>
-            <p className="lead text-muted">My teammates are awesome.</p>
           </div>
            
              </div>

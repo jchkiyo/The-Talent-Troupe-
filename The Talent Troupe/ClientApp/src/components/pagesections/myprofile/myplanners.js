@@ -47,7 +47,7 @@ export default function MyPlanners() {
       </article>
       {retirementPlans.length === 0 && (
         <div className="emptyretirementplans">
-          <Link to="/retirementplanner">
+          <Link to="/retirementplanner2">
             <img
               className="emptyretirementplans-chatbot"
               src={bot1}
@@ -107,10 +107,10 @@ export default function MyPlanners() {
                 comments={bigPurchasePlans.comments}
                 planID={bigPurchasePlans.id}
               />
-            );
+            )
           })}
         </div>
       }
     </div>
-  );
+  )
 }
