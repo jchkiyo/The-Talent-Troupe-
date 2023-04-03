@@ -183,7 +183,6 @@ export default function Retirementplanner2() {
 
     const handleFormSubmit = (event) => {
       event.preventDefault();
-      console.log("Inside SendData, userID: ", userID);
       setIsLoading(true);
 
       fetch("https://localhost:7158/api/RetirementPlanner/CreateRetirement", {
@@ -216,7 +215,6 @@ export default function Retirementplanner2() {
           setTimeout(() => {
             setIsLoading(false);
           }, 3000);
-          console.log("sent: ", planName);
           navigate("/MyProfile", { state: { data: userID } });
         })
         .catch((error) => {
@@ -391,18 +389,18 @@ export default function Retirementplanner2() {
           {showTextBox && (
             <Container fluid className="input-container">
               <Row className="justify-content-md-center">
-                <h1 class="h1">Here are your estimated requirement funds</h1>
+                <h1 class="h1">Here are your estimated retirement funds</h1>
               </Row>
               <Row>
                 <Col>
                   <h1>
-                    Your are age <p className="retirementdata">{data}</p>
+                    Your are currently <p className="retirementdata">{data} </p> years old
                   </h1>
                 </Col>
                 <Col>
                   <h1>
                     You plan to retire at{" "}
-                    <p className="retirementdata">{data2}</p>
+                    <p className="retirementdata">{data2}</p>  years old
                   </h1>
                 </Col>
                 <Col>

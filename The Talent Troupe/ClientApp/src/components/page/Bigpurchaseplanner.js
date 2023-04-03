@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import chatbot from "../../assets/ChatbotBigPurchase.png";
 import { AuthProvider, AuthContext } from "../AuthProvider";
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function BigPurchasePlanner() {
 
@@ -245,7 +245,7 @@ function BigPurchasePlanner2(props) {
 
 const SendData = ({ userID, planName, amountToSave, monthlyContribution, creationDate, comments, TimeToSave }) => {
   const [openModal, setOpenModal] = useState(false);
-
+  const navigate = useNavigate();
   <Confirmation 
     open={openModal} 
     onClose={() => setOpenModal(false)}
@@ -287,7 +287,7 @@ const SendData = ({ userID, planName, amountToSave, monthlyContribution, creatio
             });
 
             setOpenModal(true);
-            alert("Plan Saved !");
+            navigate("/MyProfile", { state: { data: userID } });
             
       }}>
         Save plan
