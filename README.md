@@ -133,7 +133,7 @@ If you would like to report bugs or file feature requests, you are welcomed to d
 <br /><br />
 # ☁️ Technologies Used
 This web application is built with 
-* [![Javascript][Javascript.js]][Javascript-url]
+* [![Javascript][Javascript.com]][Javascript-url]
 * [![C#][C#.com]][C#-url]
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
