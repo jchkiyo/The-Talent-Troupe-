@@ -14,10 +14,10 @@ import Col from "react-bootstrap/Col";
 export default function Retirementplanner2() {
   //input values
   const radiovalues = [2300, 2900, 5200];
-  const [data, setData] = useState(25);
+  const [data, setData] = useState(0);
   const [planName, setplanName] = useState("");
-  const [data2, setData2] = useState(65);
-  const [data3, setData3] = useState(15);
+  const [data2, setData2] = useState(0);
+  const [data3, setData3] = useState(0);
   const [radioValue, setRadioValue] = useState(2300);
   const [income, setIncome] = useState(800);
   const [savings, setSavings] = useState(0);
@@ -80,7 +80,7 @@ export default function Retirementplanner2() {
     setData2(0);
     setData3(0);
     setRadioValue(2300);
-    setIncome(1500);
+    setIncome(800);
     setplanName("");
     setSavings(2000);
   };
