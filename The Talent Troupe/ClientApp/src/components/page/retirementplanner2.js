@@ -419,7 +419,7 @@ export default function Retirementplanner2() {
                 <Col>
                   <h1>
                     You are planning for{" "}
-                    <p className="retirementdata">{data}</p> years of retirement
+                    <p className="retirementdata">{data3}</p> years of retirement
                   </h1>
                 </Col>
               </Row>
