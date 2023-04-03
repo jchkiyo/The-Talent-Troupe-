@@ -16,7 +16,16 @@ export default function BigPurchasePlanner() {
   return (
     <React.Fragment>
       <AuthProvider>
-        <BigPurchasePlanner2 AmountToSave={selectedProduct}/>
+      {selectedProduct ? (
+        <BigPurchasePlanner2 
+          amountToSave={selectedProduct[0]}
+          town={selectedProduct[1]}
+          flatType={selectedProduct[2]}
+          floorArea={selectedProduct[3]}
+        />
+      ) : (
+        <BigPurchasePlanner2/>
+      )}
       </AuthProvider>
     </React.Fragment>
   );
@@ -26,6 +35,26 @@ export default function BigPurchasePlanner() {
 function BigPurchasePlanner2(props) {
 
   const [userID, setuserID] = useState(0);
+  const [PlanName, setPlanName] = useState("");
+  const [AmountToSave, setAmountToSave] = useState(0);
+  const [TimeToSave, setTimeToSave] = useState("");
+  const [MonthlyContribution, setMonthlyContribution] = useState(1);
+  const [creationDate, setcreationDate] = useState("");
+  const [comments, setComments] = useState("");
+  const [Calculations, setCalculations] = useState("");
+  const [LoadPage, setLoadPage] = useState(true);
+  const [LoadFinal, setLoadFinal] = useState(false);
+
+  setTimeout(() => {
+    console.log("Update");
+    if (props.town!=null){
+      setPlanName(props.town.charAt(0).toUpperCase() + props.town.slice(1).toLowerCase()+" HDB Plan");
+      setAmountToSave(props.amountToSave);
+      setComments("Plan for HDB in "+props.town+" with expected price around $"+props.amountToSave+". "+props.flatType.toLowerCase()+" flat with floor area of "+props.floorArea+". ");
+    }
+  }, 500);
+
+
 
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
@@ -33,16 +62,7 @@ function BigPurchasePlanner2(props) {
     setuserID(currentUser.uid);
   }, 3000);
 
-  const [PlanName, setPlanName] = useState("");
-  const [AmountToSave, setAmountToSave] = useState(props.AmountToSave);
-  const [TimeToSave, setTimeToSave] = useState("");
-  const [MonthlyContribution, setMonthlyContribution] = useState(1);
-  const [creationDate, setcreationDate] = useState("");
-  const [comments, setComments] = useState("");
-  const [Calculations, setCalculations] = useState("");
 
-  const [LoadPage, setLoadPage] = useState(true);
-  const [LoadFinal, setLoadFinal] = useState(false);
 
 
   const onHandleSubmit=() => {

@@ -19,7 +19,9 @@ export default function HDBPrices() {
   const [value, setValue] = useState("");
   const [filterValue, setFilterValue] = useState("");
   const [hdbList, sethdbList] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState([]);
+
+  console.log(selectedProduct);
 
   useEffect(() => {
     fetchHdbPrice();
@@ -91,7 +93,7 @@ export default function HDBPrices() {
           tableStyle={{ minWidth: "50rem" }}
           selectionMode="single"
           selection={selectedProduct}
-          onSelectionChange={(e) => setSelectedProduct(e.value.resale_price)}
+          onSelectionChange={(e) => setSelectedProduct([e.value.resale_price, e.value.town, e.value.flat_type, e.value.floor_area_sqm])}
         >
           <Column field="town" header="Town" sortable></Column>
           <Column field="flat_type" header="Flat Type" sortable></Column>
