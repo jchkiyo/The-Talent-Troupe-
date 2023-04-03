@@ -18,7 +18,7 @@ export default function Retirementplanner2() {
   const [planName, setplanName] = useState("");
   const [data2, setData2] = useState(0);
   const [data3, setData3] = useState(0);
-  const [radioValue, setRadioValue] = useState(2300);
+  const [radioValue, setRadioValue] = useState(0);
   const [income, setIncome] = useState(800);
   const [savings, setSavings] = useState(0);
   const [cpfPrices, setcpfPrices] = useState([]);
@@ -89,7 +89,7 @@ export default function Retirementplanner2() {
     setData(0);
     setData2(0);
     setData3(0);
-    setRadioValue(2300);
+    setRadioValue(0);
     setIncome(800);
     setplanName("");
     setSavings(2000);
@@ -316,7 +316,7 @@ export default function Retirementplanner2() {
           />
           <p class="number">{data3}</p>
           <h1 class="h1">How much do you have in all your savings?</h1>
-          <input onChange={newchange} type="number" placeholder="2000" />
+          <input onChange={newchange} type="number" placeholder="0" />
           <br></br>
           <h1 class="h1">How much income do you earn per month? (min {800})</h1>
           <input
@@ -384,7 +384,7 @@ export default function Retirementplanner2() {
               onClick={handleShowTextBox}
               disabled={
                 data === 0 ||
-                data2 === 0 ||
+                data2 === 1 ||
                 data3 === 0 ||
                 income < 800 ||
                 radioValue <= 0||
