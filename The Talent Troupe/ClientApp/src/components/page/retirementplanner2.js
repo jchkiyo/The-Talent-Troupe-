@@ -34,6 +34,12 @@ export default function Retirementplanner2() {
   const userID = location.state?.data;
   console.log(userID);
 
+  useEffect(() => {
+    if (data2 <= data) {
+      setData2(parseInt(data) + 1);
+    }
+  }, [data, data2]);
+
   const radiochange = (event) => {
     const newvalue = event.target.value;
     setRadioValue(newvalue);
@@ -43,6 +49,8 @@ export default function Retirementplanner2() {
     const newvalue2 = event.target.value;
     setSavings(newvalue2);
   };
+
+ 
 
   const [showTextBox, setShowTextBox] = useState(false);
   const [showCustom, setShowCustom] = useState(false);
@@ -64,13 +72,15 @@ export default function Retirementplanner2() {
     setIncome(input);
   };
 
+  
+
   let timeout;
   const handleBlur = () => {
     clearTimeout(timeout);
     if (income < 800) {
       timeout = setTimeout(() => {
         alert("Please enter a valid income of at least 800");
-      }, 500);
+      }, 100);
     }
   };
 
@@ -281,6 +291,7 @@ export default function Retirementplanner2() {
             step="1"
             value={data2}
             onChange={(e) => {
+              
               const newValue = parseInt(e.target.value);
               if (newValue <= data) {
                 setData2(parseInt(data) + 1);
@@ -376,7 +387,9 @@ export default function Retirementplanner2() {
                 data2 === 0 ||
                 data3 === 0 ||
                 income < 800 ||
-                radioValue <= 0
+                radioValue <= 0||
+                planName === ""
+
               }
             >
               Calculate

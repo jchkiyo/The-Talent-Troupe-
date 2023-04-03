@@ -4,7 +4,8 @@ import { auth ,db} from '../firebase.js';
 import {  NavLink, useNavigate } from 'react-router-dom'
 import '../loginPages/LoginStyle.css'; 
 import { Alert } from "react-bootstrap"
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore";
+ 
 
        
 export const Signup = () => {
@@ -15,6 +16,7 @@ export const Signup = () => {
         const [username, setUsername] = useState('')
         const [email, setEmail] = useState('')
         const [password, setPassword] = useState('');
+
         
         const onSubmit = async (e) => {
           e.preventDefault()
@@ -34,9 +36,9 @@ export const Signup = () => {
                   email:email,
                   userid: auth.lastNotifiedUid
 
-                  
-                })
                 
+                })
+                          
                 .then(() => {
                   alert('Account Created Successfully 👍' );
                 })
@@ -44,11 +46,9 @@ export const Signup = () => {
                   alert(error.message);
                 });
                
-                
-              
                  
                 console.log(user);
-                navigate("/login")
+                navigate('/login',);
                 
                 // ...
             })
