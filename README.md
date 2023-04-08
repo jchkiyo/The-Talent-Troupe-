@@ -120,7 +120,7 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 * Once installed: `npm start`
 Connecting to our firebase database and Web API
 * Install .NET on your computer (https://dotnet.microsoft.com/en-us/download)
-* ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png)
+![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png)
 * Add the extension "C#" into your project 
 * Head to the debug window and make sure you run on ".Net Core Launch(web)" 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/debug.png)
