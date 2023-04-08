@@ -121,8 +121,7 @@ You may watch this [guide](https://www.youtube.com/watch?v=yOAZDymGWVw) to assis
 Connecting to our firebase database and Web API
 * Install .NET on your computer (https://dotnet.microsoft.com/en-us/download)
 * Add the extension "C#" into your project 
-* <img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png" alt="Csharp" style="margin-right: 20px;">
-![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png)
+<img src="https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png" alt="Csharp" style="margin-right: 20px;">
 * Head to the debug window and make sure you run on ".Net Core Launch(web)" 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/debug.png)
 * The C# code would run on your own localhost 
