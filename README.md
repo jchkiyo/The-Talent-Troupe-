@@ -122,11 +122,12 @@ Connecting to our firebase database and Web API
 * Install .NET on your computer (https://dotnet.microsoft.com/en-us/download)
 * Add the extension "C#" into your project 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/csharp.png)
+
 * Head to the debug window and make sure you run on ".Net Core Launch(web)" 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/debug.png)
 * The C# code would run on your own localhost 
 ![plot](https://github.com/jchkiyo/The-Talent-Troupe-/blob/main/README_docs/localhostC%23.png)
-* Make sure to this this localhost running while testing our the REACT application
+* Make sure to this localhost is running while testing our the REACT application
 
 
 # 📜 Feedback
